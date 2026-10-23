@@ -1,0 +1,33 @@
+# ---- 生成物（可由 tools/ 下的脚本重新生成，不纳入版本控制）----
+mingbaiban/明白办_参赛交付包.zip
+mingbaiban/delivery/10_明白办_源码.zip
+
+# 视频逐帧中间产物（成品为 delivery/03_*.mp4，帧序列留档在 delivery/assets/video-frames/）
+mingbaiban/tests/frames/
+
+# 校验用临时渲染图（检查结论已写入测试报告与 PROGRESS.md）
+mingbaiban/tests/pdfcheck/
+mingbaiban/tests/videocheck/
+mingbaiban/tests/_pkg_check/
+mingbaiban/tests/_unzip_check/
+
+# ---- 依赖与缓存 ----
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# ---- WorkBuddy 内部文件 ----
+.workbuddy/
+.wbapp_*.genie
+
+# ---- 系统文件 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 本地环境变量（绝不提交密钥）----
+.env
+.env.*
+!.env.example

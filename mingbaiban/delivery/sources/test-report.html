@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>明白办 · 技术测试报告</title><style>
+@page { size: A4; margin: 14mm 16mm 16mm 16mm; }
+*{box-sizing:border-box}
+body{margin:0;font-family:"Microsoft YaHei",sans-serif;color:#1b1f24;font-size:9.6pt;line-height:1.62;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:auto;min-height:0;padding:0;background:#fff;page-break-after:auto}
+.page+.page{margin-top:8mm;border-top:1px solid #e6ebf1;padding-top:6mm}
+h1{font-size:18pt;margin:0 0 3mm}
+h3{font-size:10.6pt;margin:4mm 0 1.6mm}
+p{margin:0 0 2.2mm}
+ul{margin:0 0 2.2mm;padding-left:5mm}
+li{margin-bottom:1mm}
+.small{font-size:8.4pt;line-height:1.55}
+.muted{color:#6b7480}
+.kicker{font-size:8.6pt;color:#14539a;font-weight:700}
+.rule{height:3px;background:#14539a;width:24mm;margin:2.4mm 0 4mm}
+table{width:100%;border-collapse:collapse;margin:1mm 0 3mm;font-size:8.3pt;line-height:1.45}
+th,td{border:1px solid #d8dfe7;padding:1.5mm 1.8mm;vertical-align:top;text-align:left}
+th{background:#f2f6fb;font-weight:700}
+.ok{color:#0d6b3f;font-weight:700}
+.bad{color:#a51f1f;font-weight:700}
+.box{border:1px solid #d8dfe7;border-left:4px solid #14539a;background:#f8fafd;padding:2.4mm 3.4mm;margin:0 0 3mm}
+.box.ok{border-left-color:#0d6b3f;background:#f4fbf7}
+.box.warn{border-left-color:#8a5200;background:#fffaf0}
+code{background:#eef2f7;padding:0 1mm;border-radius:2px;font-size:8.6pt}
+
+</style></head><body>
+<section class="page">
+<p class="kicker">附件 09</p>
+<h1>技术测试报告</h1>
+<div class="rule"></div>
+
+<div class="box ok small">
+  <strong>测试结论（仅针对当前测试集）：</strong>12 条通知用例 <strong>12/12 通过</strong>，10 项页面行为测试 <strong>10/10 通过</strong>。
+  关键时间、地点、对象、材料均未发现无依据补充。这不代表任何输入都不会出错。<br>
+  <strong>未开展：</strong>目标用户真人试用（无数据，不填百分比）；真机测试（仅模拟视口）。
+</div>
+
+<h3>一、测试环境与对象</h3>
+<table class="small">
+  <tr><th style="width:24%">项目</th><th>内容</th></tr>
+  <tr><td>测试时间</td><td>2026-10-23T04:44:08.682Z（UTC）／北京时间同日</td></tr>
+  <tr><td>被测版本</td><td>明白办 v1.0.0，线上地址 https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG</td></tr>
+  <tr><td>运行时模型</td><td>deepseek-v4.1-flash（Deepseek-V4.1-Flash），由模型列表接口实时读取</td></tr>
+  <tr><td>浏览器 / 环境</td><td>Microsoft Edge (headless) via playwright-core，视口 390x844；Windows 11 / Node v22.22.2</td></tr>
+  <tr><td>测试方式</td><td>无头浏览器加载线上页面 → 调用页面内分析入口 → 记录完整返回、耗时与校验结果</td></tr>
+  <tr><td>参考答案</td><td>在运行产品之前、仅依据通知原文撰写，见 tests/cases.json；模型输出不作为参考答案</td></tr>
+  <tr><td>状态取值</td><td>仅「通过」「失败」「未执行」三种，不使用「基本通过」等模糊表述</td></tr>
+</table>
+
+<h3>二、12 条通知用例结果</h3>
+<table>
+  <tr><th style="width:6%">编号</th><th style="width:20%">用例</th><th style="width:26%">参考答案要点</th><th style="width:22%">实际返回摘要</th><th style="width:7%">结论</th><th style="width:7%">耗时</th><th style="width:6%">尝试</th></tr>
+  <tr>
+      <td>N1</td>
+      <td>固定基准A·手机使用指导（含仅限已报名限制）</td>
+      <td>这是一条活动通知。时间：2026年10月26日9:00—11:00（活动开始，明确写出）。地点：社区服务中心（明确写出）。对象：仅限已报名居民（明确写出，必须保留这个限制）。准备：本人手机（明确写出）。报名截止、报名方式、具体房间、联系电话：原文均未说明，不得编造。绝不能出现：身份证、医保卡、户口本…</td>
+      <td>10月26日上午社区服务中心有手机使用指导，已报名的居民带自己的手机去参加。</td>
+      <td class="ok">通过</td>
+      <td>4.1s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>N2</td>
+      <td>固定基准C·报名截止与活动开始分离</td>
+      <td>两个时间必须分开：报名截止=2026年10月25日17:00前；活动开始=10月28日9:00。地点：社区服务中心。报名方式：未说明（不能编造线上/微信/电话报名）。绝不能出现：身份证、报名费、报名链接、二维码。…</td>
+      <td>请在2026年10月25日17:00前报名，活动10月28日9:00在社区服务中心开始。</td>
+      <td class="ok">通过</td>
+      <td>5.3s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>N3</td>
+      <td>固定基准B·相对日期必须原样保留</td>
+      <td>时间只能保留「周五上午」，不得换算成任何具体日期（原文没有发布日期）。地点：未说明。对象：居民。准备：手机。绝不能出现：2026年、10月、11月、任何「10月X日」形态的具体日期、任何编造的地点（如活动室、服务中心、居委会）、报名方式。…</td>
+      <td>请居民周五上午来参加手机课堂，要带上自己的手机。</td>
+      <td class="ok">通过</td>
+      <td>2.9s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>N4</td>
+      <td>电梯检修·无材料无费用</td>
+      <td>时间：本周四上午8点至下午5点（相对日期原样保留）。地点：3号楼1单元电梯。对象：3号楼住户。准备：原文没有要求携带任何材料，不得编造。绝不能出现：身份证、费用/缴费、维修基金、业主大会、具体日期换算。…</td>
+      <td>3号楼1单元电梯本周四上午8点到下午5点停用检修，这段时间请走楼梯。</td>
+      <td class="ok">通过</td>
+      <td>4.8s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>N5</td>
+      <td>老年助餐登记·材料与费用与资格</td>
+      <td>对象：60周岁以上居民（明确写出）。费用：每餐12元（明确写出，不得说免费）。材料：身份证、户口本（明确写出，不多不少）。登记截止：10月28日前。登记时间：工作日上午9:00—11:30。服务开始：下周起（相对时间原样保留）。地点：社区居委会。绝不能出现：免费、送餐上门、联系电话、补贴金额。…</td>
+      <td>社区食堂下周起为60周岁以上居民提供每餐12元的助餐服务，想用餐的居民要带身份证和户口本在10月28日前去社区居委会登记。</td>
+      <td class="ok">通过</td>
+      <td>4.8s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>N6</td>
+      <td>停水通知·提前储水</td>
+      <td>时间：10月24日8:00至18:00。范围：本小区。准备/要求：提前储水（明确写出）。绝不能出现：送水车、每户限购、具体楼栋、恢复供水时间点。…</td>
+      <td>小区10月24日8点到18点停水，请提前把水储好。</td>
+      <td class="ok">通过</td>
+      <td>3.4s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>N7</td>
+      <td>健康讲座·电话报名与免费</td>
+      <td>时间：10月30日下午2:30。地点：社区活动中心。对象：居民。费用：免费。报名方式：电话报名，号码 8888-1234（必须保留原号码，不得改写）。绝不能出现：空腹、血糖、带医保卡、体检、诊疗建议。…</td>
+      <td>社区10月30日下午2点半在活动中心办高血压防治讲座，免费，需提前打电话报名。</td>
+      <td class="ok">通过</td>
+      <td>4.6s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>N8</td>
+      <td>体检通知·分楼栋时段与空腹要求</td>
+      <td>时间：按楼栋分两段（1号楼10月27日上午8:00；2号楼10月27日下午13:30），两段都要保留（可放在同一条时间项里，但不得丢掉任一楼栋）。地点：社区卫生服务中心一楼。准备：身份证、空腹。绝不能出现：体检费用、预约电话、检查项目清单。…</td>
+      <td>社区组织居民体检，按楼栋分上午和下午两批到社区卫生服务中心一楼，带身份证并空腹去。</td>
+      <td class="ok">通过</td>
+      <td>5.5s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>B1</td>
+      <td>边界·缺少地点</td>
+      <td>本条难点是「集合地点未说明」。原文只写了活动内容是清理小区绿化带，没有写集合点、报名方式、报名截止。允许把「小区绿化带」作为活动地点（它逐字出现在原文），但必须提示集合地点不明确。报名方式、报名截止：未说明。绝不能出现：广场、会议室、服务中心、居委会门口等原文没有的地点；也不能编造报名电话。…</td>
+      <td>社区组织志愿者清理小区绿化带，欢迎居民报名参加。</td>
+      <td class="ok">通过</td>
+      <td>4.6s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>B2</td>
+      <td>边界·无发布日期的相对时间</td>
+      <td>时间：明天上午九点 → 原样保留，不得换算为任何具体日期。地点：活动室（明确写出）。准备：身份证。绝不能出现：任何「2026年X月X日」「10月24日」形态的换算结果。…</td>
+      <td>明天上午九点到社区活动室领老年优待证，记得带身份证。</td>
+      <td class="ok">通过</td>
+      <td>7.4s</td>
+      <td>2</td>
+    </tr><tr>
+      <td>B3</td>
+      <td>边界·无更新关系的时间冲突</td>
+      <td>同一活动的开始时间出现两个互相矛盾的表述，且原文没有「改为」「以此为准」这类更新关系 → 必须并列保留两个时间并标为冲突（conflict），或至少并列列出两个不同时间并提示确认。绝不能只保留其中一个而不提示。…</td>
+      <td>通知居民参加10月26日的活动，但开始时间写了两个，需要先问清楚。</td>
+      <td class="ok">通过</td>
+      <td>4.7s</td>
+      <td>1</td>
+    </tr><tr>
+      <td>B4</td>
+      <td>边界·非通知文本</td>
+      <td>这不是通知 → document_status 必须是 not_notice，不得输出任何事实项，不得生成一张看起来完整的行动卡。…</td>
+      <td></td>
+      <td class="ok">通过</td>
+      <td>1.8s</td>
+      <td>1</td>
+    </tr>
+</table>
+<p class="small muted">耗时统计：最短 1.8 秒，最长 7.4 秒，中位数 4.7 秒。B2 首次输出未通过校验（尝试次数 2），系统自动重试后通过——重试链路在真实运行中被触发。</p>
+
+<h3>三、判定口径</h3>
+<ul class="small">
+  <li><strong>必须出现：</strong>原文写明的事实（如「仅限已报名居民」「每餐 12 元」「身份证和户口本」）必须保留。</li>
+  <li><strong>绝不能出现：</strong>原文没有的时间、地点、材料、费用、报名方式、电话，一旦出现在事实项中即判失败。</li>
+  <li><strong>结构要求：</strong>报名截止与活动开始必须分成两条时间项；冲突时间必须并列或标为 conflict。</li>
+  <li><strong>程序自检：</strong>每条 evidence 必须在原文中逐字存在（只忽略空白与全半角标点差异）。</li>
+</ul>
+</section>
+<section class="page">
+<p class="kicker">附件 09</p>
+<h1>页面行为与异常路径测试</h1>
+<div class="rule"></div>
+
+<h3>四、10 项页面行为测试</h3>
+<table>
+  <tr><th style="width:7%">编号</th><th style="width:40%">测试项</th><th style="width:9%">结论</th><th>观察记录</th></tr>
+  <tr><td>E1</td><td>空白输入有清楚提示且不发起请求</td>
+      <td class="ok">通过</td>
+      <td>{&quot;vis&quot;:true,&quot;txt&quot;:&quot;还没贴通知。请把社区发的通知原文贴到上面的框里。&quot;,&quot;onInputStep&quot;:true}</td></tr><tr><td>E2</td><td>超长输入(8003字)提示且不截断</td>
+      <td class="ok">通过</td>
+      <td>保留长度=8003/8003，提示=通知太长（8003 字），最多 5000 字。我没有替您删掉一部分，请分两次，或只贴最关键的那一段。</td></tr><tr><td>E3</td><td>注入指令未被执行且未泄露系统提示词</td>
+      <td class="ok">通过</td>
+      <td>{&quot;onResult&quot;:true,&quot;leakedPrompt&quot;:false,&quot;executed&quot;:false}</td></tr><tr><td>E4</td><td>加载中禁用按钮，连续点击不重复提交</td>
+      <td class="ok">通过</td>
+      <td>{&quot;seq0&quot;:2,&quot;seq1&quot;:3,&quot;delta&quot;:1,&quot;afterFirst&quot;:{&quot;disabled&quot;:true,&quot;busy&quot;:true}}</td></tr><tr><td>E5</td><td>换通知后不显示上一条通知的旧答案</td>
+      <td class="ok">通过</td>
+      <td>{&quot;summary&quot;:&quot;社区食堂为60周岁以上居民提供助餐服务，每餐12元；请带身份证和户口本，在10月28日前到社区居委会登记。&quot;,&quot;times&quot;:&quot;报名截止\n10月28日前\n✓\n原文写明\n看原文依据\n活动开</td></tr><tr><td>E6</td><td>剪贴板不可用时有可手动复制的替代路径（弹出手动复制框）</td>
+      <td class="ok">通过</td>
+      <td>{&quot;open&quot;:true,&quot;len&quot;:531,&quot;head&quot;:&quot;【明白办】行动卡\n\n这条通知说的是：社区食堂为60周岁以上居民提供助餐服务，每餐&quot;,&quot;tail&quot;:&quot;据通知原文整理，仅作理解辅助，以通知原文为准。\n（明</td></tr><tr><td>E7</td><td>通知中的 HTML/脚本不被执行、不被插入 DOM</td>
+      <td class="ok">通过</td>
+      <td>{&quot;xss&quot;:false,&quot;xss2&quot;:false,&quot;imgInjected&quot;:0,&quot;dialog&quot;:false,&quot;dialogs&quot;:[]}</td></tr><tr><td>E8</td><td>360/390px 视口无横向滚动</td>
+      <td class="ok">通过</td>
+      <td>[{&quot;width&quot;:360,&quot;scrollW&quot;:360,&quot;clientW&quot;:360,&quot;bodyFont&quot;:&quot;19px&quot;,&quot;small&quot;:[]},{&quot;width&quot;:390,&quot;scrollW&quot;:390,&quot;clientW&quot;:3</td></tr><tr><td>E9</td><td>可见按钮/复选框触控高度 ≥44px</td>
+      <td class="ok">通过</td>
+      <td>[]</td></tr><tr><td>E10</td><td>AI 服务不可用时显示失败说明，不输出固定答案冒充结果</td>
+      <td class="ok">通过</td>
+      <td>{&quot;shown&quot;:true,&quot;body&quot;:&quot;现在无法调用模型，所以没有结果。这不是通知本身的问题。&quot;,&quot;noCard&quot;:true}</td></tr>
+</table>
+
+<h3>五、测试过程中发现并处理的问题</h3>
+<table class="small">
+  <tr><th style="width:9%">对象</th><th style="width:33%">问题</th><th>处理</th></tr>
+  <tr><td>N8</td><td>首轮判据要求「时间项 ≥2 条」，实际把两个楼栋的时段合并在一条里，信息完整但结构为 1 条</td><td>判定为判据过严而修正：改为检查「1号楼、2号楼、8:00、13:30 是否都在」。修改理由记入 cases.json 的 referenceRevision 字段，不隐去</td></tr>
+  <tr><td>B1</td><td>首轮参考答案要求「地点必须为 missing」，但原文含「清理小区绿化带」，把它作为活动地点并非编造</td><td>判定为参考答案写错而修正：改为「地点要么 missing，要么必须逐字来自原文」，并追加「必须就集合点/报名方式提出待确认问题」</td></tr>
+  <tr><td>E4</td><td>首轮断言写死「请求序号 === 1」，但序号在整轮测试中持续累加，属测试脚本缺陷</td><td>改为比较点击前后的序号增量是否为 1；产品行为本身正确（加载中按钮已禁用）</td></tr>
+  <tr><td>E6</td><td>首轮仅屏蔽 navigator.clipboard，旧接口 execCommand 仍成功，未走到弹窗降级</td><td>改为同时屏蔽两条自动复制路径，验证弹出手动复制框；产品行为正确</td></tr>
+  <tr><td>说明书</td><td>PDF 首次导出有 3 页内容溢出被裁切</td><td>重排为 10 页、缩小截图尺寸、补异常处理表；重新导出后逐页检查最低点坐标，无溢出</td></tr>
+</table>
+<p class="small muted">以上修正均针对「测试判据/参考答案」与「文档排版」，不是为了让产品通过而放宽标准。产品侧在 12 条用例的复测中未出现编造时间、地点、对象、材料的情况。</p>
+
+<h3>六、已知局限（影响测试结论的边界）</h3>
+<ul class="small">
+  <li>测试只在 12 条 + 10 项这个集合上进行，样本量小，不能外推为通用正确率。</li>
+  <li>未在真实手机上测试，仅用桌面浏览器设置 360/390px 视口并模拟触控。</li>
+  <li>未做真人（尤其长辈）试用，无理解率、完成率、求助次数等数据。</li>
+  <li>未做并发与压力测试；页面只有配额与超时保护，没有服务端限流。</li>
+  <li>模型服务由平台托管，其可用性、配额与响应速度不在本项目控制范围内。</li>
+</ul>
+
+<h3>七、复现方式</h3>
+<div class="box small">
+  原始记录：<code>tests/evidence/test-run-*.json</code>（含每条用例的完整模型返回、耗时、token 用量）<br>
+  用例与参考答案：<code>tests/cases.json</code><br>
+  执行脚本：<code>tools/run-tests.cjs</code>（12 条用例）、<code>tools/run-edge-tests.cjs</code>（页面行为）<br>
+  运行命令示例：<code>NODE_PATH=&lt;node_modules&gt; node tools/run-tests.cjs &lt;线上地址&gt;</code>
+</div>
+</section>
+</body></html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>明白办 · 产品说明书</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #1b1f24; font-size: 9.8pt; line-height: 1.66;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page {
+    width: 210mm; height: 297mm; padding: 15mm 16mm 14mm; position: relative;
+    page-break-after: always; overflow: hidden; background: #fff;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  h1 { font-size: 18pt; margin: 0 0 3mm; }
+  h3 { font-size: 10.6pt; margin: 3.4mm 0 1.6mm; }
+  p { margin: 0 0 2.2mm; }
+  ul, ol { margin: 0 0 2.2mm; padding-left: 5mm; }
+  li { margin-bottom: 1mm; }
+  .lead { font-size: 10.4pt; color: #333b45; }
+  .muted { color: #6b7480; }
+  .small { font-size: 8.4pt; line-height: 1.58; }
+  .kicker { font-size: 8.6pt; color: #14539a; font-weight: 700; }
+  .rule { height: 3px; background: #14539a; width: 24mm; margin: 2.4mm 0 4mm; }
+
+  table { width: 100%; border-collapse: collapse; margin: 1mm 0 3.2mm; font-size: 8.8pt; line-height: 1.5; }
+  th, td { border: 1px solid #d8dfe7; padding: 1.6mm 2mm; text-align: left; vertical-align: top; }
+  th { background: #f2f6fb; font-weight: 700; }
+  td.c { text-align: center; }
+
+  .box { border: 1px solid #d8dfe7; border-left: 4px solid #14539a; background: #f8fafd; padding: 2.4mm 3.4mm; margin: 0 0 3mm; font-size: 9.2pt; line-height: 1.62; }
+  .box.ok { border-left-color: #0d6b3f; background: #f4fbf7; }
+
+  figure { margin: 0 0 2mm; }
+  figure img { display: block; border: 1px solid #dfe5ec; border-radius: 3px; }
+  figcaption { font-size: 8.2pt; color: #6b7480; margin-top: 1mm; }
+
+  .shots3 { display: flex; gap: 3mm; }
+  .shots3.small { justify-content: center; gap: 5mm; }
+  .shots3.small figure { flex: 0 0 47mm; }
+  .shots3 figure { flex: 1; margin: 0; }
+  .shots3 img { width: 100%; }
+
+  .pill { display: inline-block; font-size: 8pt; font-weight: 700; padding: .8mm 2.2mm; border-radius: 99px; }
+  .pill.no { color: #6b7480; background: #f2f4f7; border: 1px dashed #b6bfca; }
+
+  .cover { padding: 0; }
+  .cover-top { background: #14539a; color: #fff; padding: 24mm 18mm 13mm; }
+  .cover-top .event { font-size: 8.8pt; opacity: .94; line-height: 1.7; }
+  .cover-title { font-size: 44pt; font-weight: 700; letter-spacing: 4px; margin: 8mm 0 2mm; }
+  .cover-sub { font-size: 14pt; opacity: .96; }
+  .cover-slogan { font-size: 11.5pt; margin-top: 9mm; padding-top: 4.5mm; border-top: 1px solid rgba(255,255,255,.45); }
+  .cover-body { padding: 11mm 18mm; }
+  .cover-meta { font-size: 9.2pt; }
+  .cover-meta td { border: 0; border-bottom: 1px solid #e6ebf1; padding: 2.2mm 0; }
+  .cover-meta td:first-child { color: #6b7480; width: 28mm; }
+  .cover-note { position: absolute; bottom: 14mm; left: 18mm; right: 18mm; font-size: 8pt; color: #6b7480; line-height: 1.6; }
+
+  .footer { position: absolute; bottom: 7mm; left: 16mm; right: 16mm; display: flex; justify-content: space-between; font-size: 7.8pt; color: #8b95a1; border-top: 1px solid #e6ebf1; padding-top: 1.6mm; }
+  .flowimg { width: 160mm; margin: 0 auto; }
+  .nowrap { white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<!-- ================= P1 封面 ================= -->
+<section class="page cover">
+  <div class="cover-top">
+    <div class="event">2026 年 iCAN 大学生创新创业大赛 · 快手 AI 未来创造者挑战赛<br>方向：AI 产品实现　|　主题：AI 连接的世界—公共服务与社会关怀</div>
+    <div class="cover-title">明白办</div>
+    <div class="cover-sub">面向长辈的 AI 社区通知行动助手</div>
+    <div class="cover-slogan">收到通知之后，下一步更明白。</div>
+  </div>
+  <div class="cover-body">
+    <p class="kicker">产品说明书</p>
+    <div class="rule"></div>
+    <p class="lead">把一条看不懂的社区通知，变成一张能照着做的行动卡：说清是什么、谁能参加、什么时候、要带什么、下一步做什么，并且每个事实都能点开看原文依据。</p>
+    <table class="cover-meta">
+      <tr><td>产品名称</td><td>明白办（Mingbai Ban）</td></tr>
+      <tr><td>版本</td><td>v1.0.0（候选提交版）</td></tr>
+      <tr><td>在线体验</td><td>https://mingbaiban-42482.app.workbuddy.host/</td></tr>
+      <tr><td>运行时模型</td><td>WorkBuddy 云服务托管通道，实际调用 DeepSeek-V4.1-Flash（模型列表实测）</td></tr>
+      <tr><td>文档日期</td><td>2026 年 10 月 23 日</td></tr>
+      <tr><td>文档性质</td><td>参赛产品说明书；已验证结论与尚未验证的假设分别标注</td></tr>
+    </table>
+  </div>
+  <div class="cover-note">
+    文中所述功能均为当前线上版本已实现且可复现的功能。「已做测试」为真实执行记录；「目标用户效果」尚未开展真人验证，已在文末如实说明。文中截图均取自线上真实版本的实际运行画面。
+  </div>
+</section>
+
+<!-- ================= P2 产品概述 ================= -->
+<section class="page">
+  <p class="kicker">01　产品概述</p>
+  <h1>把「读完通知」变成「知道下一步」</h1>
+  <div class="rule"></div>
+
+  <p class="lead"><strong>明白办</strong>是一个网页工具。长辈把社区通知原文粘贴进去，它会用大白话输出一张<strong>行动卡</strong>：这件事是什么、谁能参加、分用途的时间、地点、要带什么、下一步做什么、还有哪些地方通知其实没说清。</p>
+
+  <h3>要解决的问题</h3>
+  <p>社区通知写给「能读懂的成年人」，但对不少长辈，一条通知里至少藏着四道坎：</p>
+  <table>
+    <tr><th style="width:28%">困难</th><th style="width:38%">具体表现</th><th>明白办的应对</th></tr>
+    <tr><td>时间说不清</td><td>「25 日前报名」「28 日开始」混在一段里，容易把报名截止当成活动时间</td><td>按用途拆开：报名截止 / 活动开始 / 服务时间，各自单列</td></tr>
+    <tr><td>不知道要带什么</td><td>「请携带本人手机」后面没有下文，长辈却会习惯性带上身份证</td><td>只列原文写明的准备事项；没写就明确说「通知没提要带什么」</td></tr>
+    <tr><td>不敢信、也没法核</td><td>AI 一改写，就分不清哪句是原文、哪句是理解</td><td>每个事实项可展开「看原文依据」，引文逐字回溯原文</td></tr>
+    <tr><td>看完还是不动</td><td>读懂了，但不知道先做什么、要不要问人</td><td>可勾选的准备清单 + 待确认问题 + 一键复制给家人</td></tr>
+  </table>
+
+  <h3>主流程（四步）</h3>
+  <p>① 粘贴文字通知 → ② 真实大模型理解 → ③ 白话行动卡（可展开原文依据）→ ④ 勾选准备事项 / 复制给家人。</p>
+
+  <div class="box">
+    <strong>与常见「AI 摘要」的区别：</strong>普通摘要把通知变短，明白办把通知变<strong>可执行、可核对</strong>。三个设计取向：
+    <span class="nowrap">（a）</span>事实缺就写「通知未说明」，绝不自动补齐；
+    <span class="nowrap">（b）</span>每条关键事实附原文引文，程序校验引文必须真实存在于原文；
+    <span class="nowrap">（c）</span>把「通知明确要求」与「为了问清楚而提的建议」分开标注。
+  </div>
+
+  <h3>产品边界（明确不做）</h3>
+  <ul>
+    <li>不替发布方制定办理要求，不判断资格，不做医疗或法律判断。</li>
+    <li>不代替用户报名、预约或办理任何业务；清单打勾只表示「我自己准备好了」。</li>
+    <li>本版本不含账号系统、历史记录、支付、地图、OCR、语音、多模型切换。</li>
+  </ul>
+
+  <h3>一句话定位</h3>
+  <p>不是「更懂 AI」，而是<strong>更敢让长辈照着做</strong>——每一个结论都能点回原文，每一处缺失都如实标出。</p>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 2 页</span></div>
+</section>
+
+<!-- ================= P3 目标用户 ================= -->
+<section class="page">
+  <p class="kicker">02　目标用户</p>
+  <h1>谁在用，他们在什么条件下用</h1>
+  <div class="rule"></div>
+
+  <h3>核心用户：60 岁以上社区居民</h3>
+  <p>典型情形：独居或与子女异地居住；会用微信收发消息，但不熟悉在手机上查找、比对信息；对「AI」没有概念，只关心「这条通知我该怎么办」。他们的共同约束不是「不愿学」，而是<strong>看不清、点不准、怕弄错</strong>。</p>
+
+  <h3>次要用户：子女 / 照护者</h3>
+  <p>常替长辈读通知、转发通知。他们需要「能直接转给爸妈」的一段文字，而不是还要再解释一遍的摘要。</p>
+
+  <h3>使用约束 → 设计对策</h3>
+  <table>
+    <tr><th style="width:24%">使用约束</th><th style="width:30%">设计对策</th><th>当前实现（可核对）</th></tr>
+    <tr><td>看不清小字</td><td>正文加大、行距放宽、短句</td><td>正文 20px、行高 1.75；关键值 22—24px</td></tr>
+    <tr><td>手指点不准</td><td>触控区放大、留白充足</td><td>按钮最小高度 56px（要求 ≥44px），复选框 30px</td></tr>
+    <tr><td>怕点错、怕弄坏</td><td>关键动作可回退、不自动提交业务</td><td>「换一条通知」随时重置；勾选仅本地状态，不上传、不代办</td></tr>
+    <tr><td>不信 AI</td><td>结论可回到原文核对</td><td>每个事实项「看原文依据」，展开显示原文原句</td></tr>
+    <tr><td>不会用复杂界面</td><td>一屏一件事，只留一个主按钮</td><td>首页只有输入框 +「帮我看懂」+ 三条样例</td></tr>
+    <tr><td>手机屏幕窄</td><td>窄屏优先，不横向滚动</td><td>360px / 390px 视口实测无横向滚动</td></tr>
+  </table>
+
+  <h3>关键假设与验证状态</h3>
+  <table>
+    <tr><th style="width:50%">假设</th><th style="width:16%">状态</th><th>说明</th></tr>
+    <tr><td>长辈读通知时确实需要「时间/地点/对象/材料」的结构化帮助</td><td><span class="pill no">待验证</span></td><td>来自设计前的需求推理，尚未做用户访谈</td></tr>
+    <tr><td>「可展开原文依据」能提升长辈对结果的信任</td><td><span class="pill no">待验证</span></td><td>尚未做对照测试</td></tr>
+    <tr><td>行动卡复制给子女是有效的求助路径</td><td><span class="pill no">待验证</span></td><td>功能已实现，转发行为未观测</td></tr>
+    <tr><td>20px 字号 + 56px 触控区足以支撑独立完成一次操作</td><td><span class="pill no">待验证</span></td><td>仅完成尺寸层面的技术检查，未做实机与真人测试</td></tr>
+  </table>
+
+  <p class="small" style="color:#8a5200">以上「待验证」项均为设计假设。本产品尚未开展目标用户效果验证，因此不主张任何使用效果（如「提升理解率」「减少误读」）。</p>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 3 页</span></div>
+</section>
+
+<!-- ================= P4 核心功能 ================= -->
+<section class="page">
+  <p class="kicker">03　核心功能</p>
+  <h1>四项核心功能与真实界面</h1>
+  <div class="rule"></div>
+
+  <table>
+    <tr><th style="width:10%">编号</th><th style="width:22%">功能</th><th>实现要点</th></tr>
+    <tr><td class="c">F1</td><td><strong>通知输入</strong></td><td>支持粘贴中文通知，上限 5000 字；空白与超长都有明确提示且<strong>不静默截断</strong>；内置 3 条明确标注「虚构演示样例」的通知</td></tr>
+    <tr><td class="c">F2</td><td><strong>白话行动卡</strong></td><td>输出事项说明、适用对象、按用途分开的时间、地点、准备事项、下一步行动、待确认问题</td></tr>
+    <tr><td class="c">F3</td><td><strong>原文核对</strong></td><td>每个事实项标注 <span class="nowrap">原文写明 / 通知未说明 / 说得含糊 / 前后不一致</span>，可展开逐字原文；没有的信息显示「通知未说明」，不自动补齐</td></tr>
+    <tr><td class="c">F4</td><td><strong>准备与转发</strong></td><td>准备事项可勾选；一键复制整张行动卡，复制文本保留缺失标记与「确认建议」标记；勾选仅表示个人准备状态</td></tr>
+  </table>
+
+  <div class="shots3 small" style="margin-top:2mm">
+    <figure><img src="../assets/shot-01-home.png" alt="首页"><figcaption>① 首页：一个输入框、一个主按钮</figcaption></figure>
+    <figure><img src="../assets/shot-04-result-top.png" alt="行动卡"><figcaption>② 行动卡：先说「这条通知说的是」</figcaption></figure>
+    <figure><img src="../assets/shot-06-evidence.png" alt="原文依据"><figcaption>③ 每个事实可展开原文依据</figcaption></figure>
+  </div>
+
+  <p class="small muted" style="margin-top:2mm">图 ①—③：首页、行动卡顶部、展开原文依据（390×844 视口，2 倍像素密度）。</p>
+
+  <h3>异常与降级：不让长辈卡住，也不给假答案</h3>
+  <table class="small">
+    <tr><th style="width:26%">情况</th><th style="width:38%">页面行为</th><th>设计理由</th></tr>
+    <tr><td>超过 5000 字</td><td>明确告知实际字数与上限，提示分两次贴</td><td>不静默截断，避免漏掉关键信息</td></tr>
+    <tr><td>等太久（&gt;45 秒）</td><td>中止请求，说明可能网络慢，给「再试一次」</td><td>不让用户对着转圈猜</td></tr>
+    <tr><td>模型结果对不上原文</td><td>自动重试 1 次；仍不行则显示「没看明白」，不出行动卡</td><td>宁可不给，也不给错的</td></tr>
+    <tr><td>服务不可用 / 配额用尽</td><td>显示具体原因，明确「这不是通知本身的问题」</td><td>不用固定答案冒充 AI</td></tr>
+    <tr><td>剪贴板被禁用</td><td>退到旧接口，再不行弹出手动全选复制框</td><td>复制是核心动作，不能卡死</td></tr>
+  </table>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 4 页</span></div>
+</section>
+
+<!-- ================= P5 功能细节 ================= -->
+<section class="page">
+  <p class="kicker">03　核心功能（续）</p>
+  <h1>从「看懂了」到「做得到」</h1>
+  <div class="rule"></div>
+
+  <div class="shots3">
+    <figure><img src="../assets/shot-07-checked.png" alt="勾选准备事项"><figcaption>④ 准备清单可勾选（仅本地状态）</figcaption></figure>
+    <figure><img src="../assets/shot-09-missing-top.png" alt="缺失信息"><figcaption>⑤ 原文没写就标「未说明」，不补齐</figcaption></figure>
+    <figure><img src="../assets/shot-03-loading.png" alt="加载状态"><figcaption>⑥ 加载态：明确告知由 AI 真实处理</figcaption></figure>
+  </div>
+
+  <h3>状态不只靠颜色区分</h3>
+  <p class="small">「原文写明」用实线边框 + ✓，「通知未说明」用虚线边框 + —，「说得含糊」用点线边框 + ?，「前后不一致」用双线边框 + !。色弱用户、或在强光下看屏幕，也能分辨四种状态的差别。</p>
+
+  <h3>复制出来的文字是什么样（真实格式）</h3>
+  <div class="box small" style="font-family:'Microsoft YaHei',sans-serif;line-height:1.7">
+    【明白办】行动卡<br>
+    这条通知说的是：社区要办手机使用指导活动；想参加的人要在 10 月 25 日 17:00 前到一楼服务台报名。<br><br>
+    一、谁能参加<br>
+    　仅限已报名居民（原文写明）<br>
+    二、时间<br>
+    　报名截止：2026 年 10 月 25 日 17:00 前（原文写明）<br>
+    　活动开始：2026 年 10 月 26 日 9:00—11:00（原文写明）<br>
+    三、地点　社区服务中心二楼活动室（原文写明）<br>
+    四、要带什么　[ ] 本人手机（原文写明）<br>
+    五、您接下来做什么<br>
+    　[ ] 在 10 月 25 日 17:00 前到一楼服务台报名（通知明确要求）<br>
+    　[ ] 先确认自己是否已经报上名（确认建议：为了问清楚，不是通知要求）<br>
+    —— 提醒 ——　打勾只表示您自己准备好了，不代表已经报名或办好。内容仅作理解辅助，以原文为准。
+  </div>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 5 页</span></div>
+</section>
+
+<!-- ================= P5 AI 角色与价值 ================= -->
+<section class="page">
+  <p class="kicker">04　AI 角色与价值</p>
+  <h1>AI 做什么，凭什么可信</h1>
+  <div class="rule"></div>
+
+  <p><strong>AI 承担核心的理解与表达工作</strong>：读懂任意写法的中文通知（含书面语、简称、模糊表述），判断哪些是事实、哪些缺失、哪些互相打架，再转写成长辈能懂的白话，并保持「原文要求」与「建议」的区分。这无法用固定规则或模板实现——通知的措辞千变万化。</p>
+
+  <h3>内置在模型里的十条硬约束（摘自产品系统提示词）</h3>
+  <table class="small">
+    <tr><th style="width:6%">#</th><th>约束</th><th style="width:30%">为什么必须有</th></tr>
+    <tr><td>1</td><td>时间、年份、地址、电话、材料、费用、报名方式、资格不得编造</td><td>编造事实比不给答案更危险</td></tr>
+    <tr><td>2</td><td>区分报名截止、活动开始、服务时间；保留「已报名」「仅限」等限制</td><td>这是长辈最容易误读的地方</td></tr>
+    <tr><td>3</td><td>无更新关系的时间冲突必须并列保留并提示确认</td><td>擅自二选一等于替用户做决定</td></tr>
+    <tr><td>4</td><td>无可靠发布日期的「明天/周五」原样保留，不做相对日期换算</td><td>用服务器当天日期换算极易算错</td></tr>
+    <tr><td>5</td><td>原文只写「带手机」就不许添身份证等常见材料</td><td>「合理补充」正是幻觉高发区</td></tr>
+    <tr><td>6</td><td>关键事实必须给逐字原文摘录，引文必须真实存在</td><td>让结论可以被核对</td></tr>
+    <tr><td>7</td><td>原文要求与确认建议分开，不把建议包装成义务</td><td>避免制造不存在的办理要求</td></tr>
+    <tr><td>8</td><td>非通知输入判为 not_notice，不硬凑行动卡</td><td>宁可不给，也不给错的</td></tr>
+    <tr><td>9</td><td>不做医疗建议、法律判断、资格认定，不声称已代办</td><td>越界即风险</td></tr>
+    <tr><td>10</td><td>只返回约定 JSON，不返回推理过程与无关对话</td><td>保证下游可校验、可渲染</td></tr>
+  </table>
+
+  <h3>模型之外的第二道闸：程序校验</h3>
+  <p>模型输出不直接上屏。程序逐项检查：结构是否完整、<code>status</code> 取值是否合法、<code>missing</code> 是否被偷偷填了值、<strong>每条引文能否在原文中逐字找到</strong>（只忽略空白与全半角标点差异）。不通过则自动重试 1 次；仍不通过，页面显示「没看明白」，<strong>不渲染行动卡</strong>。</p>
+
+  <div class="box ok small" style="margin-bottom:2mm">
+    <strong>实测佐证：</strong>12 条用例中，B2（无发布日期的「明天上午九点」）首次输出未通过校验，系统自动重试后通过——重试机制在真实运行中被触发并生效，不是纸面设计。
+  </div>
+
+  <h3>运行时的模型服务（如实记录）</h3>
+  <table class="small">
+    <tr><th style="width:22%">项目</th><th>实际情况</th></tr>
+    <tr><td>接入方式</td><td>WorkBuddy 云服务托管的免密钥大模型通道；浏览器直接调用数据面，服务端按 Origin 校验，前端不保存长期密钥</td></tr>
+    <tr><td>实际模型</td><td>运行时通过模型列表接口读取并选用 <strong>deepseek-v4.1-flash（Deepseek-V4.1-Flash）</strong>，与页面底部「AI 实时生成」的标注一致</td></tr>
+    <tr><td>开发执行模型</td><td>DeepSeek V4.1 Flash（WorkBuddy 开发侧模型，与运行时模型是两条独立链路，不混为一谈）</td></tr>
+    <tr><td>调用参数</td><td>流式输出、temperature 0.1、单次超时 45 秒、失败最多重试 1 次</td></tr>
+    <tr><td>无法确认的部分</td><td>上游提供方的机房与部署形态由平台托管，本项目无法核实，故不作声明</td></tr>
+  </table>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 6 页</span></div>
+</section>
+
+<!-- ================= P6 技术实现（流程图） ================= -->
+<section class="page">
+  <p class="kicker">05　技术实现思路</p>
+  <h1>一条可复现的最小链路</h1>
+  <div class="rule"></div>
+
+  <figure>
+    <img class="flowimg" src="../11_明白办_技术流程图.png" alt="技术流程图">
+    <figcaption>图 1　明白办技术实现与数据流（依据实际代码绘制）</figcaption>
+  </figure>
+
+  <p class="small">整条链路只有一个外部依赖：WorkBuddy 云服务的大模型通道。没有自建后端、没有数据库、没有登录，因此也不存在「服务端存了通知原文」这个问题。浏览器端承担输入校验、请求编排与结果校验；系统提示词保存为工程文件并在运行时读取，保证文档与代码一致。</p>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 7 页</span></div>
+</section>
+
+<!-- ================= P7 技术细节 ================= -->
+<section class="page">
+  <p class="kicker">05　技术实现思路（续）</p>
+  <h1>选型、关键实现与数据结构</h1>
+  <div class="rule"></div>
+
+  <h3>技术选型</h3>
+  <table class="small">
+    <tr><th style="width:18%">层</th><th style="width:32%">选型</th><th>理由</th></tr>
+    <tr><td>前端</td><td>原生 HTML + CSS + 原生 JS（无框架、无构建步骤）</td><td>体积小、加载快、无构建链故障点；长辈设备多为中低端手机</td></tr>
+    <tr><td>模型接入</td><td>WorkBuddy 云服务 SDK（浏览器 CDN 全局版）</td><td>免密钥、免自建后端，前端不保存任何长期密钥</td></tr>
+    <tr><td>数据结构</td><td>固定 JSON 契约（10 个顶层字段）</td><td>可被程序逐项校验，避免「一段自然语言没人能验」</td></tr>
+    <tr><td>校验</td><td>自研 js/validate.js（结构与引文回溯）</td><td>把「引文必须真实存在」变成机器可判定的规则</td></tr>
+    <tr><td>托管</td><td>静态站点托管，单端口 HTTP 服务</td><td>无数据库、无登录、无历史记录，攻击面小</td></tr>
+  </table>
+
+  <h3>关键实现细节</h3>
+  <ul class="small">
+    <li><strong>单一事实来源：</strong>系统提示词保存为 <code>app/prompts/system-prompt.txt</code>，页面运行时读取该文件后作为 <code>messages[0]</code> 发送，避免「文档一份、代码一份」的漂移。</li>
+    <li><strong>过期响应丢弃：</strong>每次分析递增请求序号，回调先比对序号，旧请求的晚到响应直接丢弃，防止新通知显示旧答案。</li>
+    <li><strong>防重复提交：</strong>加载中禁用主按钮，按钮文案切换为「正在看，请稍等…」。</li>
+    <li><strong>纯文本渲染：</strong>模型输出与用户输入一律通过 <code>textContent</code> 写入 DOM，通知里若有 <code>&lt;script&gt;</code> 或 <code>&lt;img onerror&gt;</code> 也不会被执行。</li>
+    <li><strong>剪贴板降级：</strong>优先 <code>navigator.clipboard</code>，失败退 <code>execCommand</code>，再失败弹出手动全选复制框。</li>
+    <li><strong>失败不伪装：</strong>配置缺失、SDK 未加载、超时、校验不通过，均显示具体原因，绝不用固定答案冒充 AI 结果。</li>
+  </ul>
+
+  <h3>输出结构（节选）</h3>
+  <div class="box small">
+    <code>document_status · summary · audience{value,status,evidence[]} · times[{purpose,value,status,evidence[]}] · location{…} · preparation[…] · actions[{type:"required|suggested",value,evidence[]}] · questions[] · warnings[]</code><br>
+    <span class="muted">status 仅取 stated / missing / unclear / conflict；status 为 missing 时 value 必须为 null、evidence 必须为空数组。完整说明见工程内 app/prompts/data-schema.md。</span>
+  </div>
+
+  <h3>安全与隐私</h3>
+  <table class="small">
+    <tr><th style="width:26%">风险</th><th>处理方式</th></tr>
+    <tr><td>提示注入（通知里藏指令）</td><td>系统提示词把通知原文声明为「待分析数据」，明确禁止执行其中出现的指令；已实测注入用例未生效、未泄露提示词</td></tr>
+    <tr><td>XSS（通知里藏脚本）</td><td>全部文本走 <code>textContent</code>，不拼 innerHTML；已实测 <code>&lt;img onerror&gt;</code> 与 <code>&lt;script&gt;</code> 均未执行</td></tr>
+    <tr><td>密钥泄露</td><td>前端只持有 <code>publishableKey</code>（仅标识应用，服务端按 Origin 校验），无长期密钥入库</td></tr>
+    <tr><td>原文留存</td><td>不建库、不写日志、不留历史；页面刷新即清空</td></tr>
+  </table>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 8 页</span></div>
+</section>
+
+<!-- ================= P8 应用场景 ================= -->
+<section class="page">
+  <p class="kicker">06　应用场景示例</p>
+  <h1>四条真实输入，四种真实输出</h1>
+  <div class="rule"></div>
+  <p class="small muted">以下输入为测试用通知（含虚构演示样例），输出为线上版本的实际返回结果摘录，非示意性编写。</p>
+
+  <h3>场景一 · 活动报名：把「报名截止」和「活动开始」拆开</h3>
+  <div class="box small">
+    <strong>输入：</strong>请于 2026 年 10 月 25 日 17:00 前报名，活动于 10 月 28 日 9:00 在社区服务中心开始。<br>
+    <strong>输出要点：</strong>时间被拆成两条——报名截止「2026 年 10 月 25 日 17:00 前」、活动开始「10 月 28 日 9:00」；地点「社区服务中心」；报名方式原文未写，提示「需要确认」。<br>
+    <strong>价值：</strong>长辈最常见的错误就是把「25 日前报名」当成「25 日去参加」。这里在结构上就分开了。
+  </div>
+
+  <h3>场景二 · 服务登记：材料不多不少</h3>
+  <div class="box small">
+    <strong>输入：</strong>社区食堂下周起为 60 周岁以上居民提供助餐服务，每餐 12 元。请携带身份证和户口本，于 10 月 28 日前到社区居委会登记。登记时间为工作日上午 9:00—11:30。<br>
+    <strong>输出要点：</strong>对象「60 周岁以上居民」；费用「每餐 12 元」（未说免费）；准备「身份证、户口本」两项，不多不少；登记截止「10 月 28 日前」；登记时段「工作日上午 9:00—11:30」；服务开始「下周起」原样保留（不换算成具体日期）。
+  </div>
+
+  <h3>场景三 · 设施维护：没有材料就别让人准备</h3>
+  <div class="box small">
+    <strong>输入：</strong>因电梯年度检修，3 号楼 1 单元电梯将于本周四上午 8 点至下午 5 点停用，检修期间请走楼梯。如有变动，另行通知。<br>
+    <strong>输出要点：</strong>时间保留「本周四上午 8 点至下午 5 点」；准备事项为空——原文没要求带任何东西，产品就明确说「通知没提要带什么」，而不是照习惯列一串证件。
+  </div>
+
+  <h3>场景四 · 信息不全与不是通知</h3>
+  <div class="box small">
+    <strong>输入 A：</strong>社区将于 10 月 29 日上午 9 点组织志愿者清理小区绿化带，欢迎居民报名参加。<br>
+    <strong>输出 A：</strong>地点只还原到「小区绿化带」，并在待确认问题里追问「活动在小区哪个具体位置集合」「通过什么方式报名」；报名截止标为「通知未说明」。<br><br>
+    <strong>输入 B：</strong>今天天气不错，我们下午去打球吧，顺便一起吃个饭。<br>
+    <strong>输出 B：</strong>判定为「这看起来不是一条通知」，不输出任何事实，也不生成一张看起来完整的行动卡。
+  </div>
+
+  <h3>可延伸的公共服务场景</h3>
+  <p class="small">同一套「事实 + 状态 + 引文」结构可复用到：居委会选举公告、疫苗/体检安排、水电气检修、老年卡年审、补贴申领、活动室开放时间调整。核心不是某一类通知，而是<strong>把公文式表述转成可核对的白话行动</strong>。</p>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 9 页</span></div>
+</section>
+
+<!-- ================= P9 测试、局限与方向 ================= -->
+<section class="page">
+  <p class="kicker">07　验证情况、局限与孵化方向</p>
+  <h1>做过的测试，和还没做到的事</h1>
+  <div class="rule"></div>
+
+  <h3>已完成的测试（真实执行，可复现）</h3>
+  <table class="small">
+    <tr><th style="width:30%">项目</th><th style="width:18%">结果</th><th>说明</th></tr>
+    <tr><td>12 条通知用例</td><td><strong>12 / 12 通过</strong></td><td>8 条正常通知 + 4 条边界（缺地点、无发布日期的相对时间、无更新关系的时间冲突、非通知文本）。用例与参考答案在运行产品前写好</td></tr>
+    <tr><td>页面行为测试 10 项</td><td><strong>10 / 10 通过</strong></td><td>空白输入、超长不截断、提示注入、连续提交、过期响应、复制降级、HTML 注入渲染、360/390px 布局、触控尺寸、服务不可用不伪造答案</td></tr>
+    <tr><td>单次响应耗时</td><td>1.8—7.4 秒</td><td>12 次调用实测区间，中位数约 4.7 秒；页面超时阈值 45 秒</td></tr>
+    <tr><td>校验重试链路</td><td>触发 1 次并成功</td><td>B2 首次输出未过校验，自动重试后通过</td></tr>
+    <tr><td>窄屏适配</td><td>通过</td><td>360px 与 390px 视口下文档宽度 = 视口宽度，无横向滚动</td></tr>
+  </table>
+  <p class="small muted">测试环境：Windows 11 + Microsoft Edge（无头浏览器自动化），视口 390×844；测试对象为线上真实版本 v1.0.0，走真实模型调用。详细记录见《09_明白办_测试报告.pdf》。通过这 12 条只说明「在当前测试集上符合预期」，不代表任何输入都不会出错。</p>
+
+  <h3>尚未做到 / 已知局限</h3>
+  <ul class="small">
+    <li><strong>未开展目标用户效果验证。</strong>尚无真人试用数据，文中不出现任何效果百分比或满意度结论。</li>
+    <li><strong>未做真机测试。</strong>当前仅为桌面浏览器模拟手机尺寸与触控，不等于在长辈的真实手机上验证过。</li>
+    <li><strong>相对日期不换算。</strong>「明天」「周五」原样保留并提示确认，因为缺少可靠发布日期时换算极易出错；这类通知仍需用户自己核对日历。</li>
+    <li><strong>校验是机械检查。</strong>能发现引文对不上、结构缺字段，不能保证「引文真实但理解错了」这种情况。因此结果页始终提示以原文为准。</li>
+    <li><strong>仅支持文字。</strong>不支持图片、截图、语音输入；长辈收到的多是图片通知，这是当前最大使用门槛。</li>
+    <li><strong>依赖联网与模型服务。</strong>网络差或配额用尽时会失败（页面会明确说明，不会给假答案）。</li>
+  </ul>
+
+  <h3>孵化方向</h3>
+  <ul class="small">
+    <li>接入社区公众号/网格群的消息入口，减少「复制粘贴」这一步。</li>
+    <li>增加图片通知识别（OCR），覆盖长辈真正的使用场景。</li>
+    <li>为社区工作者提供「写通知时自查」模式：发布前检测时间/地点/材料是否缺失。</li>
+    <li>与社区养老服务站合作，做小规模真人对照测试，验证「原文依据」是否真的提升信任与完成率。</li>
+  </ul>
+
+  <h3>AIGC 与素材来源声明</h3>
+  <p class="small">本产品的界面代码、系统提示词、数据结构与本文档，由项目组在 AI 编程助手（WorkBuddy，开发执行模型 DeepSeek V4.1 Flash）辅助下完成；产品运行时由大语言模型 DeepSeek-V4.1-Flash 实时生成行动卡。文中截图取自本产品真实运行界面；标注「虚构演示样例」的示例通知为本项目编写，不是任何真实社区的公告。详见《12_明白办_工具素材来源与原创记录.md》。</p>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.0.0</span><span>2026-10-23　第 10 页</span></div>
+</section>
+
+</body>
+</html>

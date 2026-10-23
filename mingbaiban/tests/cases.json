@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "note": "参考答案在运行产品之前、仅依据通知原文人工撰写。每条用例先定「必须出现」和「绝不能出现」的内容，再运行产品比对。模型输出不作为参考答案。",
+    "writtenAt": "2026-10-23",
+    "writtenBeforeRunning": true,
+    "appVersion": "1.0.0",
+    "rules": {
+      "no_invention": "通知未写的时间/地点/对象/材料/费用/报名方式，产品不得补全",
+      "evidence_backed": "每个事实项的引文必须能在原文中找到",
+      "relative_date": "无可靠发布日期的相对时间必须原样保留，第一版不做换算",
+      "conflict": "无更新关系的时间冲突必须并列保留并标为冲突"
+    }
+  },
+  "cases": [
+    {
+      "id": "N1",
+      "kind": "normal",
+      "name": "固定基准A·手机使用指导（含仅限已报名限制）",
+      "input": "2026年10月26日9:00—11:00，社区服务中心开展手机使用指导，仅限已报名居民参加，请携带本人手机。",
+      "reference": "这是一条活动通知。时间：2026年10月26日9:00—11:00（活动开始，明确写出）。地点：社区服务中心（明确写出）。对象：仅限已报名居民（明确写出，必须保留这个限制）。准备：本人手机（明确写出）。报名截止、报名方式、具体房间、联系电话：原文均未说明，不得编造。绝不能出现：身份证、医保卡、户口本、联系人电话、具体街道门牌号。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "status", "path": "audience", "expect": "stated" },
+        { "type": "contains", "path": "audience.value", "any": ["已报名"] },
+        { "type": "status", "path": "location", "expect": "stated" },
+        { "type": "contains", "path": "location.value", "any": ["社区服务中心"] },
+        { "type": "purposeStatus", "purpose": "活动开始", "expect": "stated" },
+        { "type": "prepContains", "any": ["手机"] },
+        { "type": "forbiddenGlobal", "values": ["身份证", "医保卡", "户口本", "报名截止时间"] }
+      ]
+    },
+    {
+      "id": "N2",
+      "kind": "normal",
+      "name": "固定基准C·报名截止与活动开始分离",
+      "input": "请于2026年10月25日17:00前报名，活动于10月28日9:00在社区服务中心开始。",
+      "reference": "两个时间必须分开：报名截止=2026年10月25日17:00前；活动开始=10月28日9:00。地点：社区服务中心。报名方式：未说明（不能编造线上/微信/电话报名）。绝不能出现：身份证、报名费、报名链接、二维码。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "purposeStatus", "purpose": "报名截止", "expect": "stated" },
+        { "type": "purposeContains", "purpose": "报名截止", "any": ["10月25日", "17:00"] },
+        { "type": "purposeStatus", "purpose": "活动开始", "expect": "stated" },
+        { "type": "purposeContains", "purpose": "活动开始", "any": ["10月28日", "9:00"] },
+        { "type": "purposesNotMerged" },
+        { "type": "forbiddenGlobal", "values": ["微信报名", "扫码", "报名链接", "报名费"] }
+      ]
+    },
+    {
+      "id": "N3",
+      "kind": "normal",
+      "name": "固定基准B·相对日期必须原样保留",
+      "input": "请居民周五上午来参加手机课堂，带上自己的手机。",
+      "reference": "时间只能保留「周五上午」，不得换算成任何具体日期（原文没有发布日期）。地点：未说明。对象：居民。准备：手机。绝不能出现：2026年、10月、11月、任何「10月X日」形态的具体日期、任何编造的地点（如活动室、服务中心、居委会）、报名方式。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "timesContainAny", "any": ["周五"] },
+        { "type": "status", "path": "location", "expect": "missing" },
+        { "type": "prepContains", "any": ["手机"] },
+        { "type": "forbiddenGlobal", "values": ["2026", "10月", "11月", "9月", "活动室", "服务中心", "居委会"] }
+      ]
+    },
+    {
+      "id": "N4",
+      "kind": "normal",
+      "name": "电梯检修·无材料无费用",
+      "input": "通知\n3号楼各位住户：\n因电梯年度检修，3号楼1单元电梯将于本周四上午8点至下午5点停用，检修期间请走楼梯。\n如有变动，另行通知。\n物业服务中心",
+      "reference": "时间：本周四上午8点至下午5点（相对日期原样保留）。地点：3号楼1单元电梯。对象：3号楼住户。准备：原文没有要求携带任何材料，不得编造。绝不能出现：身份证、费用/缴费、维修基金、业主大会、具体日期换算。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "contains", "path": "location.value", "any": ["3号楼"] },
+        { "type": "timesContainAny", "any": ["本周四", "周四"] },
+        { "type": "forbiddenGlobal", "values": ["身份证", "缴费", "维修基金", "业主大会", "2026"] }
+      ]
+    },
+    {
+      "id": "N5",
+      "kind": "normal",
+      "name": "老年助餐登记·材料与费用与资格",
+      "input": "关于老年助餐服务登记的通知\n辖区居民：\n社区食堂下周起为60周岁以上居民提供助餐服务，每餐12元。\n需要用餐的居民请携带身份证和户口本，于10月28日前到社区居委会登记。\n登记时间为工作日上午9:00—11:30。\n社区居委会",
+      "reference": "对象：60周岁以上居民（明确写出）。费用：每餐12元（明确写出，不得说免费）。材料：身份证、户口本（明确写出，不多不少）。登记截止：10月28日前。登记时间：工作日上午9:00—11:30。服务开始：下周起（相对时间原样保留）。地点：社区居委会。绝不能出现：免费、送餐上门、联系电话、补贴金额。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "contains", "path": "audience.value", "any": ["60"] },
+        { "type": "prepContainsAll", "values": ["身份证", "户口本"] },
+        { "type": "purposeStatus", "purpose": "报名截止", "expect": "stated" },
+        { "type": "purposeContains", "purpose": "报名截止", "any": ["10月28日"] },
+        { "type": "forbiddenGlobal", "values": ["免费", "送餐上门", "补贴", "联系电话"] }
+      ]
+    },
+    {
+      "id": "N6",
+      "kind": "normal",
+      "name": "停水通知·提前储水",
+      "input": "停水通知\n因管道抢修，本小区将于10月24日8:00至18:00停水，请提前储水。给您带来不便，敬请谅解。\n物业",
+      "reference": "时间：10月24日8:00至18:00。范围：本小区。准备/要求：提前储水（明确写出）。绝不能出现：送水车、每户限购、具体楼栋、恢复供水时间点。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "timesContainAny", "any": ["10月24日"] },
+        { "type": "prepContains", "any": ["储水"] },
+        { "type": "forbiddenGlobal", "values": ["送水车", "限购", "身份证"] }
+      ]
+    },
+    {
+      "id": "N7",
+      "kind": "normal",
+      "name": "健康讲座·电话报名与免费",
+      "input": "健康讲座通知\n社区卫生服务站于10月30日下午2:30在社区活动中心举办高血压防治讲座，免费参加。\n因场地有限，请提前电话报名，报名电话：8888-1234。",
+      "reference": "时间：10月30日下午2:30。地点：社区活动中心。对象：居民。费用：免费。报名方式：电话报名，号码 8888-1234（必须保留原号码，不得改写）。绝不能出现：空腹、血糖、带医保卡、体检、诊疗建议。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "contains", "path": "location.value", "any": ["活动中心"] },
+        { "type": "globalContainsAny", "any": ["8888-1234", "88881234"] },
+        { "type": "forbiddenGlobal", "values": ["空腹", "血糖", "医保卡", "体检", "诊断"] }
+      ]
+    },
+    {
+      "id": "N8",
+      "kind": "normal",
+      "name": "体检通知·分楼栋时段与空腹要求",
+      "input": "关于开展居民健康体检的通知\n各位居民：\n本次体检按楼栋分时段进行：1号楼10月27日上午8:00，2号楼10月27日下午13:30。\n地点：社区卫生服务中心一楼。\n请携带身份证，空腹前往。",
+      "reference": "时间：按楼栋分两段（1号楼10月27日上午8:00；2号楼10月27日下午13:30），两段都要保留（可放在同一条时间项里，但不得丢掉任一楼栋）。地点：社区卫生服务中心一楼。准备：身份证、空腹。绝不能出现：体检费用、预约电话、检查项目清单。",
+      "referenceRevision": "首轮判据要求 times 至少 2 条，属于结构层面的过严要求；原文两段时段被合并进一条时间项但完整保留、引文逐字一致，信息未丢失。改为检查两段时段是否都在（由 timesCountAtLeast 改为 timesContainAll）。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "timesContainAll", "values": ["1号楼", "2号楼", "8:00", "13:30"] },
+        { "type": "globalContainsAll", "values": ["1号楼", "2号楼"] },
+        { "type": "prepContainsAll", "values": ["身份证", "空腹"] },
+        { "type": "forbiddenGlobal", "values": ["体检费", "预约电话", "血常规", "B超"] }
+      ]
+    },
+    {
+      "id": "B1",
+      "kind": "boundary",
+      "name": "边界·缺少地点",
+      "input": "社区将于10月29日上午9点组织志愿者清理小区绿化带，欢迎居民报名参加。",
+      "reference": "本条难点是「集合地点未说明」。原文只写了活动内容是清理小区绿化带，没有写集合点、报名方式、报名截止。允许把「小区绿化带」作为活动地点（它逐字出现在原文），但必须提示集合地点不明确。报名方式、报名截止：未说明。绝不能出现：广场、会议室、服务中心、居委会门口等原文没有的地点；也不能编造报名电话。",
+      "referenceRevision": "首轮判据要求 location 必须为 missing，属于判错：原文含「清理小区绿化带」，把小区绿化带作为活动地点不算编造。改为两条更准确的判据——地点要么 missing，要么必须是原文中逐字出现的片段；同时必须就集合点/报名方式提出待确认问题。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "locationGroundedOrMissing" },
+        { "type": "asksAbout", "any": ["集合", "具体位置", "报名方式", "报名截止"] },
+        { "type": "forbiddenGlobal", "values": ["广场", "会议室", "服务中心", "居委会", "门口"] }
+      ]
+    },
+    {
+      "id": "B2",
+      "kind": "boundary",
+      "name": "边界·无发布日期的相对时间",
+      "input": "明天上午九点，社区在活动室发放老年优待证，请带好身份证。",
+      "reference": "时间：明天上午九点 → 原样保留，不得换算为任何具体日期。地点：活动室（明确写出）。准备：身份证。绝不能出现：任何「2026年X月X日」「10月24日」形态的换算结果。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "timesContainAny", "any": ["明天"] },
+        { "type": "forbiddenGlobal", "values": ["2026", "10月2", "10月3", "11月"] },
+        { "type": "contains", "path": "location.value", "any": ["活动室"] }
+      ]
+    },
+    {
+      "id": "B3",
+      "kind": "boundary",
+      "name": "边界·无更新关系的时间冲突",
+      "input": "活动定于10月26日上午9点开始。\n活动定于10月26日下午3点开始，请准时参加。",
+      "reference": "同一活动的开始时间出现两个互相矛盾的表述，且原文没有「改为」「以此为准」这类更新关系 → 必须并列保留两个时间并标为冲突（conflict），或至少并列列出两个不同时间并提示确认。绝不能只保留其中一个而不提示。",
+      "checks": [
+        { "type": "docStatus", "expect": "notice" },
+        { "type": "conflictOrBothTimes" },
+        { "type": "globalContainsAll", "values": ["9点", "3点"] }
+      ]
+    },
+    {
+      "id": "B4",
+      "kind": "boundary",
+      "name": "边界·非通知文本",
+      "input": "今天天气不错，我们下午去打球吧，顺便一起吃个饭。",
+      "reference": "这不是通知 → document_status 必须是 not_notice，不得输出任何事实项，不得生成一张看起来完整的行动卡。",
+      "checks": [
+        { "type": "docStatus", "expect": "not_notice" }
+      ]
+    }
+  ]
+}

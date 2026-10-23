@@ -1,0 +1,283 @@
+LLM status: {"ready":true,"reason":""}
+models: {
+  "picked": {
+    "id": "deepseek-v4.1-flash",
+    "name": "Deepseek-V4.1-Flash",
+    "vendor": "f",
+    "descriptionZh": "已更新至 V4.1-Flash-1017最新版，支持1M上下文窗口，原生多模态",
+    "descriptionEn": "DeepSeek flagship model, supporting 1M context window, native multimodal model",
+    "contextWindow": {
+      "defaultLength": 300000,
+      "supportedLengths": [
+        300000,
+        600000,
+        1000000
+      ]
+    },
+    "maxInputTokens": 1000000,
+    "maxOutputTokens": 128000,
+    "enabled": true,
+    "credits": "x0.11 credits",
+    "maxAllowedSize": 1000000,
+    "supportsImages": true,
+    "supportsToolCall": true,
+    "supportsReasoning": true,
+    "onlyReasoning": true,
+    "reasoning": {
+      "defaultEffort": "high",
+      "supportedEfforts": [
+        "low",
+        "high",
+        "max"
+      ],
+      "summary": "auto",
+      "canDisableThinking": true
+    },
+    "temperature": 1
+  },
+  "ids": [
+    {
+      "id": "auto",
+      "name": "Auto"
+    },
+    {
+      "id": "hy3",
+      "name": "Hy3"
+    },
+    {
+      "id": "hy3-x",
+      "name": "Hy3"
+    },
+    {
+      "id": "hy4-preview",
+      "name": "Hy4 preview"
+    },
+    {
+      "id": "hy4-preview-x",
+      "name": "Hy4 preview"
+    },
+    {
+      "id": "default",
+      "name": "Default"
+    },
+    {
+      "id": "glm-5v-turbo",
+      "name": "GLM-5v-Turbo"
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3"
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3-Flash"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "GLM-5.2"
+    },
+    {
+      "id": "glm-5.1",
+      "name": "GLM-5.1"
+    },
+    {
+      "id": "glm-5.0",
+      "name": "GLM-5.0"
+    },
+    {
+      "id": "glm-4.7",
+      "name": "GLM-4.7"
+    },
+    {
+      "id": "glm-4.6",
+      "name": "GLM-4.6"
+    },
+    {
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax-M3"
+    },
+    {
+      "id": "minimax-m2.5",
+      "name": "MiniMax-M2.5"
+    },
+    {
+      "id": "kimi-k3-1",
+      "name": "Kimi-K3"
+    },
+    {
+      "id": "kimi-k2.8-preview",
+      "name": "Kimi-K2.8-Preview"
+    },
+    {
+      "id": "kimi-k2.7",
+      "name": "Kimi-K2.7-Code"
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi-K2.6"
+    },
+    {
+      "id": "kimi-k2.5",
+      "name": "Kimi-K2.5"
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "name": "Kimi-K2-Thinking"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek-V4-Flash"
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "Deepseek-V4.1-Flash"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek-V4-Pro"
+    },
+    {
+      "id": "deepseek-v3-2-volc",
+      "name": "DeepSeek-V3.2"
+    },
+    {
+      "id": "hunyuan-2.0-thinking",
+      "name": "Hunyuan-2.0-Thinking"
+    },
+    {
+      "id": "hunyuan-chat",
+      "name": "Hunyuan-Turbos"
+    },
+    {
+      "id": "hunyuan-image-alpha",
+      "name": "Hunyuan Image Alpha"
+    },
+    {
+      "id": "space-bunny",
+      "name": "Space-Bunny"
+    },
+    {
+      "id": "step-5-preview",
+      "name": "Step-5-Preview"
+    },
+    {
+      "id": "mimo-v2.6-pro",
+      "name": "Xiaomi MiMo-V2.6-Pro"
+    },
+    {
+      "id": "minimax-m3.1-flash",
+      "name": "MiniMax-M3.1-Flash"
+    }
+  ]
+}
+elapsed ms: 4816
+result: {
+  "ok": true,
+  "phase": "done",
+  "data": {
+    "document_status": "notice",
+    "document_status_reason": "这是一则社区图书室开放时间调整和还书的通知",
+    "summary": "社区图书室从11月3日起只在每周二、周四下午2点到5点开放，已借的书要在11月10日前还到一楼服务台。",
+    "audience": {
+      "value": "已经借了图书的居民，以及要去社区图书室借书的居民",
+      "status": "unclear",
+      "evidence": [
+        "已借图书请于11月10日前归还至一楼服务台"
+      ]
+    },
+    "times": [
+      {
+        "purpose": "服务时间",
+        "value": "自11月3日起，每周二、周四下午2:00—5:00开放，其余时间暂停借阅",
+        "status": "stated",
+        "evidence": [
+          "社区图书室自11月3日起改为每周二、周四下午2:00—5:00开放，其余时间暂停借阅"
+        ]
+      },
+      {
+        "purpose": "其他时间",
+        "value": "11月10日之前把已借图书还到一楼服务台",
+        "status": "stated",
+        "evidence": [
+          "已借图书请于11月10日前归还至一楼服务台"
+        ]
+      }
+    ],
+    "location": {
+      "value": "一楼服务台（还书地点）；社区图书室（开放地点）",
+      "status": "stated",
+      "evidence": [
+        "归还至一楼服务台",
+        "社区图书室"
+      ]
+    },
+    "preparation": [
+      {
+        "value": "已借的图书",
+        "status": "stated",
+        "evidence": [
+          "已借图书"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "required",
+        "value": "在11月10日之前，把已经借的书还到一楼服务台",
+        "evidence": [
+          "已借图书请于11月10日前归还至一楼服务台"
+        ]
+      },
+      {
+        "type": "suggested",
+        "value": "想去图书室的话，请挑每周二、周四下午2点到5点去，别的时间不开放借阅",
+        "evidence": [
+          "每周二、周四下午2:00—5:00开放，其余时间暂停借阅"
+        ]
+      }
+    ],
+    "questions": [
+      "11月3日、11月10日分别是哪一天，是今年还是明年？",
+      "11月10日还书，是当天下午5点前还是当天几点前？",
+      "11月3日之前，图书室还按原来的时间开放吗？"
+    ],
+    "warnings": [
+      "通知没写发布日期，11月3日和11月10日请自己核对是哪一天。",
+      "除每周二、周四下午2点到5点外，其余时间不能借阅。"
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一则社区图书室开放时间调整和还书的通知\",\n  \"summary\": \"社区图书室从11月3日起只在每周二、周四下午2点到5点开放，已借的书要在11月10日前还到一楼服务台。\",\n  \"audience\": {\n    \"value\": \"已经借了图书的居民，以及要去社区图书室借书的居民\",\n    \"status\": \"unclear\",\n    \"evidence\": [\"已借图书请于11月10日前归还至一楼服务台\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"服务时间\",\n      \"value\": \"自11月3日起，每周二、周四下午2:00—5:00开放，其余时间暂停借阅\",\n      \"status\": \"stated\",\n      \"evidence\": [\"社区图书室自11月3日起改为每周二、周四下午2:00—5:00开放，其余时间暂停借阅\"]\n    },\n    {\n      \"purpose\": \"其他时间\",\n      \"value\": \"11月10日之前把已借图书还到一楼服务台\",\n      \"status\": \"stated\",\n      \"evidence\": [\"已借图书请于11月10日前归还至一楼服务台\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"一楼服务台（还书地点）；社区图书室（开放地点）\",\n    \"status\": \"stated\",\n    \"evidence\": [\"归还至一楼服务台\", \"社区图书室\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"已借的图书\",\n      \"status\": \"stated\",\n      \"evidence\": [\"已借图书\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"在11月10日之前，把已经借的书还到一楼服务台\",\n      \"evidence\": [\"已借图书请于11月10日前归还至一楼服务台\"]\n    },\n    {\n      \"type\": \"suggested\",\n      \"value\": \"想去图书室的话，请挑每周二、周四下午2点到5点去，别的时间不开放借阅\",\n      \"evidence\": [\"每周二、周四下午2:00—5:00开放，其余时间暂停借阅\"]\n    }\n  ],\n  \"questions\": [\n    \"11月3日、11月10日分别是哪一天，是今年还是明年？\",\n    \"11月10日还书，是当天下午5点前还是当天几点前？\",\n    \"11月3日之前，图书室还按原来的时间开放吗？\"\n  ],\n  \"warnings\": [\n    \"通知没写发布日期，11月3日和11月10日请自己核对是哪一天。\",\n    \"除每周二、周四下午2点到5点外，其余时间不能借阅。\"\n  ]\n}",
+  "model": {
+    "id": "deepseek-v4.1-flash",
+    "name": "Deepseek-V4.1-Flash",
+    "vendor": "f",
+    "descriptionZh": "已更新至 V4.1-Flash-1017最新版，支持1M上下文窗口，原生多模态",
+    "descriptionEn": "DeepSeek flagship model, supporting 1M context window, native multimodal model",
+    "contextWindow": {
+      "defaultLength": 300000,
+      "supportedLengths": [
+        300000,
+        600000,
+        1000000
+      ]
+    },
+    "maxInputTokens": 1000000,
+    "maxOutputTokens": 128000,
+    "enabled": true,
+    "credits": "x0.11 credits",
+    "maxAllowedSize": 1000000,
+    "supportsImages": true,
+    "supportsToolCall": true,
+    "supportsReasoning": true,
+    "onlyReasoning": true,
+    "reasoning": {
+      "defaultEffort": "high",
+      "suppo
+--- console logs ---
+error: Failed to load resource: the server responded with a status of 404 ()

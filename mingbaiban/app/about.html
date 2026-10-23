@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于明白办 · 使用说明</title>
+<link rel="stylesheet" href="./css/app.css">
+<style>
+  .doc { background:#fff; border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(20,40,70,.07); }
+  .doc h1 { font-size:26px; margin:0 0 6px; }
+  .doc h2 { font-size:21px; margin:26px 0 10px; }
+  .doc p, .doc li { font-size:18px; color:#3a4149; line-height:1.8; }
+  .doc ul { padding-left:22px; }
+  .doc .k { color:#14539a; font-weight:700; }
+  .back { display:inline-block; margin-top:24px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">明</span>
+      <span class="brand-text"><strong>明白办</strong><small>收到通知之后，下一步更明白</small></span>
+    </div>
+    <a class="btn btn-ghost" href="./index.html">返回</a>
+  </div>
+</header>
+<main>
+  <div class="doc">
+    <h1>关于「明白办」</h1>
+    <p>明白办是一个帮您读懂社区通知的小工具。把通知原文贴进去，它会用大白话告诉您：这件事是什么、谁能参加、什么时候、在哪里、要带什么、下一步做什么，以及哪些地方通知其实没说清。</p>
+
+    <h2>怎么用</h2>
+    <ul>
+      <li>把社区发的通知文字复制下来，贴进输入框。</li>
+      <li>点「帮我看懂」，等 5—20 秒。</li>
+      <li>看行动卡。每一项后面有「看原文依据」，可以展开对照通知原句。</li>
+      <li>要带的东西、要做的事可以打勾。打勾只是提醒自己，不代表已经报名。</li>
+      <li>点「复制整张行动卡」，可以发给家人，或者存到手机备忘录。</li>
+    </ul>
+
+    <h2>它会怎么做，不会怎么做</h2>
+    <ul>
+      <li><span class="k">会</span>：逐句读通知，区分「报名截止」和「活动开始」，指出通知里没写的东西。</li>
+      <li><span class="k">不会</span>：不会替您补上通知里没有的信息。通知没写地点，它就写「通知未说明」。</li>
+      <li><span class="k">不会</span>：不会替您报名、预约或办理任何事。</li>
+      <li><span class="k">不会</span>：不做医疗建议、不做政策资格判断。</li>
+    </ul>
+
+    <h2>关于 AI</h2>
+    <p>行动卡由大语言模型实时生成，不是提前写好的固定答案。生成后会经过一层自动检查：如果模型给出的「原文依据」在通知里找不到，或者结构不完整，页面不会显示行动卡，而是提示重试，避免给您一张编造内容的卡片。</p>
+    <p>这层检查只能发现「引文对不上」这类问题，不能保证理解百分百正确。重要的事情，请以通知原文和社区工作人员的说法为准。</p>
+
+    <h2>隐私</h2>
+    <p>您贴进来的通知文字会发送到模型服务用于生成这一次的结果。本产品不建立通知历史数据库，不在服务器保存您的通知原文，也不要求登录。请不要把身份证号、银行卡号、手机号等个人敏感信息贴进来。</p>
+
+    <h2>这是参赛演示版本</h2>
+    <p>明白办是 2026 年 iCAN 大学生创新创业大赛 · 快手 AI 未来创造者挑战赛的参赛作品，方向为「AI 产品实现」。页面中的三条样例通知为本项目编写的虚构演示材料，不是任何真实社区的公告。目前尚未开展面向目标用户的效果验证，实际使用效果有待检验。</p>
+
+    <a class="btn btn-primary back" href="./index.html">回去试一条通知</a>
+  </div>
+</main>
+</body>
+</html>

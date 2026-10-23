@@ -1,0 +1,294 @@
+{
+  "product": "明白办 — 面向长辈的 AI 社区通知行动助手",
+  "version": "1.0.0",
+  "generatedAt": "2026-10-23T15:47:28+08:00",
+  "onlineUrl": "https://mingbaiban-42482.app.workbuddy.host/",
+  "applicationId": "wbapp_iiPVrUTJJSCc0MurWICMde",
+  "runtimeModel": {
+    "id": "deepseek-v4.1-flash",
+    "name": "Deepseek-V4.1-Flash",
+    "channel": "WorkBuddy 云服务免密钥通道（浏览器直连数据面，Origin 校验）"
+  },
+  "devModel": "DeepSeek V4.1 Flash (WorkBuddy 开发执行模型)",
+  "status": {
+    "A_fileDelivery": "完成",
+    "B_productRuntime": "达成约定范围（12/12 通知用例、10/10 页面行为测试，真实模型调用）",
+    "C_competitionSubmission": "未执行 — 比赛尚未提交（需人工发布快手视频并完成官网报名）"
+  },
+  "files": [
+    {
+      "name": "00_开始使用与交付状态.md",
+      "path": "mingbaiban/delivery/00_开始使用与交付状态.md",
+      "bytes": 4683,
+      "sha256": "734509cf7e67da0c85ba615a0ab15d090123bb72a6f3150d71b63055a08a58d9",
+      "purpose": "交付入口与三项状态",
+      "requirementRefs": [
+        "R2",
+        "R4",
+        "I-*"
+      ],
+      "verifyStatus": "已生成并打开确认非空",
+      "delivered": true
+    },
+    {
+      "name": "01_明白办_产品说明书.pdf",
+      "path": "mingbaiban/delivery/01_明白办_产品说明书.pdf",
+      "bytes": 1321645,
+      "sha256": "62439f4c4c4b9d7b94422e8803b4c8de8e8075ed797e97b41cbc8bc2331a55d4",
+      "purpose": "官方要求的产品说明书（10 页，含六项）",
+      "requirementRefs": [
+        "R2-2"
+      ],
+      "verifyStatus": "已用 pypdf 提取全文核对六项齐全；用 pymupdf 逐页渲染检查无溢出",
+      "delivered": true
+    },
+    {
+      "name": "02_明白办_产品说明书_可编辑源文件.docx",
+      "path": "mingbaiban/delivery/02_明白办_产品说明书_可编辑源文件.docx",
+      "bytes": 391472,
+      "sha256": "e959896fbd2123174529d88f3465b14d4ca86549c40d072edf2df80337a3457c",
+      "purpose": "说明书可编辑稿",
+      "requirementRefs": [
+        "R2-2"
+      ],
+      "verifyStatus": "已用 python-docx 回读，120 段、10 表",
+      "delivered": true
+    },
+    {
+      "name": "03_明白办_产品演示.mp4",
+      "path": "mingbaiban/delivery/03_明白办_产品演示.mp4",
+      "bytes": 5195161,
+      "sha256": "ed83f76813efe18f926cbffb28902c142a4579bbcd9ed1933777c5dec35874a2",
+      "purpose": "官方要求的演示视频（110 秒）",
+      "requirementRefs": [
+        "R2-1"
+      ],
+      "verifyStatus": "已用 ffmpeg 读取：110.07 秒 / 1080x1920 / h264 / 30fps；抽帧检查首中尾",
+      "delivered": true
+    },
+    {
+      "name": "04_明白办_视频字幕.srt",
+      "path": "mingbaiban/delivery/04_明白办_视频字幕.srt",
+      "bytes": 1157,
+      "sha256": "7bbcbfd8cf5cf68a2e9a6ac44404e4aeb85421973c3783d099633818941c4540",
+      "purpose": "视频字幕",
+      "requirementRefs": [
+        "R2-1",
+        "R2-5"
+      ],
+      "verifyStatus": "由同一时间数据生成，13 条，与成片时间码一致",
+      "delivered": true
+    },
+    {
+      "name": "05_明白办_视频脚本与分镜.md",
+      "path": "mingbaiban/delivery/05_明白办_视频脚本与分镜.md",
+      "bytes": 5124,
+      "sha256": "4dcf9551183f7d35a93e2ac5b17f00446c99c92ca55f1bac8c759e663e3aeea3",
+      "purpose": "视频脚本与分镜（可编辑）",
+      "requirementRefs": [
+        "R2-1"
+      ],
+      "verifyStatus": "已生成并打开确认非空",
+      "delivered": true
+    },
+    {
+      "name": "06_明白办_快手发布文案.txt",
+      "path": "mingbaiban/delivery/06_明白办_快手发布文案.txt",
+      "bytes": 4703,
+      "sha256": "942d0926b6acd38286e08355b04f4960b6d7a8cc474170e11d9a30547c6c44f3",
+      "purpose": "快手发布文案（含双话题与 AI 说明）",
+      "requirementRefs": [
+        "R2-1",
+        "R2-5"
+      ],
+      "verifyStatus": "已生成并打开确认非空",
+      "delivered": true
+    },
+    {
+      "name": "07_明白办_视频封面.png",
+      "path": "mingbaiban/delivery/07_明白办_视频封面.png",
+      "bytes": 369957,
+      "sha256": "d5756c41721f9d456a6dad0d1fd3827ca96ee0ca3514bda08c4e87272149e8ae",
+      "purpose": "视频封面",
+      "requirementRefs": [
+        "R2-1"
+      ],
+      "verifyStatus": "与成片首帧同源",
+      "delivered": true
+    },
+    {
+      "name": "08_明白办_在线体验与运行说明.pdf",
+      "path": "mingbaiban/delivery/08_明白办_在线体验与运行说明.pdf",
+      "bytes": 258405,
+      "sha256": "68405e7f91888b9cebabe8554868f29bdbe6179092a3984efb23b67514d84d24",
+      "purpose": "在线体验、运行与源码说明",
+      "requirementRefs": [
+        "R2-3",
+        "U-2"
+      ],
+      "verifyStatus": "3 页，含在线地址与源码结构",
+      "delivered": true
+    },
+    {
+      "name": "09_明白办_测试报告.pdf",
+      "path": "mingbaiban/delivery/09_明白办_测试报告.pdf",
+      "bytes": 360185,
+      "sha256": "ac72ef97ed876d7eae9151b93b37004c9c722c2beb4504ce7a57965c0869035b",
+      "purpose": "技术测试报告",
+      "requirementRefs": [
+        "I-9"
+      ],
+      "verifyStatus": "4 页，数据直接读取测试记录 JSON，非手抄",
+      "delivered": true
+    },
+    {
+      "name": "10_明白办_源码.zip",
+      "path": "mingbaiban/delivery/10_明白办_源码.zip",
+      "bytes": 2155141,
+      "sha256": "2017081060e32025c70a8d28ef9b1495ceb52fb04461abd28c6e43460405da27",
+      "purpose": "完整源码包",
+      "requirementRefs": [
+        "R2-3",
+        "U-4"
+      ],
+      "verifyStatus": "已解包校验：zip.testzip() 通过，关键文件齐全",
+      "delivered": true
+    },
+    {
+      "name": "11_明白办_技术流程图.png",
+      "path": "mingbaiban/delivery/11_明白办_技术流程图.png",
+      "bytes": 360019,
+      "sha256": "90c598faf86ea9e99a817fbfc851c456dcfb78363e0b44135d67b13b5e5e5cf7",
+      "purpose": "技术流程图",
+      "requirementRefs": [
+        "R2-3",
+        "U-4"
+      ],
+      "verifyStatus": "1600x2020，依据实际实现绘制",
+      "delivered": true
+    },
+    {
+      "name": "12_明白办_工具素材来源与原创记录.md",
+      "path": "mingbaiban/delivery/12_明白办_工具素材来源与原创记录.md",
+      "bytes": 7048,
+      "sha256": "2f0e8776f1638fa07b4af7d964ca53baca2ade5a596455d82e74ea7b71309e9f",
+      "purpose": "AI 参与与素材授权记录",
+      "requirementRefs": [
+        "R2-5"
+      ],
+      "verifyStatus": "已生成并打开确认非空",
+      "delivered": true
+    },
+    {
+      "name": "13_明白办_报名字段与提交核对表.md",
+      "path": "mingbaiban/delivery/13_明白办_报名字段与提交核对表.md",
+      "bytes": 5213,
+      "sha256": "6b013152b2762699db5012da5d1c23fbf623c7e2aab2ca4ca5a8ea4adab27f63",
+      "purpose": "报名字段与提交核对",
+      "requirementRefs": [
+        "R2-4",
+        "R2-7"
+      ],
+      "verifyStatus": "已生成并打开确认非空",
+      "delivered": true
+    },
+    {
+      "name": "14_明白办_交付清单.json",
+      "path": "mingbaiban/delivery/14_明白办_交付清单.json",
+      "bytes": 10608,
+      "sha256": null,
+      "purpose": "本清单",
+      "requirementRefs": [
+        "-"
+      ],
+      "verifyStatus": "本清单自身，哈希自引用故略去",
+      "delivered": true
+    },
+    {
+      "name": "15_明白办_用户试用材料/00_说明_这是空白模板.md",
+      "path": "mingbaiban/delivery/15_明白办_用户试用材料/00_说明_这是空白模板.md",
+      "bytes": 2131,
+      "sha256": "10f2c0eb8001088d0c9c094a43ebaee89fe96bb7b024e0c6a34cc74915965802",
+      "purpose": "试用材料说明（空白模板）",
+      "requirementRefs": [
+        "U-5"
+      ],
+      "verifyStatus": "已生成",
+      "delivered": true
+    },
+    {
+      "name": "15_明白办_用户试用材料/01_访谈提纲.md",
+      "path": "mingbaiban/delivery/15_明白办_用户试用材料/01_访谈提纲.md",
+      "bytes": 2298,
+      "sha256": "0f9aff9b75e478b8955560a1568ab48c62a7db894e20d05dda0a605ca8a66e8a",
+      "purpose": "访谈提纲",
+      "requirementRefs": [
+        "I-9"
+      ],
+      "verifyStatus": "已生成",
+      "delivered": true
+    },
+    {
+      "name": "15_明白办_用户试用材料/02_试用记录表_空白.csv",
+      "path": "mingbaiban/delivery/15_明白办_用户试用材料/02_试用记录表_空白.csv",
+      "bytes": 278,
+      "sha256": "ddf7809bb28718b886b769c665c3b8eccd894ef688b842459bb761555b615027",
+      "purpose": "试用记录表（空白）",
+      "requirementRefs": [
+        "I-9"
+      ],
+      "verifyStatus": "已生成",
+      "delivered": true
+    },
+    {
+      "name": "assets/shot-01-home.png",
+      "path": "mingbaiban/delivery/assets/shot-01-home.png",
+      "bytes": 115681,
+      "sha256": "faca78237bf1b1f4b9b95c111e88a6a43d27acf9b337db4f227b0ad5ca3c321b",
+      "purpose": "真实界面截图（首页）",
+      "requirementRefs": [
+        "R2-3"
+      ],
+      "verifyStatus": "已生成",
+      "delivered": true
+    },
+    {
+      "name": "sources/manual.html",
+      "path": "mingbaiban/delivery/sources/manual.html",
+      "bytes": 33432,
+      "sha256": "dcc1b05b1e08b58b47e862f6d5e388163b1dc07be9e5d88fde1e7187a4404421",
+      "purpose": "说明书可编辑源（HTML）",
+      "requirementRefs": [
+        "R2-2"
+      ],
+      "verifyStatus": "已生成",
+      "delivered": true
+    }
+  ],
+  "extraAssets": {
+    "screenshots": 14,
+    "videoFrames": 13,
+    "editableSources": [
+      "04_明白办_视频字幕.srt",
+      "11_明白办_技术流程图.png",
+      "make_chart.py",
+      "make_docx.py",
+      "make_reports.py",
+      "make_video.py",
+      "manual.html",
+      "run-edge-tests.cjs",
+      "run-guide.html",
+      "run-tests.cjs",
+      "shots.cjs",
+      "test-report.html",
+      "to-pdf-flow.cjs",
+      "to-pdf.cjs",
+      "video-timing.json"
+    ]
+  },
+  "notes": [
+    "本清单中所有 size 与 sha256 均由脚本实际计算，未手写。",
+    "ZIP 位于项目根目录（delivery 之外），避免递归打包自身。",
+    "15_用户试用材料为空白模板，不含任何真实试用数据。"
+  ]
+}

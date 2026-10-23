@@ -1,0 +1,318 @@
+{
+  "runAt": "2026-10-23T04:43:05.115Z",
+  "url": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
+  "appVersion": "1.0.0",
+  "devModel": "DeepSeek V4.1 Flash（WorkBuddy 开发执行模型）",
+  "runtimeModelPicked": {
+    "id": "deepseek-v4.1-flash",
+    "name": "Deepseek-V4.1-Flash"
+  },
+  "browser": "Microsoft Edge (headless) via playwright-core，视口 390x844",
+  "environment": "Windows 11 / Node v22.22.2",
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "notRun": 0
+  },
+  "consoleErrors": [
+    "console: Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "results": [
+    {
+      "id": "N8",
+      "name": "体检通知·分楼栋时段与空腹要求",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:01.275Z",
+      "elapsedMs": 4103,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1273,
+          "completion_tokens": 612,
+          "total_tokens": 1885,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 249,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.04,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一则社区发布的居民健康体检通知，按楼栋安排了体检时间。",
+          "summary": "社区组织居民体检，1号楼和2号楼分上午、下午两个时段，到社区卫生服务中心一楼，带身份证，空腹去。",
+          "audience": {
+            "value": "本次体检面向的居民，通知按楼栋分别安排，分别提到1号楼和2号楼的居民",
+            "status": "stated",
+            "evidence": [
+              "各位居民",
+              "1号楼10月27日上午8:00，2号楼10月27日下午13:30"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "活动开始",
+              "value": "1号楼：10月27日上午8:00；2号楼：10月27日下午13:30",
+              "status": "stated",
+              "evidence": [
+                "1号楼10月27日上午8:00，2号楼10月27日下午13:30"
+              ]
+            },
+            {
+              "purpose": "报名截止",
+              "value": null,
+              "status": "missing",
+              "evidence": []
+            }
+          ],
+          "location": {
+            "value": "社区卫生服务中心一楼",
+            "status": "stated",
+            "evidence": [
+              "地点：社区卫生服务中心一楼。"
+            ]
+          },
+          "preparation": [
+            {
+              "value": "携带身份证",
+              "status": "stated",
+              "evidence": [
+                "请携带身份证"
+              ]
+            },
+            {
+              "value": "空腹前往",
+              "status": "stated",
+              "evidence": [
+                "空腹前往"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": "required",
+              "value": "按自己所在楼栋的时段去体检：1号楼10月27日上午8:00，2号楼10月27日下午13:30",
+              "evidence": [
+                "1号楼10月27日上午8:00，2号楼10月27日下午13:30"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "到社区卫生服务中心一楼",
+              "evidence": [
+                "地点：社区卫生服务中心一楼。"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "带上身份证",
+              "evidence": [
+                "请携带身份证"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "空腹去",
+              "evidence": [
+                "空腹前往"
+              ]
+            }
+          ],
+          "questions": [
+            "通知没说年份，10月27日是哪一年的？",
+            "通知只写了1号楼和2号楼，其他楼栋的居民什么时候去？"
+          ],
+          "warnings": [
+            "通知没有写发布日期，10月27日具体是哪一天，请向发布方核对。",
+            "通知只提到1号楼和2号楼的时间，如果不住在这两栋楼，先问清楚自己的时段。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一则社区发布的居民健康体检通知，按楼栋安排了体检时间。\",\n  \"summary\": \"社区组织居民体检，1号楼和2号楼分上午、下午两个时段，到社区卫生服务中心一楼，带身份证，空腹去。\",\n  \"audience\": {\n    \"value\": \"本次体检面向的居民，通知按楼栋分别安排，分别提到1号楼和2号楼的居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"各位居民\", \"1号楼10月27日上午8:00，2号楼10月27日下午13:30\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"1号楼：10月27日上午8:00；2号楼：10月27日下午13:30\",\n      \"status\": \"stated\",\n      \"evidence\": [\"1号楼10月27日上午8:00，2号楼10月27日下午13:30\"]\n    },\n    {\n      \"purpose\": \"报名截止\",\n      \"value\": null,\n      \"status\": \"missing\",\n      \"evidence\": []\n    }\n  ],\n  \"location\": {\n    \"value\": \"社区卫生服务中心一楼\",\n    \"status\": \"stated\",\n    \"evidence\": [\"地点：社区卫生服务中心一楼。\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"携带身份证\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请携带身份证\"]\n    },\n    {\n      \"value\": \"空腹前往\",\n      \"status\": \"stated\",\n      \"evidence\": [\"空腹前往\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"按自己所在楼栋的时段去体检：1号楼10月27日上午8:00，2号楼10月27日下午13:30\",\n      \"evidence\": [\"1号楼10月27日上午8:00，2号楼10月27日下午13:30\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"到社区卫生服务中心一楼\",\n      \"evidence\": [\"地点：社区卫生服务中心一楼。\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"带上身份证\",\n      \"evidence\": [\"请携带身份证\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"空腹去\",\n      \"evidence\": [\"空腹前往\"]\n    }\n  ],\n  \"questions\": [\n    \"通知没说年份，10月27日是哪一年的？\",\n    \"通知只写了1号楼和2号楼，其他楼栋的居民什么时候去？\"\n  ],\n  \"warnings\": [\n    \"通知没有写发布日期，10月27日具体是哪一天，请向发布方核对。\",\n    \"通知只提到1号楼和2号楼的时间，如果不住在这两栋楼，先问清楚自己的时段。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "时间：按楼栋分两段（1号楼10月27日上午8:00；2号楼10月27日下午13:30），两段都要保留（可放在同一条时间项里，但不得丢掉任一楼栋）。地点：社区卫生服务中心一楼。准备：身份证、空腹。绝不能出现：体检费用、预约电话、检查项目清单。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "timesContainAll",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "globalContainsAll",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "prepContainsAll",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "B1",
+      "name": "边界·缺少地点",
+      "kind": "boundary",
+      "runAt": "2026-10-23T04:43:04.872Z",
+      "elapsedMs": 3597,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1242,
+          "completion_tokens": 387,
+          "total_tokens": 1629,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 218,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.03,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一条社区组织志愿者清理绿化带、欢迎居民报名的活动通知。",
+          "summary": "社区在10月29日上午9点组织志愿者清理小区绿化带，居民可以报名参加。",
+          "audience": {
+            "value": "愿意报名参加清理小区绿化带的居民和志愿者",
+            "status": "stated",
+            "evidence": [
+              "组织志愿者清理小区绿化带，欢迎居民报名参加"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "活动开始",
+              "value": "10月29日上午9点",
+              "status": "stated",
+              "evidence": [
+                "社区将于10月29日上午9点组织志愿者清理小区绿化带"
+              ]
+            },
+            {
+              "purpose": "报名截止",
+              "value": null,
+              "status": "missing",
+              "evidence": []
+            }
+          ],
+          "location": {
+            "value": "小区绿化带",
+            "status": "stated",
+            "evidence": [
+              "清理小区绿化带"
+            ]
+          },
+          "preparation": [],
+          "actions": [
+            {
+              "type": "required",
+              "value": "想参加就向社区报名",
+              "status": "stated",
+              "evidence": [
+                "欢迎居民报名参加"
+              ]
+            }
+          ],
+          "questions": [
+            "报名截止到哪一天？",
+            "报名找谁、通过什么方式报？",
+            "10月29日是哪一年，是周几？",
+            "集合地点具体在哪里？"
+          ],
+          "warnings": [
+            "通知没有写发布日期，'10月29日'这个日期请向社区核对是哪一年、哪一天。",
+            "通知没写报名截止时间和报名方式，报名前先问清楚。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条社区组织志愿者清理绿化带、欢迎居民报名的活动通知。\",\n  \"summary\": \"社区在10月29日上午9点组织志愿者清理小区绿化带，居民可以报名参加。\",\n  \"audience\": {\n    \"value\": \"愿意报名参加清理小区绿化带的居民和志愿者\",\n    \"status\": \"stated\",\n    \"evidence\": [\"组织志愿者清理小区绿化带，欢迎居民报名参加\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"10月29日上午9点\",\n      \"status\": \"stated\",\n      \"evidence\": [\"社区将于10月29日上午9点组织志愿者清理小区绿化带\"]\n    },\n    {\n      \"purpose\": \"报名截止\",\n      \"value\": null,\n      \"status\": \"missing\",\n      \"evidence\": []\n    }\n  ],\n  \"location\": {\n    \"value\": \"小区绿化带\",\n    \"status\": \"stated\",\n    \"evidence\": [\"清理小区绿化带\"]\n  },\n  \"preparation\": [],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"想参加就向社区报名\",\n      \"status\": \"stated\",\n      \"evidence\": [\"欢迎居民报名参加\"]\n    }\n  ],\n  \"questions\": [\n    \"报名截止到哪一天？\",\n    \"报名找谁、通过什么方式报？\",\n    \"10月29日是哪一年，是周几？\",\n    \"集合地点具体在哪里？\"\n  ],\n  \"warnings\": [\n    \"通知没有写发布日期，'10月29日'这个日期请向社区核对是哪一年、哪一天。\",\n    \"通知没写报名截止时间和报名方式，报名前先问清楚。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "本条难点是「集合地点未说明」。原文只写了活动内容是清理小区绿化带，没有写集合点、报名方式、报名截止。允许把「小区绿化带」作为活动地点（它逐字出现在原文），但必须提示集合地点不明确。报名方式、报名截止：未说明。绝不能出现：广场、会议室、服务中心、居委会门口等原文没有的地点；也不能编造报名电话。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "locationGroundedOrMissing",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "asksAbout",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    }
+  ]
+}

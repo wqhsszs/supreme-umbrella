@@ -1,0 +1,297 @@
+LLM status: {"ready":true,"reason":""}
+models: {
+  "picked": {
+    "id": "deepseek-v4.1-flash",
+    "name": "Deepseek-V4.1-Flash",
+    "vendor": "f",
+    "descriptionZh": "已更新至 V4.1-Flash-1017最新版，支持1M上下文窗口，原生多模态",
+    "descriptionEn": "DeepSeek flagship model, supporting 1M context window, native multimodal model",
+    "contextWindow": {
+      "defaultLength": 300000,
+      "supportedLengths": [
+        300000,
+        600000,
+        1000000
+      ]
+    },
+    "maxInputTokens": 1000000,
+    "maxOutputTokens": 128000,
+    "enabled": true,
+    "credits": "x0.11 credits",
+    "maxAllowedSize": 1000000,
+    "supportsImages": true,
+    "supportsToolCall": true,
+    "supportsReasoning": true,
+    "onlyReasoning": true,
+    "reasoning": {
+      "defaultEffort": "high",
+      "supportedEfforts": [
+        "low",
+        "high",
+        "max"
+      ],
+      "summary": "auto",
+      "canDisableThinking": true
+    },
+    "temperature": 1
+  },
+  "ids": [
+    {
+      "id": "auto",
+      "name": "Auto"
+    },
+    {
+      "id": "hy3",
+      "name": "Hy3"
+    },
+    {
+      "id": "hy3-x",
+      "name": "Hy3"
+    },
+    {
+      "id": "hy4-preview",
+      "name": "Hy4 preview"
+    },
+    {
+      "id": "hy4-preview-x",
+      "name": "Hy4 preview"
+    },
+    {
+      "id": "default",
+      "name": "Default"
+    },
+    {
+      "id": "glm-5v-turbo",
+      "name": "GLM-5v-Turbo"
+    },
+    {
+      "id": "glm-5.3",
+      "name": "GLM-5.3"
+    },
+    {
+      "id": "glm-5.3-flash",
+      "name": "GLM-5.3-Flash"
+    },
+    {
+      "id": "glm-5.2",
+      "name": "GLM-5.2"
+    },
+    {
+      "id": "glm-5.1",
+      "name": "GLM-5.1"
+    },
+    {
+      "id": "glm-5.0",
+      "name": "GLM-5.0"
+    },
+    {
+      "id": "glm-4.7",
+      "name": "GLM-4.7"
+    },
+    {
+      "id": "glm-4.6",
+      "name": "GLM-4.6"
+    },
+    {
+      "id": "glm-4.6v",
+      "name": "GLM-4.6V"
+    },
+    {
+      "id": "minimax-m3",
+      "name": "MiniMax-M3"
+    },
+    {
+      "id": "minimax-m2.5",
+      "name": "MiniMax-M2.5"
+    },
+    {
+      "id": "kimi-k3-1",
+      "name": "Kimi-K3"
+    },
+    {
+      "id": "kimi-k2.8-preview",
+      "name": "Kimi-K2.8-Preview"
+    },
+    {
+      "id": "kimi-k2.7",
+      "name": "Kimi-K2.7-Code"
+    },
+    {
+      "id": "kimi-k2.6",
+      "name": "Kimi-K2.6"
+    },
+    {
+      "id": "kimi-k2.5",
+      "name": "Kimi-K2.5"
+    },
+    {
+      "id": "kimi-k2-thinking",
+      "name": "Kimi-K2-Thinking"
+    },
+    {
+      "id": "deepseek-v4-flash",
+      "name": "Deepseek-V4-Flash"
+    },
+    {
+      "id": "deepseek-v4.1-flash",
+      "name": "Deepseek-V4.1-Flash"
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "name": "Deepseek-V4-Pro"
+    },
+    {
+      "id": "deepseek-v3-2-volc",
+      "name": "DeepSeek-V3.2"
+    },
+    {
+      "id": "hunyuan-2.0-thinking",
+      "name": "Hunyuan-2.0-Thinking"
+    },
+    {
+      "id": "hunyuan-chat",
+      "name": "Hunyuan-Turbos"
+    },
+    {
+      "id": "hunyuan-image-alpha",
+      "name": "Hunyuan Image Alpha"
+    },
+    {
+      "id": "space-bunny",
+      "name": "Space-Bunny"
+    },
+    {
+      "id": "step-5-preview",
+      "name": "Step-5-Preview"
+    },
+    {
+      "id": "mimo-v2.6-pro",
+      "name": "Xiaomi MiMo-V2.6-Pro"
+    },
+    {
+      "id": "minimax-m3.1-flash",
+      "name": "MiniMax-M3.1-Flash"
+    }
+  ]
+}
+elapsed ms: 3950
+result: {
+  "ok": true,
+  "phase": "done",
+  "data": {
+    "document_status": "notice",
+    "document_status_reason": "这是一条社区服务中心开展手机使用指导活动的通知。",
+    "summary": "社区服务中心10月26日上午9点到11点教用手机，只有已报名的人能参加，要带上自己的手机。",
+    "audience": {
+      "value": "仅限已报名居民",
+      "status": "stated",
+      "evidence": [
+        "仅限已报名居民参加"
+      ]
+    },
+    "times": [
+      {
+        "purpose": "活动开始",
+        "value": "2026年10月26日9:00—11:00",
+        "status": "stated",
+        "evidence": [
+          "2026年10月26日9:00—11:00"
+        ]
+      }
+    ],
+    "location": {
+      "value": "社区服务中心",
+      "status": "stated",
+      "evidence": [
+        "社区服务中心开展手机使用指导"
+      ]
+    },
+    "preparation": [
+      {
+        "value": "本人手机",
+        "status": "stated",
+        "evidence": [
+          "请携带本人手机"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "required",
+        "value": "只有已经报名的居民才能参加，没报名不能参加。",
+        "status": "stated",
+        "evidence": [
+          "仅限已报名居民参加"
+        ]
+      },
+      {
+        "type": "required",
+        "value": "去的时候带上自己的手机。",
+        "status": "stated",
+        "evidence": [
+          "请携带本人手机"
+        ]
+      },
+      {
+        "type": "suggested",
+        "value": "先确认自己是否已经报名成功，再决定去不去。",
+        "status": "suggested",
+        "evidence": [
+          "仅限已报名居民参加"
+        ]
+      }
+    ],
+    "questions": [
+      "我算不算已经报名的居民？怎么查自己报没报上？",
+      "活动在社区服务中心哪个房间？",
+      "需要提前多久到？"
+    ],
+    "warnings": [
+      "这条通知只写了已报名的人能参加，没写怎么报名，也没写报名截止时间。",
+      "通知没写要带身份证、医保卡或其他材料，只写了带本人手机。"
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条社区服务中心开展手机使用指导活动的通知。\",\n  \"summary\": \"社区服务中心10月26日上午9点到11点教用手机，只有已报名的人能参加，要带上自己的手机。\",\n  \"audience\": {\n    \"value\": \"仅限已报名居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"仅限已报名居民参加\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"2026年10月26日9:00—11:00\",\n      \"status\": \"stated\",\n      \"evidence\": [\"2026年10月26日9:00—11:00\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"社区服务中心\",\n    \"status\": \"stated\",\n    \"evidence\": [\"社区服务中心开展手机使用指导\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"本人手机\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请携带本人手机\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"只有已经报名的居民才能参加，没报名不能参加。\",\n      \"status\": \"stated\",\n      \"evidence\": [\"仅限已报名居民参加\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"去的时候带上自己的手机。\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请携带本人手机\"]\n    },\n    {\n      \"type\": \"suggested\",\n      \"value\": \"先确认自己是否已经报名成功，再决定去不去。\",\n      \"status\": \"suggested\",\n      \"evidence\": [\"仅限已报名居民参加\"]\n    }\n  ],\n  \"questions\": [\n    \"我算不算已经报名的居民？怎么查自己报没报上？\",\n    \"活动在社区服务中心哪个房间？\",\n    \"需要提前多久到？\"\n  ],\n  \"warnings\": [\n    \"这条通知只写了已报名的人能参加，没写怎么报名，也没写报名截止时间。\",\n    \"通知没写要带身份证、医保卡或其他材料，只写了带本人手机。\"\n  ]\n}",
+  "model": {
+    "id": "deepseek-v4.1-flash",
+    "name": "Deepseek-V4.1-Flash",
+    "vendor": "f",
+    "descriptionZh": "已更新至 V4.1-Flash-1017最新版，支持1M上下文窗口，原生多模态",
+    "descriptionEn": "DeepSeek flagship model, supporting 1M context window, native multimodal model",
+    "contextWindow": {
+      "defaultLength": 300000,
+      "supportedLengths": [
+        300000,
+        600000,
+        1000000
+      ]
+    },
+    "maxInputTokens": 1000000,
+    "maxOutputTokens": 128000,
+    "enabled": true,
+    "credits": "x0.11 credits",
+    "maxAllowedSize": 1000000,
+    "supportsImages": true,
+    "supportsToolCall": true,
+    "supportsReasoning": true,
+    "onlyReasoning": true,
+    "reasoning": {
+      "defaultEffort": "high",
+      "supportedEfforts": [
+        "low",
+        "high",
+        "max"
+      ],
+      "summary": "auto",
+      "canDisableThinking": true
+    },
+    "temperature": 1
+  },
+  "usage": {
+    "prompt_tokens": 1256,
+    "completion_tokens": 484,
+    "total_
+--- console logs ---
+error: Failed to load resource: the server responded with a status of 404 ()

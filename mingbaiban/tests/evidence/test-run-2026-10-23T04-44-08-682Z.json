@@ -1,0 +1,1583 @@
+{
+  "runAt": "2026-10-23T04:44:08.682Z",
+  "url": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
+  "appVersion": "1.0.0",
+  "devModel": "DeepSeek V4.1 Flash（WorkBuddy 开发执行模型）",
+  "runtimeModelPicked": {
+    "id": "deepseek-v4.1-flash",
+    "name": "Deepseek-V4.1-Flash"
+  },
+  "browser": "Microsoft Edge (headless) via playwright-core，视口 390x844",
+  "environment": "Windows 11 / Node v22.22.2",
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "notRun": 0
+  },
+  "consoleErrors": [
+    "console: Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "results": [
+    {
+      "id": "N1",
+      "name": "固定基准A·手机使用指导（含仅限已报名限制）",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:18.624Z",
+      "elapsedMs": 4128,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1256,
+          "completion_tokens": 397,
+          "total_tokens": 1653,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 232,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.03,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一条社区活动通知，说明手机使用指导的时间、地点和参加要求。",
+          "summary": "10月26日上午社区服务中心有手机使用指导，已报名的居民带自己的手机去参加。",
+          "audience": {
+            "value": "仅限已报名的居民",
+            "status": "stated",
+            "evidence": [
+              "仅限已报名居民参加"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "活动开始",
+              "value": "2026年10月26日9:00—11:00",
+              "status": "stated",
+              "evidence": [
+                "2026年10月26日9:00—11:00"
+              ]
+            }
+          ],
+          "location": {
+            "value": "社区服务中心",
+            "status": "stated",
+            "evidence": [
+              "社区服务中心开展手机使用指导"
+            ]
+          },
+          "preparation": [
+            {
+              "value": "本人手机",
+              "status": "stated",
+              "evidence": [
+                "请携带本人手机"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": "required",
+              "value": "确认自己已经报名，没报名不能参加",
+              "evidence": [
+                "仅限已报名居民参加"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "活动当天带上自己的手机",
+              "evidence": [
+                "请携带本人手机"
+              ]
+            }
+          ],
+          "questions": [
+            "已经报名的居民怎么知道自己报上了？",
+            "如果没报名，还能不能补报？"
+          ],
+          "warnings": [
+            "这条通知只写了活动时间，没有写报名截止时间，也没写怎么报名。",
+            "通知写的是“仅限已报名居民参加”，没报名的人不能去。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条社区活动通知，说明手机使用指导的时间、地点和参加要求。\",\n  \"summary\": \"10月26日上午社区服务中心有手机使用指导，已报名的居民带自己的手机去参加。\",\n  \"audience\": {\n    \"value\": \"仅限已报名的居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"仅限已报名居民参加\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"2026年10月26日9:00—11:00\",\n      \"status\": \"stated\",\n      \"evidence\": [\"2026年10月26日9:00—11:00\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"社区服务中心\",\n    \"status\": \"stated\",\n    \"evidence\": [\"社区服务中心开展手机使用指导\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"本人手机\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请携带本人手机\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"确认自己已经报名，没报名不能参加\",\n      \"evidence\": [\"仅限已报名居民参加\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"活动当天带上自己的手机\",\n      \"evidence\": [\"请携带本人手机\"]\n    }\n  ],\n  \"questions\": [\n    \"已经报名的居民怎么知道自己报上了？\",\n    \"如果没报名，还能不能补报？\"\n  ],\n  \"warnings\": [\n    \"这条通知只写了活动时间，没有写报名截止时间，也没写怎么报名。\",\n    \"通知写的是“仅限已报名居民参加”，没报名的人不能去。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "这是一条活动通知。时间：2026年10月26日9:00—11:00（活动开始，明确写出）。地点：社区服务中心（明确写出）。对象：仅限已报名居民（明确写出，必须保留这个限制）。准备：本人手机（明确写出）。报名截止、报名方式、具体房间、联系电话：原文均未说明，不得编造。绝不能出现：身份证、医保卡、户口本、联系人电话、具体街道门牌号。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "status",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "contains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "status",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "contains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "purposeStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "prepContains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "N2",
+      "name": "固定基准C·报名截止与活动开始分离",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:23.916Z",
+      "elapsedMs": 5291,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1251,
+          "completion_tokens": 443,
+          "total_tokens": 1694,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 227,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.03,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一条关于报名截止和活动开始时间的活动通知。",
+          "summary": "请在2026年10月25日17:00前报名，活动10月28日9:00在社区服务中心开始。",
+          "audience": {
+            "value": null,
+            "status": "missing",
+            "evidence": []
+          },
+          "times": [
+            {
+              "purpose": "报名截止",
+              "value": "2026年10月25日17:00前",
+              "status": "stated",
+              "evidence": [
+                "请于2026年10月25日17:00前报名"
+              ]
+            },
+            {
+              "purpose": "活动开始",
+              "value": "10月28日9:00",
+              "status": "stated",
+              "evidence": [
+                "活动于10月28日9:00在社区服务中心开始"
+              ]
+            }
+          ],
+          "location": {
+            "value": "社区服务中心",
+            "status": "stated",
+            "evidence": [
+              "在社区服务中心开始"
+            ]
+          },
+          "preparation": [],
+          "actions": [
+            {
+              "type": "required",
+              "value": "在2026年10月25日17:00前完成报名",
+              "evidence": [
+                "请于2026年10月25日17:00前报名"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "10月28日9:00到社区服务中心参加活动",
+              "evidence": [
+                "活动于10月28日9:00在社区服务中心开始"
+              ]
+            }
+          ],
+          "questions": [
+            "报名要到哪里报、找谁报，通知里没写，是问社区服务中心吗？",
+            "活动10月28日9:00开始，大概几点结束，要带什么东西吗？",
+            "这个活动哪些人可以参加，有名额限制吗？"
+          ],
+          "warnings": [
+            "通知只写了报名截止时间和活动开始时间，没有写报名方式，具体怎么报名需要问发布方。",
+            "通知没有写活动结束时间和要带的东西，别自己猜着准备。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条关于报名截止和活动开始时间的活动通知。\",\n  \"summary\": \"请在2026年10月25日17:00前报名，活动10月28日9:00在社区服务中心开始。\",\n  \"audience\": { \"value\": null, \"status\": \"missing\", \"evidence\": [] },\n  \"times\": [\n    { \"purpose\": \"报名截止\", \"value\": \"2026年10月25日17:00前\", \"status\": \"stated\", \"evidence\": [\"请于2026年10月25日17:00前报名\"] },\n    { \"purpose\": \"活动开始\", \"value\": \"10月28日9:00\", \"status\": \"stated\", \"evidence\": [\"活动于10月28日9:00在社区服务中心开始\"] }\n  ],\n  \"location\": { \"value\": \"社区服务中心\", \"status\": \"stated\", \"evidence\": [\"在社区服务中心开始\"] },\n  \"preparation\": [],\n  \"actions\": [\n    { \"type\": \"required\", \"value\": \"在2026年10月25日17:00前完成报名\", \"evidence\": [\"请于2026年10月25日17:00前报名\"] },\n    { \"type\": \"required\", \"value\": \"10月28日9:00到社区服务中心参加活动\", \"evidence\": [\"活动于10月28日9:00在社区服务中心开始\"] }\n  ],\n  \"questions\": [\n    \"报名要到哪里报、找谁报，通知里没写，是问社区服务中心吗？\",\n    \"活动10月28日9:00开始，大概几点结束，要带什么东西吗？\",\n    \"这个活动哪些人可以参加，有名额限制吗？\"\n  ],\n  \"warnings\": [\n    \"通知只写了报名截止时间和活动开始时间，没有写报名方式，具体怎么报名需要问发布方。\",\n    \"通知没有写活动结束时间和要带的东西，别自己猜着准备。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "两个时间必须分开：报名截止=2026年10月25日17:00前；活动开始=10月28日9:00。地点：社区服务中心。报名方式：未说明（不能编造线上/微信/电话报名）。绝不能出现：身份证、报名费、报名链接、二维码。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "purposeStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "purposeContains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "purposeStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "purposeContains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "purposesNotMerged",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "N3",
+      "name": "固定基准B·相对日期必须原样保留",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:26.861Z",
+      "elapsedMs": 2945,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1235,
+          "completion_tokens": 355,
+          "total_tokens": 1590,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 211,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.02,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一条通知居民参加手机课堂的活动通知。",
+          "summary": "请居民周五上午来参加手机课堂，要带上自己的手机。",
+          "audience": {
+            "value": "居民",
+            "status": "stated",
+            "evidence": [
+              "请居民周五上午来参加手机课堂"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "活动开始",
+              "value": "周五上午",
+              "status": "stated",
+              "evidence": [
+                "请居民周五上午来参加手机课堂"
+              ]
+            }
+          ],
+          "location": {
+            "value": null,
+            "status": "missing",
+            "evidence": []
+          },
+          "preparation": [
+            {
+              "value": "自己的手机",
+              "status": "stated",
+              "evidence": [
+                "带上自己的手机"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": "required",
+              "value": "周五上午去参加手机课堂",
+              "evidence": [
+                "请居民周五上午来参加手机课堂"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "带上自己的手机",
+              "evidence": [
+                "带上自己的手机"
+              ]
+            }
+          ],
+          "questions": [
+            "周五上午具体是几点开始？",
+            "这个周五是哪一天，日期能确认一下吗？",
+            "手机课堂在哪里办，地址是什么？"
+          ],
+          "warnings": [
+            "通知里没有写发布日期，“周五上午”要跟发布方核对是哪一天、几点。",
+            "通知只说带自己的手机，没说还要带别的东西。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条通知居民参加手机课堂的活动通知。\",\n  \"summary\": \"请居民周五上午来参加手机课堂，要带上自己的手机。\",\n  \"audience\": {\n    \"value\": \"居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"请居民周五上午来参加手机课堂\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"周五上午\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请居民周五上午来参加手机课堂\"]\n    }\n  ],\n  \"location\": {\n    \"value\": null,\n    \"status\": \"missing\",\n    \"evidence\": []\n  },\n  \"preparation\": [\n    {\n      \"value\": \"自己的手机\",\n      \"status\": \"stated\",\n      \"evidence\": [\"带上自己的手机\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"周五上午去参加手机课堂\",\n      \"evidence\": [\"请居民周五上午来参加手机课堂\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"带上自己的手机\",\n      \"evidence\": [\"带上自己的手机\"]\n    }\n  ],\n  \"questions\": [\n    \"周五上午具体是几点开始？\",\n    \"这个周五是哪一天，日期能确认一下吗？\",\n    \"手机课堂在哪里办，地址是什么？\"\n  ],\n  \"warnings\": [\n    \"通知里没有写发布日期，“周五上午”要跟发布方核对是哪一天、几点。\",\n    \"通知只说带自己的手机，没说还要带别的东西。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "时间只能保留「周五上午」，不得换算成任何具体日期（原文没有发布日期）。地点：未说明。对象：居民。准备：手机。绝不能出现：2026年、10月、11月、任何「10月X日」形态的具体日期、任何编造的地点（如活动室、服务中心、居委会）、报名方式。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "timesContainAny",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "status",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "prepContains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "N4",
+      "name": "电梯检修·无材料无费用",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:31.626Z",
+      "elapsedMs": 4765,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1267,
+          "completion_tokens": 449,
+          "total_tokens": 1716,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 243,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.03,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一份物业发布的电梯停用检修通知，告知住户停梯时间和临时通行方式。",
+          "summary": "3号楼1单元电梯本周四上午8点到下午5点停用检修，这段时间请走楼梯。",
+          "audience": {
+            "value": "3号楼1单元的住户",
+            "status": "stated",
+            "evidence": [
+              "3号楼各位住户",
+              "3号楼1单元电梯将于本周四上午8点至下午5点停用"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "服务时间",
+              "value": "本周四上午8点至下午5点（原文未写具体日期，需要核对是哪一天）",
+              "status": "stated",
+              "evidence": [
+                "3号楼1单元电梯将于本周四上午8点至下午5点停用"
+              ]
+            }
+          ],
+          "location": {
+            "value": "3号楼1单元电梯",
+            "status": "stated",
+            "evidence": [
+              "3号楼1单元电梯将于本周四上午8点至下午5点停用"
+            ]
+          },
+          "preparation": [],
+          "actions": [
+            {
+              "type": "required",
+              "value": "本周四上午8点到下午5点这段时间，不要坐电梯，改走楼梯",
+              "evidence": [
+                "检修期间请走楼梯"
+              ]
+            },
+            {
+              "type": "suggested",
+              "value": "可以问一下物业，这次停梯的“本周四”具体是哪一天，以及电梯有没有变化",
+              "evidence": [
+                "如有变动，另行通知"
+              ]
+            }
+          ],
+          "questions": [
+            "“本周四”具体是哪一天？通知上没有写发布日期。",
+            "如果检修时间有变化，会通过什么方式通知住户？"
+          ],
+          "warnings": [
+            "通知上没有写发布日期，因此这里的“本周四”到底是哪一天说不准，请向物业核实。",
+            "“如有变动，另行通知”说明时间可能会改，出门前最好再确认一次。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一份物业发布的电梯停用检修通知，告知住户停梯时间和临时通行方式。\",\n  \"summary\": \"3号楼1单元电梯本周四上午8点到下午5点停用检修，这段时间请走楼梯。\",\n  \"audience\": {\n    \"value\": \"3号楼1单元的住户\",\n    \"status\": \"stated\",\n    \"evidence\": [\"3号楼各位住户\", \"3号楼1单元电梯将于本周四上午8点至下午5点停用\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"服务时间\",\n      \"value\": \"本周四上午8点至下午5点（原文未写具体日期，需要核对是哪一天）\",\n      \"status\": \"stated\",\n      \"evidence\": [\"3号楼1单元电梯将于本周四上午8点至下午5点停用\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"3号楼1单元电梯\",\n    \"status\": \"stated\",\n    \"evidence\": [\"3号楼1单元电梯将于本周四上午8点至下午5点停用\"]\n  },\n  \"preparation\": [],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"本周四上午8点到下午5点这段时间，不要坐电梯，改走楼梯\",\n      \"evidence\": [\"检修期间请走楼梯\"]\n    },\n    {\n      \"type\": \"suggested\",\n      \"value\": \"可以问一下物业，这次停梯的“本周四”具体是哪一天，以及电梯有没有变化\",\n      \"evidence\": [\"如有变动，另行通知\"]\n    }\n  ],\n  \"questions\": [\n    \"“本周四”具体是哪一天？通知上没有写发布日期。\",\n    \"如果检修时间有变化，会通过什么方式通知住户？\"\n  ],\n  \"warnings\": [\n    \"通知上没有写发布日期，因此这里的“本周四”到底是哪一天说不准，请向物业核实。\",\n    \"“如有变动，另行通知”说明时间可能会改，出门前最好再确认一次。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "时间：本周四上午8点至下午5点（相对日期原样保留）。地点：3号楼1单元电梯。对象：3号楼住户。准备：原文没有要求携带任何材料，不得编造。绝不能出现：身份证、费用/缴费、维修基金、业主大会、具体日期换算。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "contains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "timesContainAny",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "N5",
+      "name": "老年助餐登记·材料与费用与资格",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:36.430Z",
+      "elapsedMs": 4804,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1288,
+          "completion_tokens": 577,
+          "total_tokens": 1865,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1152
+          },
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 136,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.04,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一则社区老年助餐服务登记通知，告知服务对象、费用、所需材料和登记时间地点。",
+          "summary": "社区食堂下周起为60周岁以上居民提供每餐12元的助餐服务，想用餐的居民要带身份证和户口本在10月28日前去社区居委会登记。",
+          "audience": {
+            "value": "60周岁以上居民",
+            "status": "stated",
+            "evidence": [
+              "社区食堂下周起为60周岁以上居民提供助餐服务"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "报名截止",
+              "value": "10月28日前",
+              "status": "stated",
+              "evidence": [
+                "于10月28日前到社区居委会登记"
+              ]
+            },
+            {
+              "purpose": "活动开始",
+              "value": "下周起",
+              "status": "stated",
+              "evidence": [
+                "社区食堂下周起为60周岁以上居民提供助餐服务"
+              ]
+            },
+            {
+              "purpose": "服务时间",
+              "value": "工作日上午9:00—11:30",
+              "status": "stated",
+              "evidence": [
+                "登记时间为工作日上午9:00—11:30"
+              ]
+            }
+          ],
+          "location": {
+            "value": "社区居委会",
+            "status": "stated",
+            "evidence": [
+              "到社区居委会登记"
+            ]
+          },
+          "preparation": [
+            {
+              "value": "身份证和户口本",
+              "status": "stated",
+              "evidence": [
+                "请携带身份证和户口本"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": "required",
+              "value": "在10月28日前，带上身份证和户口本，到社区居委会登记。",
+              "evidence": [
+                "需要用餐的居民请携带身份证和户口本，于10月28日前到社区居委会登记。"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "登记要在工作日上午9:00—11:30去办。",
+              "evidence": [
+                "登记时间为工作日上午9:00—11:30。"
+              ]
+            }
+          ],
+          "questions": [
+            "通知里说的“下周起”具体是哪一天开始？",
+            "10月28日是星期几，是不是工作日？",
+            "登记要不要提前预约，还是直接去就行？"
+          ],
+          "warnings": [
+            "通知没有写发布日期，“下周起”和“10月28日前”这类时间请向居委会核对具体是哪一天。",
+            "只有工作日早上9:00到11:30才能登记，别的时间去可能办不了。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一则社区老年助餐服务登记通知，告知服务对象、费用、所需材料和登记时间地点。\",\n  \"summary\": \"社区食堂下周起为60周岁以上居民提供每餐12元的助餐服务，想用餐的居民要带身份证和户口本在10月28日前去社区居委会登记。\",\n  \"audience\": {\n    \"value\": \"60周岁以上居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"社区食堂下周起为60周岁以上居民提供助餐服务\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"报名截止\",\n      \"value\": \"10月28日前\",\n      \"status\": \"stated\",\n      \"evidence\": [\"于10月28日前到社区居委会登记\"]\n    },\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"下周起\",\n      \"status\": \"stated\",\n      \"evidence\": [\"社区食堂下周起为60周岁以上居民提供助餐服务\"]\n    },\n    {\n      \"purpose\": \"服务时间\",\n      \"value\": \"工作日上午9:00—11:30\",\n      \"status\": \"stated\",\n      \"evidence\": [\"登记时间为工作日上午9:00—11:30\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"社区居委会\",\n    \"status\": \"stated\",\n    \"evidence\": [\"到社区居委会登记\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"身份证和户口本\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请携带身份证和户口本\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"在10月28日前，带上身份证和户口本，到社区居委会登记。\",\n      \"evidence\": [\"需要用餐的居民请携带身份证和户口本，于10月28日前到社区居委会登记。\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"登记要在工作日上午9:00—11:30去办。\",\n      \"evidence\": [\"登记时间为工作日上午9:00—11:30。\"]\n    }\n  ],\n  \"questions\": [\n    \"通知里说的“下周起”具体是哪一天开始？\",\n    \"10月28日是星期几，是不是工作日？\",\n    \"登记要不要提前预约，还是直接去就行？\"\n  ],\n  \"warnings\": [\n    \"通知没有写发布日期，“下周起”和“10月28日前”这类时间请向居委会核对具体是哪一天。\",\n    \"只有工作日早上9:00到11:30才能登记，别的时间去可能办不了。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "对象：60周岁以上居民（明确写出）。费用：每餐12元（明确写出，不得说免费）。材料：身份证、户口本（明确写出，不多不少）。登记截止：10月28日前。登记时间：工作日上午9:00—11:30。服务开始：下周起（相对时间原样保留）。地点：社区居委会。绝不能出现：免费、送餐上门、联系电话、补贴金额。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "contains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "prepContainsAll",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "purposeStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "purposeContains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "N6",
+      "name": "停水通知·提前储水",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:39.860Z",
+      "elapsedMs": 3430,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1262,
+          "completion_tokens": 416,
+          "total_tokens": 1678,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 238,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.03,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是物业发布的停水通知，说明了停水时间和需要提前储水。",
+          "summary": "小区10月24日8点到18点停水，请提前把水储好。",
+          "audience": {
+            "value": "本小区居民",
+            "status": "stated",
+            "evidence": [
+              "本小区将于10月24日8:00至18:00停水"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "服务时间",
+              "value": "10月24日8:00至18:00",
+              "status": "stated",
+              "evidence": [
+                "本小区将于10月24日8:00至18:00停水"
+              ]
+            }
+          ],
+          "location": {
+            "value": "本小区",
+            "status": "stated",
+            "evidence": [
+              "本小区将于10月24日8:00至18:00停水"
+            ]
+          },
+          "preparation": [
+            {
+              "value": "提前储水",
+              "status": "stated",
+              "evidence": [
+                "请提前储水"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": "required",
+              "value": "在10月24日8点停水前，把家里要用的水提前储好。",
+              "evidence": [
+                "请提前储水"
+              ]
+            }
+          ],
+          "questions": [
+            "通知上没有写发布的日期，10月24日具体是哪一天，请向物业确认。",
+            "这次停水是只停一次，还是会延长或提前恢复，需要向物业问清楚。"
+          ],
+          "warnings": [
+            "通知没有写发布日期，10月24日这个日期请再和物业核对一下。",
+            "通知只说了提前储水，没有说要关水阀或做别的准备，也不用带证件或交钱。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是物业发布的停水通知，说明了停水时间和需要提前储水。\",\n  \"summary\": \"小区10月24日8点到18点停水，请提前把水储好。\",\n  \"audience\": {\n    \"value\": \"本小区居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"本小区将于10月24日8:00至18:00停水\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"服务时间\",\n      \"value\": \"10月24日8:00至18:00\",\n      \"status\": \"stated\",\n      \"evidence\": [\"本小区将于10月24日8:00至18:00停水\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"本小区\",\n    \"status\": \"stated\",\n    \"evidence\": [\"本小区将于10月24日8:00至18:00停水\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"提前储水\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请提前储水\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"在10月24日8点停水前，把家里要用的水提前储好。\",\n      \"evidence\": [\"请提前储水\"]\n    }\n  ],\n  \"questions\": [\n    \"通知上没有写发布的日期，10月24日具体是哪一天，请向物业确认。\",\n    \"这次停水是只停一次，还是会延长或提前恢复，需要向物业问清楚。\"\n  ],\n  \"warnings\": [\n    \"通知没有写发布日期，10月24日这个日期请再和物业核对一下。\",\n    \"通知只说了提前储水，没有说要关水阀或做别的准备，也不用带证件或交钱。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "时间：10月24日8:00至18:00。范围：本小区。准备/要求：提前储水（明确写出）。绝不能出现：送水车、每户限购、具体楼栋、恢复供水时间点。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "timesContainAny",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "prepContains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "N7",
+      "name": "健康讲座·电话报名与免费",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:44.484Z",
+      "elapsedMs": 4624,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1266,
+          "completion_tokens": 356,
+          "total_tokens": 1622,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 242,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.02,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一条社区健康讲座通知，告知时间、地点和报名方式。",
+          "summary": "社区10月30日下午2点半在活动中心办高血压防治讲座，免费，需提前打电话报名。",
+          "audience": {
+            "value": null,
+            "status": "missing",
+            "evidence": []
+          },
+          "times": [
+            {
+              "purpose": "活动开始",
+              "value": "10月30日下午2:30",
+              "status": "stated",
+              "evidence": [
+                "社区卫生服务站于10月30日下午2:30在社区活动中心举办高血压防治讲座"
+              ]
+            }
+          ],
+          "location": {
+            "value": "社区活动中心",
+            "status": "stated",
+            "evidence": [
+              "在社区活动中心举办高血压防治讲座"
+            ]
+          },
+          "preparation": [],
+          "actions": [
+            {
+              "type": "required",
+              "value": "提前打电话报名，号码是8888-1234",
+              "evidence": [
+                "请提前电话报名，报名电话：8888-1234"
+              ]
+            }
+          ],
+          "questions": [
+            "10月30日是今年的哪一天，是星期几？",
+            "打电话报名最晚要提前到什么时候？",
+            "报名时要不要说姓名或人数？"
+          ],
+          "warnings": [
+            "通知没有写发布日期，‘10月30日’请向发布方核对具体是哪一天。",
+            "场地有限，通知要求提前电话报名，不要直接去现场。",
+            "通知没说要带什么东西，也没写报名截止时间。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条社区健康讲座通知，告知时间、地点和报名方式。\",\n  \"summary\": \"社区10月30日下午2点半在活动中心办高血压防治讲座，免费，需提前打电话报名。\",\n  \"audience\": {\n    \"value\": null,\n    \"status\": \"missing\",\n    \"evidence\": []\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"10月30日下午2:30\",\n      \"status\": \"stated\",\n      \"evidence\": [\"社区卫生服务站于10月30日下午2:30在社区活动中心举办高血压防治讲座\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"社区活动中心\",\n    \"status\": \"stated\",\n    \"evidence\": [\"在社区活动中心举办高血压防治讲座\"]\n  },\n  \"preparation\": [],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"提前打电话报名，号码是8888-1234\",\n      \"evidence\": [\"请提前电话报名，报名电话：8888-1234\"]\n    }\n  ],\n  \"questions\": [\n    \"10月30日是今年的哪一天，是星期几？\",\n    \"打电话报名最晚要提前到什么时候？\",\n    \"报名时要不要说姓名或人数？\"\n  ],\n  \"warnings\": [\n    \"通知没有写发布日期，‘10月30日’请向发布方核对具体是哪一天。\",\n    \"场地有限，通知要求提前电话报名，不要直接去现场。\",\n    \"通知没说要带什么东西，也没写报名截止时间。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "时间：10月30日下午2:30。地点：社区活动中心。对象：居民。费用：免费。报名方式：电话报名，号码 8888-1234（必须保留原号码，不得改写）。绝不能出现：空腹、血糖、带医保卡、体检、诊疗建议。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "contains",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "globalContainsAny",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "N8",
+      "name": "体检通知·分楼栋时段与空腹要求",
+      "kind": "normal",
+      "runAt": "2026-10-23T04:43:49.963Z",
+      "elapsedMs": 5479,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1273,
+          "completion_tokens": 583,
+          "total_tokens": 1856,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 249,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.04,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一则通知居民参加健康体检、按楼栋分时段到场并携带身份证的通知。",
+          "summary": "社区组织居民体检，按楼栋分上午和下午两批到社区卫生服务中心一楼，带身份证并空腹去。",
+          "audience": {
+            "value": "1号楼和2号楼的居民",
+            "status": "stated",
+            "evidence": [
+              "本次体检按楼栋分时段进行：1号楼10月27日上午8:00，2号楼10月27日下午13:30。"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "活动开始",
+              "value": "1号楼：10月27日上午8:00；2号楼：10月27日下午13:30",
+              "status": "stated",
+              "evidence": [
+                "1号楼10月27日上午8:00，2号楼10月27日下午13:30"
+              ]
+            }
+          ],
+          "location": {
+            "value": "社区卫生服务中心一楼",
+            "status": "stated",
+            "evidence": [
+              "地点：社区卫生服务中心一楼。"
+            ]
+          },
+          "preparation": [
+            {
+              "value": "身份证，并且要空腹",
+              "status": "stated",
+              "evidence": [
+                "请携带身份证，空腹前往。"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": "required",
+              "value": "按自己所在楼栋的时段去体检：1号楼上午8:00到，2号楼下午13:30到。",
+              "evidence": [
+                "本次体检按楼栋分时段进行：1号楼10月27日上午8:00，2号楼10月27日下午13:30。"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "去社区卫生服务中心一楼参加体检。",
+              "evidence": [
+                "地点：社区卫生服务中心一楼。"
+              ]
+            },
+            {
+              "type": "required",
+              "value": "带上身份证，空腹去。",
+              "evidence": [
+                "请携带身份证，空腹前往。"
+              ]
+            }
+          ],
+          "questions": [
+            "通知里只写了日期10月27日，没写年份，请问是哪一年的10月27日？",
+            "如果我不属于1号楼或2号楼，或者分不清自己算哪栋，该什么时间去？"
+          ],
+          "warnings": [
+            "通知没有写发布年份，看到“10月27日”请先找人核实具体是哪一天。",
+            "两家楼的到场时间不一样，请按自己楼栋的时间去，别弄混。",
+            "通知要求空腹，去之前请按要求别吃东西；具体怎么空腹，通知没细说，可以问一下社区。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一则通知居民参加健康体检、按楼栋分时段到场并携带身份证的通知。\",\n  \"summary\": \"社区组织居民体检，按楼栋分上午和下午两批到社区卫生服务中心一楼，带身份证并空腹去。\",\n  \"audience\": {\n    \"value\": \"1号楼和2号楼的居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"本次体检按楼栋分时段进行：1号楼10月27日上午8:00，2号楼10月27日下午13:30。\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"1号楼：10月27日上午8:00；2号楼：10月27日下午13:30\",\n      \"status\": \"stated\",\n      \"evidence\": [\"1号楼10月27日上午8:00，2号楼10月27日下午13:30\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"社区卫生服务中心一楼\",\n    \"status\": \"stated\",\n    \"evidence\": [\"地点：社区卫生服务中心一楼。\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"身份证，并且要空腹\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请携带身份证，空腹前往。\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"按自己所在楼栋的时段去体检：1号楼上午8:00到，2号楼下午13:30到。\",\n      \"evidence\": [\"本次体检按楼栋分时段进行：1号楼10月27日上午8:00，2号楼10月27日下午13:30。\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"去社区卫生服务中心一楼参加体检。\",\n      \"evidence\": [\"地点：社区卫生服务中心一楼。\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"带上身份证，空腹去。\",\n      \"evidence\": [\"请携带身份证，空腹前往。\"]\n    }\n  ],\n  \"questions\": [\n    \"通知里只写了日期10月27日，没写年份，请问是哪一年的10月27日？\",\n    \"如果我不属于1号楼或2号楼，或者分不清自己算哪栋，该什么时间去？\"\n  ],\n  \"warnings\": [\n    \"通知没有写发布年份，看到“10月27日”请先找人核实具体是哪一天。\",\n    \"两家楼的到场时间不一样，请按自己楼栋的时间去，别弄混。\",\n    \"通知要求空腹，去之前请按要求别吃东西；具体怎么空腹，通知没细说，可以问一下社区。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "时间：按楼栋分两段（1号楼10月27日上午8:00；2号楼10月27日下午13:30），两段都要保留（可放在同一条时间项里，但不得丢掉任一楼栋）。地点：社区卫生服务中心一楼。准备：身份证、空腹。绝不能出现：体检费用、预约电话、检查项目清单。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "timesContainAll",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "globalContainsAll",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "prepContainsAll",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "B1",
+      "name": "边界·缺少地点",
+      "kind": "boundary",
+      "runAt": "2026-10-23T04:43:54.519Z",
+      "elapsedMs": 4555,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1242,
+          "completion_tokens": 335,
+          "total_tokens": 1577,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 218,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.02,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一条社区招募居民志愿者参加绿化带清理活动的通知",
+          "summary": "社区组织志愿者清理小区绿化带，欢迎居民报名参加。",
+          "audience": {
+            "value": "愿意报名参加的居民",
+            "status": "stated",
+            "evidence": [
+              "欢迎居民报名参加"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "活动开始",
+              "value": "10月29日上午9点",
+              "status": "stated",
+              "evidence": [
+                "社区将于10月29日上午9点组织志愿者清理小区绿化带"
+              ]
+            }
+          ],
+          "location": {
+            "value": "小区绿化带",
+            "status": "stated",
+            "evidence": [
+              "组织志愿者清理小区绿化带"
+            ]
+          },
+          "preparation": [],
+          "actions": [
+            {
+              "type": "required",
+              "value": "想参加就报名",
+              "status": "stated",
+              "evidence": [
+                "欢迎居民报名参加"
+              ]
+            }
+          ],
+          "questions": [
+            "报名截止到哪天？",
+            "到哪里报名、找谁报名？",
+            "10月29日是今年哪天，星期几？",
+            "活动在哪里集合？"
+          ],
+          "warnings": [
+            "通知没写报名截止时间和报名方式，先向社区确认再行动。",
+            "通知没写活动年份，请核对10月29日具体是哪一天。",
+            "通知没写要带什么东西，不要自行假设。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条社区招募居民志愿者参加绿化带清理活动的通知\",\n  \"summary\": \"社区组织志愿者清理小区绿化带，欢迎居民报名参加。\",\n  \"audience\": {\n    \"value\": \"愿意报名参加的居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"欢迎居民报名参加\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"10月29日上午9点\",\n      \"status\": \"stated\",\n      \"evidence\": [\"社区将于10月29日上午9点组织志愿者清理小区绿化带\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"小区绿化带\",\n    \"status\": \"stated\",\n    \"evidence\": [\"组织志愿者清理小区绿化带\"]\n  },\n  \"preparation\": [],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"想参加就报名\",\n      \"status\": \"stated\",\n      \"evidence\": [\"欢迎居民报名参加\"]\n    }\n  ],\n  \"questions\": [\n    \"报名截止到哪天？\",\n    \"到哪里报名、找谁报名？\",\n    \"10月29日是今年哪天，星期几？\",\n    \"活动在哪里集合？\"\n  ],\n  \"warnings\": [\n    \"通知没写报名截止时间和报名方式，先向社区确认再行动。\",\n    \"通知没写活动年份，请核对10月29日具体是哪一天。\",\n    \"通知没写要带什么东西，不要自行假设。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "本条难点是「集合地点未说明」。原文只写了活动内容是清理小区绿化带，没有写集合点、报名方式、报名截止。允许把「小区绿化带」作为活动地点（它逐字出现在原文），但必须提示集合地点不明确。报名方式、报名截止：未说明。绝不能出现：广场、会议室、服务中心、居委会门口等原文没有的地点；也不能编造报名电话。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "locationGroundedOrMissing",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "asksAbout",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "B2",
+      "name": "边界·无发布日期的相对时间",
+      "kind": "boundary",
+      "runAt": "2026-10-23T04:44:01.950Z",
+      "elapsedMs": 7431,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 2,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1241,
+          "completion_tokens": 340,
+          "total_tokens": 1581,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 217,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.02,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一条社区发放老年优待证的领取通知",
+          "summary": "明天上午九点到社区活动室领老年优待证，记得带身份证。",
+          "audience": {
+            "value": "来领老年优待证的居民",
+            "status": "stated",
+            "evidence": [
+              "社区在活动室发放老年优待证"
+            ]
+          },
+          "times": [
+            {
+              "purpose": "服务时间",
+              "value": "明天上午九点",
+              "status": "stated",
+              "evidence": [
+                "明天上午九点"
+              ]
+            }
+          ],
+          "location": {
+            "value": "社区活动室",
+            "status": "stated",
+            "evidence": [
+              "社区在活动室发放老年优待证"
+            ]
+          },
+          "preparation": [
+            {
+              "value": "身份证",
+              "status": "stated",
+              "evidence": [
+                "请带好身份证"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": "required",
+              "value": "明天上午九点去社区活动室领老年优待证，去的时候带上身份证。",
+              "evidence": [
+                "明天上午九点，社区在活动室发放老年优待证，请带好身份证"
+              ]
+            }
+          ],
+          "questions": [
+            "通知里说的“明天”具体是哪一天？请和社区确认一下。"
+          ],
+          "warnings": [
+            "通知里只写了“明天”，没说具体日期，去之前先确认“明天”是哪一天，别记错日子。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条社区发放老年优待证的领取通知\",\n  \"summary\": \"明天上午九点到社区活动室领老年优待证，记得带身份证。\",\n  \"audience\": {\n    \"value\": \"来领老年优待证的居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"社区在活动室发放老年优待证\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"服务时间\",\n      \"value\": \"明天上午九点\",\n      \"status\": \"stated\",\n      \"evidence\": [\"明天上午九点\"]\n    }\n  ],\n  \"location\": {\n    \"value\": \"社区活动室\",\n    \"status\": \"stated\",\n    \"evidence\": [\"社区在活动室发放老年优待证\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"身份证\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请带好身份证\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"明天上午九点去社区活动室领老年优待证，去的时候带上身份证。\",\n      \"evidence\": [\"明天上午九点，社区在活动室发放老年优待证，请带好身份证\"]\n    }\n  ],\n  \"questions\": [\n    \"通知里说的“明天”具体是哪一天？请和社区确认一下。\"\n  ],\n  \"warnings\": [\n    \"通知里只写了“明天”，没说具体日期，去之前先确认“明天”是哪一天，别记错日子。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "时间：明天上午九点 → 原样保留，不得换算为任何具体日期。地点：活动室（明确写出）。准备：身份证。绝不能出现：任何「2026年X月X日」「10月24日」形态的换算结果。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "timesContainAny",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "forbiddenGlobal",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "contains",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "B3",
+      "name": "边界·无更新关系的时间冲突",
+      "kind": "boundary",
+      "runAt": "2026-10-23T04:44:06.629Z",
+      "elapsedMs": 4679,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1248,
+          "completion_tokens": 389,
+          "total_tokens": 1637,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 224,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.03,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "notice",
+          "document_status_reason": "这是一条活动时间通知，但开始时间前后写法不一致。",
+          "summary": "通知居民参加10月26日的活动，但开始时间写了两个，需要先问清楚。",
+          "audience": {
+            "value": null,
+            "status": "missing",
+            "evidence": []
+          },
+          "times": [
+            {
+              "purpose": "活动开始",
+              "value": "一处写10月26日上午9点，另一处写10月26日下午3点",
+              "status": "conflict",
+              "evidence": [
+                "活动定于10月26日上午9点开始。",
+                "活动定于10月26日下午3点开始，请准时参加。"
+              ]
+            }
+          ],
+          "location": {
+            "value": null,
+            "status": "missing",
+            "evidence": []
+          },
+          "preparation": [],
+          "actions": [
+            {
+              "type": "suggested",
+              "value": "先向发布方问清楚活动到底是上午9点还是下午3点开始，再去参加。",
+              "evidence": [
+                "活动定于10月26日上午9点开始。",
+                "活动定于10月26日下午3点开始，请准时参加。"
+              ]
+            }
+          ],
+          "questions": [
+            "活动到底几点开始，是上午9点还是下午3点？",
+            "通知没有写活动在哪办，请问地点在哪里？"
+          ],
+          "warnings": [
+            "通知里出现了两个开始时间，一个上午9点、一个下午3点，没说哪个改了、以哪个为准，别自己挑一个。",
+            "通知没有写发布日期，请核对10月26日是哪一个月的哪一年。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一条活动时间通知，但开始时间前后写法不一致。\",\n  \"summary\": \"通知居民参加10月26日的活动，但开始时间写了两个，需要先问清楚。\",\n  \"audience\": {\n    \"value\": null,\n    \"status\": \"missing\",\n    \"evidence\": []\n  },\n  \"times\": [\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"一处写10月26日上午9点，另一处写10月26日下午3点\",\n      \"status\": \"conflict\",\n      \"evidence\": [\n        \"活动定于10月26日上午9点开始。\",\n        \"活动定于10月26日下午3点开始，请准时参加。\"\n      ]\n    }\n  ],\n  \"location\": {\n    \"value\": null,\n    \"status\": \"missing\",\n    \"evidence\": []\n  },\n  \"preparation\": [],\n  \"actions\": [\n    {\n      \"type\": \"suggested\",\n      \"value\": \"先向发布方问清楚活动到底是上午9点还是下午3点开始，再去参加。\",\n      \"evidence\": [\n        \"活动定于10月26日上午9点开始。\",\n        \"活动定于10月26日下午3点开始，请准时参加。\"\n      ]\n    }\n  ],\n  \"questions\": [\n    \"活动到底几点开始，是上午9点还是下午3点？\",\n    \"通知没有写活动在哪办，请问地点在哪里？\"\n  ],\n  \"warnings\": [\n    \"通知里出现了两个开始时间，一个上午9点、一个下午3点，没说哪个改了、以哪个为准，别自己挑一个。\",\n    \"通知没有写发布日期，请核对10月26日是哪一个月的哪一年。\"\n  ]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "同一活动的开始时间出现两个互相矛盾的表述，且原文没有「改为」「以此为准」这类更新关系 → 必须并列保留两个时间并标为冲突（conflict），或至少并列列出两个不同时间并提示确认。绝不能只保留其中一个而不提示。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "conflictOrBothTimes",
+          "pass": true,
+          "msg": ""
+        },
+        {
+          "type": "globalContainsAll",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    },
+    {
+      "id": "B4",
+      "name": "边界·非通知文本",
+      "kind": "boundary",
+      "runAt": "2026-10-23T04:44:08.430Z",
+      "elapsedMs": 1801,
+      "productResult": {
+        "ok": true,
+        "phase": "done",
+        "attempts": 1,
+        "errors": [],
+        "appWarnings": [],
+        "model": {
+          "id": "deepseek-v4.1-flash",
+          "name": "Deepseek-V4.1-Flash"
+        },
+        "usage": {
+          "prompt_tokens": 1237,
+          "completion_tokens": 134,
+          "total_tokens": 1371,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 0
+          },
+          "prompt_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "cached_tokens": 1024
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 213,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0,
+          "prompt_cache_write_tokens": 0,
+          "completion_thinking_tokens": 0,
+          "credit": 0.01,
+          "cached_tokens": 0
+        },
+        "data": {
+          "document_status": "not_notice",
+          "document_status_reason": "这段话是约人打球吃饭的聊天内容，不是给居民的通知。",
+          "summary": "",
+          "audience": {
+            "value": null,
+            "status": "missing",
+            "evidence": []
+          },
+          "times": [],
+          "location": {
+            "value": null,
+            "status": "missing",
+            "evidence": []
+          },
+          "preparation": [],
+          "actions": [],
+          "questions": [],
+          "warnings": [
+            "这条内容看起来是日常聊天，不是通知，无法整理成行动卡。请重新提供通知原文。"
+          ]
+        },
+        "raw": "{\n  \"document_status\": \"not_notice\",\n  \"document_status_reason\": \"这段话是约人打球吃饭的聊天内容，不是给居民的通知。\",\n  \"summary\": \"\",\n  \"audience\": { \"value\": null, \"status\": \"missing\", \"evidence\": [] },\n  \"times\": [],\n  \"location\": { \"value\": null, \"status\": \"missing\", \"evidence\": [] },\n  \"preparation\": [],\n  \"actions\": [],\n  \"questions\": [],\n  \"warnings\": [\"这条内容看起来是日常聊天，不是通知，无法整理成行动卡。请重新提供通知原文。\"]\n}",
+        "runError": null
+      },
+      "referenceAnswer": "这不是通知 → document_status 必须是 not_notice，不得输出任何事实项，不得生成一张看起来完整的行动卡。",
+      "checks": [
+        {
+          "type": "docStatus",
+          "pass": true,
+          "msg": ""
+        }
+      ],
+      "pass": true,
+      "status": "通过"
+    }
+  ]
+}
