@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>明白办 · 在线体验与运行说明</title><style>
+@page { size: A4; margin: 14mm 16mm 16mm 16mm; }
+*{box-sizing:border-box}
+body{margin:0;font-family:"Microsoft YaHei",sans-serif;color:#26312C;font-size:9.7pt;line-height:1.68}
+h1{font-size:17pt;margin:0 0 3mm}
+h3{font-size:10.6pt;margin:4mm 0 1.6mm;color:#254C40}
+p{margin:0 0 2.2mm}
+ul{margin:0 0 2.2mm;padding-left:5mm}
+li{margin-bottom:1mm}
+.small{font-size:8.4pt;line-height:1.55}
+.muted{color:#5D6A63}
+.kicker{font-size:8.6pt;color:#254C40;font-weight:700}
+.rule{height:3px;background:#254C40;width:24mm;margin:2.4mm 0 4mm}
+table{width:100%;border-collapse:collapse;margin:1mm 0 3mm;font-size:8.3pt;line-height:1.45}
+th,td{border:1px solid #E3DCCD;padding:1.5mm 1.8mm;text-align:left;vertical-align:top}
+th{background:#F2EFE7;font-weight:700}
+.ok{color:#2F6B4F;font-weight:700}
+.bad{color:#9E2B25;font-weight:700}
+.box{border:1px solid #E3DCCD;border-left:4px solid #254C40;background:#FAF8F3;padding:2.4mm 3.4mm;margin:0 0 3mm}
+.box.ok{border-left-color:#2F6B4F;background:#F2F8F4}
+.box.warn{border-left-color:#8A4B1E;background:#FDF6EC}
+code{background:#F0EFE9;padding:0 1mm;border-radius:2px;font-size:8.6pt}
+</style></head><body>
+<section>
+<p class="kicker">附件 08</p>
+<h1>在线体验与运行说明</h1>
+<div class="rule"></div>
+<div class="box ok">
+  <b>预览地址：</b><a href="https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG">https://mingbaiban-42482.app.workbuddy.host/</a><br>
+  <span class="small">无需注册、无需登录。手机与电脑都能用。</span>
+</div>
+<h3>一、怎么试（3 分钟）</h3>
+<ol class="small" style="padding-left:5mm">
+  <li>打开地址，点首页「示例一 · 手机使用指导」。</li>
+  <li>点「整理成行动卡」，等 3—15 秒（真实模型在处理）。</li>
+  <li>看结论卡下面的「谁适用」「何时、何地」——注意报名截止与活动开始是两个时间，地点分别是一楼服务台、二楼活动室。</li>
+  <li>点任意一项下面的「对照通知原文」，能看到通知里的原句。</li>
+  <li>点「复制行动卡，发给家人」，可粘贴到聊天里。</li>
+</ol>
+<h3>二、版本怎么核对</h3>
+<p class="small">控制台执行 <code>window.MBB_CONFIG.appVersion</code>，应返回 <code>1.2.0-b2</code>。页面页脚也会显示本次实际使用的模型名与耗时。</p>
+<h3>三、真实模型调用的条件</h3>
+<table>
+  <tr><th style="width:26%">项目</th><th>说明</th></tr>
+  <tr><td>通道</td><td>WorkBuddy 云服务免密钥通道；浏览器直连数据面，服务端按 Origin 校验</td></tr>
+  <tr><td>运行时模型</td><td><code>deepseek-v4.1-flash</code>（模型列表接口读取后选用）</td></tr>
+  <tr><td>网络</td><td>需要联网；模型调用在浏览器端直接发生</td></tr>
+  <tr><td>超时与重试</td><td>单次 45 秒；失败最多重试 1 次（网络瞬断也重试 1 次）</td></tr>
+  <tr><td>域名限制</td><td>换域名或本地 <code>file://</code> 打开时，模型调用会被服务端拒绝，页面显示「AI 服务还没连接上」——这是设计行为</td></tr>
+  <tr><td>配额</td><td>由平台侧决定；用尽时页面明确提示，不给假答案</td></tr>
+</table>
+<h3>四、原始输入与隐私边界</h3>
+<ul class="small">
+  <li>通知原文只用于本次请求，<b>不建账号、不建历史库、不主动写日志</b>，刷新页面即清空。</li>
+  <li>模型服务由平台托管，其服务端可能按平台规则处理请求数据，这部分不在本产品控制范围，因此<b>不承诺“绝不上传/绝不保留”</b>。</li>
+  <li>请不要把身份证号、银行卡号、手机号等敏感信息贴进来。</li>
+  <li>页面不加载第三方统计或广告脚本；除模型通道与 CDN 上的 SDK 外无外部请求。</li>
+</ul>
+<h3>五、已验证环境与未验证项</h3>
+<table class="small">
+  <tr><th style="width:46%">已验证</th><th>说明</th></tr>
+  <tr><td>公网地址可访问</td><td>无头浏览器从外部加载成功，非静态占位页</td></tr>
+  <tr><td>新输入可真实调用模型</td><td>12 条用例均返回真实结果，耗时与 token 用量已记录</td></tr>
+  <tr><td>主要交互可用</td><td>输入、样例、整理、对照原文、勾选、复制、换一条均实测</td></tr>
+  <tr><td>四档视口布局</td><td>360 / 390 / 768 / 1280，无横向滚动</td></tr>
+</table>
+<table class="small">
+  <tr><th style="width:46%">未验证</th><th>原因</th></tr>
+  <tr><td>真机（长辈实际手机）</td><td>仅桌面浏览器模拟视口，未在真实手机运行</td></tr>
+  <tr><td>微信内置浏览器</td><td>未实测</td></tr>
+  <tr><td>真人使用效果</td><td>尚未开展试用，无数据</td></tr>
+  <tr><td>长期可用性</td><td>平台配额与链接有效期不由本项目控制</td></tr>
+</table>
+</section><section style="page-break-before:always">
+<p class="kicker">附件 08（续）</p>
+<h1>本地运行与部署</h1>
+<div class="rule"></div>
+<h3>一、本地看界面</h3>
+<div class="box small"><code>cd upgrades/B/project</code><br><code>python3 -m http.server 8123 --bind 127.0.0.1</code><br>打开 <code>http://127.0.0.1:8123/</code></div>
+<p class="small muted">本地只能看布局与交互，点「整理成行动卡」会因 Origin 不匹配而失败——这不是 bug。</p>
+<h3>二、部署要点（踩过的坑）</h3>
+<ul class="small">
+  <li><b>必须复用同一应用</b>：新建应用会换域名，模型通道 Origin 不匹配，所有调用被拒。</li>
+  <li><b>静态资源带版本号</b>：<code>index.html</code> 里的 <code>?v=1.2.0-b2</code> 是 CDN 缓存键；改前端必须同步改，否则会出现「HTML 新、JS 旧」的混合状态。</li>
+  <li><b>发布后等传播</b>：同一域名在不同节点短时可能返回不同版本，连续刷新 5 次核对方可。</li>
+  <li><b>测试脚本要等就绪</b>：<code>tools_tests/*.cjs</code> 会等待并核对 <code>appVersion</code> 再开始。</li>
+</ul>
+<h3>三、文件结构（本轮工程）</h3>
+<table class="small">
+  <tr><th style="width:34%">路径</th><th>作用</th></tr>
+  <tr><td><code>project/index.html</code> <code>about.html</code></td><td>产品页面（A 轮改版，B 轮小修）</td></tr>
+  <tr><td><code>project/css/app.css</code></td><td>暖社区视觉、响应式、状态样式</td></tr>
+  <tr><td><code>project/js/{config,llm,validate,app}.js</code></td><td>配置 / 模型调用 / 校验 / 渲染与状态机</td></tr>
+  <tr><td><code>project/prompts/system-prompt.txt</code></td><td>系统提示词（运行时读取，单一来源）</td></tr>
+  <tr><td><code>project/tests/cases.json</code></td><td>12 条用例与参考答案</td></tr>
+  <tr><td><code>tools_record.cjs</code></td><td>CDP 录屏脚本（7 段，按旁白时长配速）</td></tr>
+  <tr><td><code>tools_make_video.py</code></td><td>逐帧排版 + 音轨拼接 + 字幕生成</td></tr>
+  <tr><td><code>tools_make_docx.py</code></td><td>生成可编辑 Word</td></tr>
+  <tr><td><code>delivery/sources/</code></td><td>说明书 HTML、两张信息图 HTML、旁白稿、封面 HTML、时间线</td></tr>
+</table>
+<h3>四、重新生成</h3>
+<div class="box small">
+  录屏：<code>node tools_record.cjs &lt;url&gt; 1.2.0-b2</code><br>
+  成片：<code>python tools_make_video.py</code>（依赖 delivery/assets/audio 与 recordings）<br>
+  说明书：<code>node tools_pdf.cjs delivery/sources/manual-b.html delivery/01_明白办_产品说明书.pdf</code><br>
+  Word：<code>python tools_make_docx.py</code>
+</div>
+</section></body></html>

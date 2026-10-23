@@ -1,46 +1,49 @@
 {
-  "currentRound": "A",
+  "currentRound": "B",
   "roundStatus": {
     "A": "delivered",
-    "B": "not_started",
+    "B": "delivered",
     "C": "not_started"
   },
-  "sourceVersion": "1.0.0",
-  "workingDir": "mingbaiban/upgrades/A/project",
-  "deliveryDir": "mingbaiban/upgrades/A/delivery",
+  "sourceVersion": "1.1.0-a3",
+  "workingDir": "mingbaiban/upgrades/B/project",
+  "deliveryDir": "mingbaiban/upgrades/B/delivery",
   "previewUrl": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
   "previewIsIndependent": false,
   "previewNote": "平台把同一工作区的发布都指向同一应用（wbapp_iiPVrUTJJSCc0MurWICMde），A 轮覆盖了原 v1.0.0 的线上版本；原版代码在 mingbaiban/app/ 与 git 提交 9ad17e8 中可回滚。",
-  "codeVersion": "1.1.0-a3",
+  "codeVersion": "1.2.0-b2",
   "codeHash": null,
-  "assetsManifest": "mingbaiban/upgrades/A/delivery/manifest.json",
+  "assetsManifest": "mingbaiban/upgrades/B/delivery/14_明白办_交付清单.json",
   "zips": {
-    "source": "mingbaiban/upgrades/A/明白办_A轮源码.zip",
-    "package": "mingbaiban/upgrades/A/明白办_A轮交付包.zip"
+    "source": "mingbaiban/upgrades/B/delivery/10_明白办_源码.zip",
+    "package": "mingbaiban/upgrades/B/明白办_B轮参赛交付包.zip"
   },
   "models": {
-    "runtime": "deepseek-v4.1-flash（WorkBuddy 云服务免密钥通道，浏览器直连数据面）",
+    "runtime": "deepseek-v4.1-flash（WorkBuddy 云服务免密钥通道）",
     "dev": "DeepSeek V4.1 Flash（WorkBuddy 开发执行模型）",
-    "image": "WorkBuddy ImageGen（工具未返回具体模型 ID，故不写型号）"
+    "image": "WorkBuddy ImageGen（B 轮新增 3 张，图片生成模型 ID 未返回）",
+    "tts": "Windows SAPI5 / Microsoft Huihui（本地系统语音合成，非云端大模型 TTS）"
   },
   "completed": [
-    "首页信息结构与文案重写（整理者视角）",
-    "结果页按 要办什么→谁适用→何时何地→准备什么→下一步→还要确认 重排",
-    "新增 times[].place：报名地点与活动地点分开",
-    "顶部确认横幅：冲突置顶、不默认收起",
-    "复制内容与当前勾选状态一致（[x]/[ ]）+ 不是报名凭证的声明",
-    "validate.js：required 无原文依据改判失败；not_notice 不再被误判为失败；网络瞬断重试 1 次",
-    "暖色视觉 + 2 张 AI 插画（主视觉 / 加载静物）实际用于页面",
-    "12 条用例 12/12、页面行为 10/10、A 轮专项 11/11（新版重跑，非复用旧数字）",
-    "四档视口无横向滚动、触控 ≥56px、9 组配色全部 ≥4.5:1",
-    "前后对照 HTML + PNG、验证记录、视觉规范、运行说明、manifest、两个 ZIP"
+    "3 张叙事插画（收到通知/一起核对/出门准备），以 A 主视觉为参考图，人物一致",
+    "10 段中文旁白（SAPI5），总长 116.6 秒；先出音频再排画面",
+    "7 段真实操作录屏（CDP 抓帧），占全片约 84%",
+    "成片 119.7 秒 / 1080×1920 / H.264(yuv420p) / AAC，含音轨",
+    "说明书 PDF 10 页 + 同源 DOCX（96 段/11 表/10 图），六项内容齐全",
+    "公众版四步图、技术实现图（可编辑 HTML → PNG）",
+    "封面 1080×1920（主视觉 + 一处真实 UI 局部）",
+    "08 运行说明 3 页、09 测试报告 3 页（数据读自证据 JSON）",
+    "06 发布文案（主+备用，含双话题与 AI 来源说明）",
+    "13 报名表、12 来源记录、15 配对试用模板（空白）",
+    "14 清单 81 项（含 sha256）、两个 ZIP 解包校验",
+    "b2 上重跑：12/12、10/10、11/11"
   ],
   "failedOrBlocked": [
-    "独立预览域名：平台不支持（发布均指向同一应用），因此 A 轮覆盖了原地址",
-    "OCR / 语音朗读 / 自动分享 / 持久化分享链接：按任务书属 C 轮，本轮未做",
-    "完整 PDF 与演示视频重制：按任务书属 B 轮，本轮未做",
-    "真机测试与真人试用：不具备条件，未做"
+    "独立预览域名：平台把同工作区发布指向同一应用，B 覆盖了 A 的线上版本（原版与 A 轮代码均可回滚）",
+    "云端大模型 TTS：无可用通道，改用系统 SAPI5；听感偏朗读腔，已在材料中说明",
+    "真人试用与真机测试：不具备条件，未做",
+    "OCR 与产品内朗读：属 C 轮，未做"
   ],
-  "nextStep": "把 02_B轮_参赛材料插画与配音升级.txt 交给执行方，并说明「继续执行 B 轮任务书，基于 A 轮成果完成本轮文件交付」；B 轮以 upgrades/A/project 为基线，沿用本轮主视觉与配色。",
-  "updatedAt": "2026-10-23T20:22:41+08:00"
+  "nextStep": "拖入 03_C轮_截图识别与产品朗读升级.txt，并说明「继续执行 C 轮任务书，完成新增功能与最终材料同步」；以 upgrades/B/project 为基线，沿用 B 的插画与配色。",
+  "updatedAt": "2026-10-23T21:08:17+08:00"
 }

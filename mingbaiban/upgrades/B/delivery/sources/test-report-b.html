@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>明白办 · 技术测试报告</title><style>
+@page { size: A4; margin: 14mm 16mm 16mm 16mm; }
+*{box-sizing:border-box}
+body{margin:0;font-family:"Microsoft YaHei",sans-serif;color:#26312C;font-size:9.7pt;line-height:1.68}
+h1{font-size:17pt;margin:0 0 3mm}
+h3{font-size:10.6pt;margin:4mm 0 1.6mm;color:#254C40}
+p{margin:0 0 2.2mm}
+ul{margin:0 0 2.2mm;padding-left:5mm}
+li{margin-bottom:1mm}
+.small{font-size:8.4pt;line-height:1.55}
+.muted{color:#5D6A63}
+.kicker{font-size:8.6pt;color:#254C40;font-weight:700}
+.rule{height:3px;background:#254C40;width:24mm;margin:2.4mm 0 4mm}
+table{width:100%;border-collapse:collapse;margin:1mm 0 3mm;font-size:8.3pt;line-height:1.45}
+th,td{border:1px solid #E3DCCD;padding:1.5mm 1.8mm;text-align:left;vertical-align:top}
+th{background:#F2EFE7;font-weight:700}
+.ok{color:#2F6B4F;font-weight:700}
+.bad{color:#9E2B25;font-weight:700}
+.box{border:1px solid #E3DCCD;border-left:4px solid #254C40;background:#FAF8F3;padding:2.4mm 3.4mm;margin:0 0 3mm}
+.box.ok{border-left-color:#2F6B4F;background:#F2F8F4}
+.box.warn{border-left-color:#8A4B1E;background:#FDF6EC}
+code{background:#F0EFE9;padding:0 1mm;border-radius:2px;font-size:8.6pt}
+</style></head><body>
+<section>
+<p class="kicker">附件 09</p>
+<h1>技术测试报告（B 轮）</h1>
+<div class="rule"></div>
+<div class="box ok small">
+  <b>被测版本 v1.2.0-b2</b>，线上真实模型调用。<br>
+  12 条通知用例 <b>12/12 通过</b>；
+  页面行为 10 项 <b>10/10 通过</b>；
+  A 轮专项 11 项 <b>11/11 通过</b>。<br>
+  <b>未开展</b>：目标用户真人试用、真机测试。本报告不代表"任何输入都不会出错"。
+</div>
+<h3>一、环境与对象</h3>
+<table class="small">
+  <tr><th style="width:24%">项目</th><th>内容</th></tr>
+  <tr><td>执行时间</td><td>2026-10-23T13:00:43.486Z（UTC）</td></tr>
+  <tr><td>被测版本</td><td>v1.2.0-b2；https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG</td></tr>
+  <tr><td>运行时模型</td><td>deepseek-v4.1-flash（Deepseek-V4.1-Flash）</td></tr>
+  <tr><td>浏览器</td><td>Microsoft Edge (headless) via playwright-core，视口 390x844；Windows 11 / Node v22.22.2</td></tr>
+  <tr><td>参考答案</td><td>运行产品前写定，见 project/tests/cases.json（含 A 轮修订痕迹）</td></tr>
+</table>
+<h3>二、12 条通知用例</h3>
+<table><tr><th style="width:8%">编号</th><th style="width:46%">用例</th><th style="width:12%">结论</th><th style="width:14%">耗时</th><th>尝试</th></tr><tr><td>N1</td><td>固定基准A·手机使用指导（含仅限已报名限制）</td><td class='ok'>通过</td><td>16.1s</td><td>2</td></tr><tr><td>N2</td><td>固定基准C·报名截止与活动开始分离</td><td class='ok'>通过</td><td>5.7s</td><td>1</td></tr><tr><td>N3</td><td>固定基准B·相对日期必须原样保留</td><td class='ok'>通过</td><td>7.0s</td><td>1</td></tr><tr><td>N4</td><td>电梯检修·无材料无费用</td><td class='ok'>通过</td><td>4.6s</td><td>1</td></tr><tr><td>N5</td><td>老年助餐登记·材料与费用与资格</td><td class='ok'>通过</td><td>8.0s</td><td>1</td></tr><tr><td>N6</td><td>停水通知·提前储水</td><td class='ok'>通过</td><td>12.0s</td><td>2</td></tr><tr><td>N7</td><td>健康讲座·电话报名与免费</td><td class='ok'>通过</td><td>4.1s</td><td>1</td></tr><tr><td>N8</td><td>体检通知·分楼栋时段与空腹要求</td><td class='ok'>通过</td><td>5.5s</td><td>1</td></tr><tr><td>B1</td><td>边界·缺少地点</td><td class='ok'>通过</td><td>5.7s</td><td>1</td></tr><tr><td>B2</td><td>边界·无发布日期的相对时间</td><td class='ok'>通过</td><td>5.8s</td><td>1</td></tr><tr><td>B3</td><td>边界·无更新关系的时间冲突</td><td class='ok'>通过</td><td>6.7s</td><td>1</td></tr><tr><td>B4</td><td>边界·非通知文本</td><td class='ok'>通过</td><td>4.0s</td><td>1</td></tr></table>
+<p class="small muted">耗时区间 4.0—16.1 秒，中位数 5.8 秒。原始记录：assets/evidence/test-run-*.json。</p>
+<h3>三、页面行为 10 项</h3>
+<table><tr><th style="width:8%">编号</th><th>测试项</th><th style="width:12%">结论</th></tr><tr><td>E1</td><td>空白输入有清楚提示且不发起请求</td><td class='ok'>通过</td></tr><tr><td>E2</td><td>超长输入(8003字)提示且不截断</td><td class='ok'>通过</td></tr><tr><td>E3</td><td>注入指令未被执行且未泄露系统提示词</td><td class='ok'>通过</td></tr><tr><td>E4</td><td>加载中禁用按钮，连续点击不重复提交</td><td class='ok'>通过</td></tr><tr><td>E5</td><td>换通知后不显示上一条通知的旧答案</td><td class='ok'>通过</td></tr><tr><td>E6</td><td>剪贴板不可用时有可手动复制的替代路径（弹出手动复制框）</td><td class='ok'>通过</td></tr><tr><td>E7</td><td>通知中的 HTML/脚本不被执行、不被插入 DOM</td><td class='ok'>通过</td></tr><tr><td>E8</td><td>360/390px 视口无横向滚动</td><td class='ok'>通过</td></tr><tr><td>E9</td><td>可见按钮/复选框触控高度 ≥44px</td><td class='ok'>通过</td></tr><tr><td>E10</td><td>AI 服务不可用时显示失败说明，不输出固定答案冒充结果</td><td class='ok'>通过</td></tr></table>
+<h3>四、A 轮专项 11 项</h3>
+<table><tr><th style="width:8%">编号</th><th style="width:40%">项目</th><th style="width:12%">结论</th><th>观察</th></tr><tr><td>A1</td><td>required 但无原文引文 → 校验拒绝</td><td class='ok'>通过</td><td>{"ok":false,"errors":["actions[0]：标为原文要求但未提供原文引文"]}</td></tr><tr><td>A2</td><td>required 引文对不上原文 → 校验拒绝</td><td class='ok'>通过</td><td>{"ok":false,"errors":["actions[0]：引文在原文中找不到 →「请携带身份证」","actions[0]：标为原文要求，但没有一条引</td></tr><tr><td>A3</td><td>required 且引文真实 → 校验通过（未误伤正常数据）</td><td class='ok'>通过</td><td>{"ok":true,"errors":[]}</td></tr><tr><td>A0</td><td>示例通知能出结果页（若模型校验失败会自动重试，最多 3 次）</td><td class='ok'>通过</td><td>{"result":true,"error":false,"notNotice":false,"detail":"","attempt":1}</td></tr><tr><td>A4</td><td>报名地点与活动地点分别显示，未合并成笼统地点</td><td class='ok'>通过</td><td>{"text":"报名截止\n2026年10月25日17:00前\n✓\n原文写明\n地点：社区服务中心一楼服务台 \n✓\n原文写明\n对照通知原文\n活动开</td></tr><tr><td>A5</td><td>勾选后复制为 [x]，取消后复制为 [ ]（导出与界面一致）</td><td class='ok'>通过</td><td>checked含[x]=true unchecked含[x]=false</td></tr><tr><td>A6</td><td>复制文本写明"不是报名凭证"，未把整理者状态说成已报名</td><td class='ok'>通过</td><td>名在一楼服务台，活动在二楼活动室，两个地点不同。
+
+—— 说明 ——
+方框打勾记录的是「整理者准备到哪一步」，不是报名凭证，也不代表已经报名或办好。
+通知没写的</td></tr><tr><td>A7</td><td>复制文本不含模型名与耗时等工程细节</td><td class='ok'>通过</td><td>【明白办】社区通知行动卡
+
+这条通知要办什么
+  社区在2026年10月26日上午开展手机使用指导活动。要提前一天到一楼服务台报名，仅限已报名居民参加，并带本人</td></tr><tr><td>A8</td><td>正文不含亲属称呼与概括性说法</td><td class='ok'>通过</td><td>{"bad":[],"len":738}</td></tr><tr><td>A9</td><td>时间冲突时顶部出现提醒，写明前后不一致且不收起</td><td class='ok'>通过</td><td>{"visible":true,"isDanger":true,"text":"! 通知里有前后不一致的地方，先问清楚再安排\n\n活动开始：通知里出现了互相不</td></tr><tr><td>A10</td><td>非通知文本显示"不是通知"提示，而不是失败页</td><td class='ok'>通过</td><td>{"notNotice":true,"error":false,"title":"这段文字看起来不是社区通知"}</td></tr></table>
+</section><section style="page-break-before:always">
+<p class="kicker">附件 09（续）</p>
+<h1>本轮修复与未验证项</h1>
+<div class="rule"></div>
+<h3>五、B 轮发现并修掉的问题</h3>
+<table class="small">
+  <tr><th style="width:8%">#</th><th style="width:36%">问题</th><th>处理</th></tr>
+  <tr><td>1</td><td>同一时间项的"时间引文"与"地点引文"重复时，证据框里出现两条一模一样的原文</td><td>合并时按文本去重；版本升到 b2 并重录、重新合成</td></tr>
+  <tr><td>2</td><td>视频字幕超过两行被截断（"地点也分开标着"被切）</td><td>字幕按宽度自适应字号，最多三行</td></tr>
+  <tr><td>3</td><td>成片为 yuvj420p（全色域），部分播放器偏色</td><td>重编码为 yuv420p（tv range）</td></tr>
+  <tr><td>4</td><td>首次录屏停顿过短，画面比旁白快，观感像快进</td><td>录屏按旁白时长配速（7 段各自补到目标时长），并给长段落加 3.2 秒静音补偿</td></tr>
+  <tr><td>5</td><td>部署后 CDN 节点短时返回新旧混合资源</td><td>静态资源加 ?v= 版本键；测试与录屏脚本先核对 appVersion</td></tr>
+</table>
+<p class="small muted">第 1 条属于产品缺陷（已修）；第 2—4 条属于制作缺陷（已修）；第 5 条属于部署环境问题（已规避）。</p>
+<h3>六、未验证项（明确列出）</h3>
+<ul class="small">
+  <li><b>未做真机测试</b>：360/390/768/1280 均为桌面浏览器模拟视口。</li>
+  <li><b>未做真人试用</b>：没有长辈或志愿者使用记录，不提供任何效果数据。</li>
+  <li><b>未测屏幕阅读器</b>：只做了语义标签与 alt 文本的人工检查。</li>
+  <li><b>未测微信内置浏览器</b>：长辈常用环境，尚未验证。</li>
+  <li><b>模型输出有波动</b>：同一输入多次调用措辞会变；本报告是某一时刻的真实结果。</li>
+  <li><b>旁白听感</b>：系统合成音色，偏朗读腔，不如商业 TTS 自然。</li>
+</ul>
+<h3>七、复现</h3>
+<div class="box small">
+<code>export NODE_PATH=&lt;node workspace&gt;/node_modules</code><br>
+<code>node tools_tests/run-tests.cjs &lt;线上地址&gt;</code><br>
+<code>node tools_tests/run-edge-tests.cjs &lt;线上地址&gt;</code><br>
+<code>node tools_tests/a_extra_tests.cjs &lt;线上地址&gt;</code>
+</div>
+</section></body></html>

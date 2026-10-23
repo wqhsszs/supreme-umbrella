@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>明白办 · 视频封面</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1080px; height: 1920px; overflow: hidden; background: #F7F3EB;
+         font-family: "Microsoft YaHei", "PingFang SC", sans-serif; color: #26312C; }
+  .wrap { width: 1080px; height: 1920px; position: relative;
+          background: radial-gradient(circle at 15% 8%, rgba(185,91,54,.07), transparent 42%),
+                      radial-gradient(circle at 86% 92%, rgba(37,76,64,.07), transparent 45%); }
+  .top { padding: 74px 72px 0; }
+  .brand { display: flex; align-items: center; gap: 18px; }
+  .mark { width: 92px; height: 92px; border-radius: 24px; background: #254C40; color: #fff;
+          display: grid; place-items: center; font-size: 46px; font-weight: 700; }
+  .brand b { font-size: 44px; letter-spacing: 2px; }
+  h1 { font-size: 96px; line-height: 1.16; font-weight: 700; margin-top: 60px; letter-spacing: 2px; }
+  h1 em { font-style: normal; color: #254C40; }
+  .sub { font-size: 38px; color: #45514A; line-height: 1.6; margin-top: 30px; width: 900px; }
+  .art { position: absolute; left: 0; right: 0; top: 640px; height: 620px; overflow: hidden; }
+  .art img { width: 100%; display: block; margin-top: -30px; }
+  .ui { position: absolute; left: 50%; transform: translateX(-50%); top: 1206px; width: 560px;
+        border-radius: 24px; overflow: hidden; border: 5px solid #fff;
+        box-shadow: 0 20px 50px rgba(38,49,44,.22); }
+  .ui img { width: 100%; display: block; }
+  .foot { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 72px 66px; background: #F7F3EB; border-top: 1px solid #E3DCCD; }
+  .tag { display: inline-block; font-size: 30px; font-weight: 700; color: #254C40;
+         background: #E7EEE9; border-radius: 99px; padding: 12px 26px; margin-bottom: 22px; }
+  .meta { font-size: 26px; color: #5D6A63; line-height: 1.65; }
+  .meta b { color: #26312C; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><span class="mark">明</span><b>明白办</b></div>
+    <h1>给家人一张<br><em>明白卡</em></h1>
+    <p class="sub">把社区通知整理成家人看得懂的行动卡：时间分用途、地点不混淆、每一项都能对照原文。</p>
+  </div>
+
+  <div class="art"><img src="../assets/illustrations/checking-together.png" alt="家人与长辈一起核对通知"></div>
+  <div class="ui"><img src="../assets/screenshots/b-cover-ui-crop.png" alt="行动卡界面局部"></div>
+
+  <div class="foot">
+    <span class="tag">AI 产品实现</span>
+    <p class="meta"><b>2026 iCAN × 快手 AI 未来创造者挑战赛</b><br>
+    实时模型生成 · 逐项原文依据 · 缺失与冲突提示<br>
+    插画由 AI 生成，界面为真实产品截图</p>
+  </div>
+</div>
+</body>
+</html>

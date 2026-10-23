@@ -1,0 +1,96 @@
+{
+  "totalSeconds": 119.75,
+  "fps": 15,
+  "segments": [
+    {
+      "id": "S1",
+      "kind": "illu",
+      "resource": "notice-arrived.png",
+      "title": "一条通知，两个时间，两处地点",
+      "start": 0,
+      "duration": 14.53,
+      "text": "社区发来一条通知：二十五号下午五点前报名，二十六号上午九点活动，一个在一楼，一个在二楼。"
+    },
+    {
+      "id": "S2",
+      "kind": "illu",
+      "resource": "checking-together.png",
+      "title": "家人先整理，长辈自己决定",
+      "start": 12.68,
+      "duration": 14.53,
+      "text": "家里人先看一遍，把它整理成一张卡，再交给长辈。去不去、怎么办，还是长辈自己定。"
+    },
+    {
+      "id": "S3",
+      "kind": "rec",
+      "resource": "P1-paste",
+      "title": "贴进原文，点“整理成行动卡”",
+      "start": 24.9,
+      "duration": 14.53,
+      "text": "打开明白办，把通知原文贴进去，点“整理成行动卡”。这一步是真的在调模型，不是提前写好的答案。"
+    },
+    {
+      "id": "S4",
+      "kind": "rec",
+      "resource": "P2-result",
+      "title": "先说要办什么，再说谁适用",
+      "start": 38.33,
+      "duration": 14.53,
+      "text": "几秒钟后，卡片出来了。先说要办什么事，再说谁适用，然后把报名截止和活动开始分开写。"
+    },
+    {
+      "id": "S5",
+      "kind": "rec",
+      "resource": "P3-evidence",
+      "title": "两处地点分开写，逐项可对照",
+      "start": 51.35,
+      "duration": 14.53,
+      "text": "每一项后面都能点开“对照通知原文”，看到通知里的原句。报名在一楼服务台，活动在二楼活动室，地点也分开标着。"
+    },
+    {
+      "id": "S7",
+      "kind": "rec",
+      "resource": "P4-check",
+      "title": "要带的东西打勾，不等于已报名",
+      "start": 66.23,
+      "duration": 14.53,
+      "text": "要带的东西可以打勾，但打勾只是记下准备到哪一步，不等于已经报名。"
+    },
+    {
+      "id": "S8",
+      "kind": "rec",
+      "resource": "P5-copy",
+      "title": "整张卡复制，缺失提醒一起带走",
+      "start": 75.23,
+      "duration": 14.53,
+      "text": "点“复制行动卡”，整张卡可以粘贴到聊天里发给家人，缺失和提醒都一起带走。"
+    },
+    {
+      "id": "S6a",
+      "kind": "rec",
+      "resource": "P6-missing",
+      "title": "原文没有的，标“通知未说明”",
+      "start": 85.36,
+      "duration": 14.53,
+      "text": "通知没写的地方，它会直接写“通知未说明”，不会替社区补。"
+    },
+    {
+      "id": "S6b",
+      "kind": "rec",
+      "resource": "P7-conflict",
+      "title": "前后不一致，最上面先提醒",
+      "start": 93.34,
+      "duration": 14.53,
+      "text": "信息前后不一致的时候，最上面会提醒先问清楚，再安排时间。"
+    },
+    {
+      "id": "S9",
+      "kind": "illu",
+      "resource": "leaving-ready.png",
+      "title": "把通知整理清楚，让人自己决定",
+      "start": 105.22,
+      "duration": 14.53,
+      "text": "明白办现在只能处理文字，也还没有做过真机测试和长辈试用。它做的是一件事：把通知整理清楚，让人自己决定。"
+    }
+  ]
+}

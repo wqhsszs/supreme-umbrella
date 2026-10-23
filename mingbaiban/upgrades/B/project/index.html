@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7F3EB">
+<title>明白办 · 把社区通知，整理成家人看得懂的行动卡</title>
+<meta name="description" content="明白办：把社区发来的通知原文，整理成一张看得懂、带原文依据的行动卡，再转给家人。">
+<link rel="stylesheet" href="./css/app.css?v=1.2.0-b2">
+</head>
+<body>
+
+<a class="skip" href="#noticeInput">跳到输入框</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">明</span>
+      <span class="brand-text">
+        <strong>明白办</strong>
+        <small>把社区通知整理成行动卡</small>
+      </span>
+    </div>
+    <button id="btnReset" class="btn btn-ghost" type="button" hidden>换一条通知</button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ 第一步：贴通知 ============ -->
+  <section id="stepInput" class="panel compose">
+    <div class="hero-text">
+      <h1>帮家人整理一条社区通知</h1>
+      <p class="lede">时间、地点、要带什么，核对清楚再转给家人。</p>
+    </div>
+
+    <ol class="steps" aria-label="使用步骤">
+      <li><b>1</b>贴通知</li>
+      <li><b>2</b>核对重点</li>
+      <li><b>3</b>复制给家人</li>
+    </ol>
+
+    <div class="field">
+      <label class="label" for="noticeInput">把社区发来的通知文字贴在这里</label>
+      <textarea id="noticeInput" class="textarea" rows="6"
+        placeholder="例如：请于10月25日17:00前到社区服务中心一楼服务台报名，26日9:00在二楼活动室参加手机使用指导……"
+        spellcheck="false" aria-describedby="inputHint"></textarea>
+      <div class="field-foot">
+        <span id="inputHint" class="hint">暂时只能处理文字。通知是图片的，可以先复制成文字，或照着打一遍。最多 5000 字。</span>
+        <span id="charCount" class="counter">0 / 5000</span>
+      </div>
+      <p id="inputError" class="error-text" role="alert" hidden></p>
+    </div>
+
+    <button id="btnAnalyze" class="btn btn-primary btn-xl" type="button">
+      <span class="btn-label">整理成行动卡</span>
+      <span class="btn-busy" hidden>正在整理…</span>
+    </button>
+
+    <figure class="hero-art">
+      <img src="./assets/illustrations/hero-family-web.jpg" width="1200" height="743"
+           alt="插画：家人和一位长辈在餐桌旁一起看手机和便签，家人指着便签上的重点，长辈身体微前倾一起看。"
+           fetchpriority="high" decoding="async">
+      <figcaption>插画为虚构人物，由 AI 生成，不对应任何真实个人。</figcaption>
+    </figure>
+
+    <div class="samples">
+      <p class="samples-title">手边没有通知？<strong>先用一条示例看看</strong></p>
+      <div class="samples-list" id="sampleList">
+        <button class="btn btn-sample" type="button" data-sample="0">示例一 · 手机使用指导（活动报名）</button>
+        <button class="btn btn-sample" type="button" data-sample="1">示例二 · 电梯检修停用（设施维护）</button>
+        <button class="btn btn-sample" type="button" data-sample="2">示例三 · 老年助餐登记（服务登记）</button>
+      </div>
+      <p class="samples-note">三条示例都是本项目编写的虚构演示材料，不是任何真实社区的公告。</p>
+    </div>
+  </section>
+
+  <!-- ============ 整理中 ============ -->
+  <section id="stepLoading" class="panel" hidden>
+    <div class="loading-card" role="status" aria-live="polite">
+      <img class="loading-art" src="./assets/illustrations/desk-still-life-web.jpg" width="1000" height="619"
+           alt="" aria-hidden="true" decoding="async">
+      <p class="loading-title">正在整理时间、地点和准备事项……</p>
+      <p class="loading-sub">这一步由 AI 逐句阅读通知原文，不是提前写好的答案。</p>
+      <p class="dots" aria-hidden="true"><span></span><span></span><span></span></p>
+    </div>
+    <button id="btnCancel" class="btn btn-ghost btn-wide" type="button">先不看，返回</button>
+  </section>
+
+  <!-- ============ 整理失败 ============ -->
+  <section id="stepError" class="panel" hidden>
+    <div class="error-card" role="alert">
+      <p class="error-title" id="errTitle">这次没有整理成功</p>
+      <p class="error-body" id="errBody">原文还在，可以再试一次。</p>
+      <p class="error-detail" id="errDetail" hidden></p>
+    </div>
+    <button id="btnRetry" class="btn btn-primary btn-wide" type="button">再试一次</button>
+    <button id="btnBackHome" class="btn btn-ghost btn-wide" type="button">改一下通知内容</button>
+  </section>
+
+  <!-- ============ 不是通知 ============ -->
+  <section id="stepNotNotice" class="panel" hidden>
+    <div class="notice-card">
+      <p class="notice-title">这段文字看起来不是社区通知</p>
+      <p class="notice-body" id="notNoticeReason"></p>
+      <p class="notice-body">把社区发来的通知原文完整贴进来，我再整理。</p>
+    </div>
+    <button id="btnBackHome2" class="btn btn-primary btn-wide" type="button">重新贴一条通知</button>
+  </section>
+
+  <!-- ============ 行动卡 ============ -->
+  <section id="stepResult" class="panel" hidden aria-live="polite">
+
+    <div class="card card-summary">
+      <span class="card-kicker">这条通知要办什么</span>
+      <p class="summary-text" id="summaryText"></p>
+      <p class="summary-reason" id="statusReason"></p>
+    </div>
+
+    <div id="confirmBanner" hidden></div>
+
+    <div class="card">
+      <h2 class="card-title"><span class="num">1</span>谁适用</h2>
+      <div id="audienceBox"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><span class="num">2</span>何时、何地</h2>
+      <p class="card-note">报名截止、活动开始是两件事，地点也分别对应。</p>
+      <div id="timesBox"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><span class="num">3</span>家人需要准备什么</h2>
+      <p class="card-note">打勾只记录准备到哪一步，<strong>不等于已经报名或办好</strong>。</p>
+      <div id="prepBox"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title"><span class="num">4</span>下一步</h2>
+      <div id="actionBox"></div>
+    </div>
+
+    <div class="card" id="questionCard" hidden>
+      <h2 class="card-title"><span class="num">5</span>还要确认什么</h2>
+      <p class="card-note">这几件事可以先帮家人问清楚。</p>
+      <div id="questionBox"></div>
+    </div>
+
+    <div class="card" id="warningCard" hidden>
+      <h2 class="card-title"><span class="num">6</span>注意</h2>
+      <div id="warningBox"></div>
+    </div>
+
+    <div class="result-actions">
+      <button id="btnCopy" class="btn btn-primary btn-wide" type="button">复制行动卡，发给家人</button>
+      <button id="btnNewNotice" class="btn btn-ghost btn-wide" type="button">换一条通知</button>
+    </div>
+
+    <p class="meta-line" id="metaLine"></p>
+    <p class="disclaimer">
+      这张卡只帮助读懂通知，不替社区提要求，也不代替办理。
+      <a href="./about.html">关于与使用说明</a>
+    </p>
+  </section>
+
+</main>
+
+<!-- 复制失败时的替代操作 -->
+<dialog id="copyFallback" class="copy-dialog">
+  <form method="dialog">
+    <h2 class="copy-title">没能自动复制，这样也能复制</h2>
+    <p class="copy-help">下面的文字已经选中了。按住它选「全选」，再点「复制」；电脑上按 Ctrl+C。</p>
+    <textarea id="copyFallbackText" class="copy-area" rows="12" readonly></textarea>
+    <button class="btn btn-primary btn-wide" type="button" id="btnSelectAll">全选这些字</button>
+    <button class="btn btn-ghost btn-wide" value="close">知道了</button>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js"></script>
+<script src="./js/config.js?v=1.2.0-b2"></script>
+<script src="./js/validate.js?v=1.2.0-b2"></script>
+<script src="./js/llm.js?v=1.2.0-b2"></script>
+<script src="./js/app.js?v=1.2.0-b2"></script>
+</body>
+</html>

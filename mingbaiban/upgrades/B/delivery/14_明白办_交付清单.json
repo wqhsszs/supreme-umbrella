@@ -1,0 +1,509 @@
+{
+  "round": "B",
+  "product": "明白办 — 面向长辈的 AI 社区通知行动助手",
+  "version": "1.2.0-b2",
+  "baselineRound": "A (1.1.0-a3)",
+  "generatedAt": "2026-10-23T21:05:56+08:00",
+  "previewUrl": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
+  "applicationId": "wbapp_iiPVrUTJJSCc0MurWICMde",
+  "runtimeModel": "deepseek-v4.1-flash (WorkBuddy 云服务通道)",
+  "imageTool": "WorkBuddy ImageGen（B 轮新增 3 张）",
+  "tts": "Windows SAPI5 / Microsoft Huihui（非云端大模型 TTS）",
+  "video": {
+    "file": "03_明白办_产品演示.mp4",
+    "seconds": 119.67,
+    "size": "1080x1920",
+    "codec": "H.264 yuv420p + AAC"
+  },
+  "note": "平台将同工作区发布指向同一应用；B 轮覆盖了 A 轮线上版本，原版与 A 轮代码均可回滚。 录屏原始帧已压缩为 assets/recordings/recording-raw.mp4（2.28MB），帧序列不再随包分发。",
+  "fileCount": 80,
+  "files": [
+    {
+      "name": "00_开始使用与交付状态.md",
+      "path": "upgrades/B/delivery/00_开始使用与交付状态.md",
+      "bytes": 3316,
+      "sha256": "66ca57c13e91c54d73e64a89bcbff8c4e0a1ee9beb841828d43fd46de8c34053"
+    },
+    {
+      "name": "01_明白办_产品说明书.pdf",
+      "path": "upgrades/B/delivery/01_明白办_产品说明书.pdf",
+      "bytes": 5092640,
+      "sha256": "a0e85d441cd36db355687ba69e25d4629964ec53ab9b18a0e72b88c18a63060c"
+    },
+    {
+      "name": "02_明白办_产品说明书_可编辑源文件.docx",
+      "path": "upgrades/B/delivery/02_明白办_产品说明书_可编辑源文件.docx",
+      "bytes": 4577981,
+      "sha256": "506baed616d922f6f1fa6890cd01d31d7b1d5f71456db75c4fe3afda0dc05bd5"
+    },
+    {
+      "name": "03_明白办_产品演示.mp4",
+      "path": "upgrades/B/delivery/03_明白办_产品演示.mp4",
+      "bytes": 12564828,
+      "sha256": "b3828d4d5272cf2d28529f7fa379daf6a0b821359860c3fac81c5764e803437c"
+    },
+    {
+      "name": "04_明白办_视频字幕.srt",
+      "path": "upgrades/B/delivery/04_明白办_视频字幕.srt",
+      "bytes": 1573,
+      "sha256": "57795edf60ce85030ff280176c5dac428e6b787a533cf16f9c15c7d79393068d"
+    },
+    {
+      "name": "05_明白办_视频脚本与分镜.md",
+      "path": "upgrades/B/delivery/05_明白办_视频脚本与分镜.md",
+      "bytes": 4387,
+      "sha256": "37649992531db5f8b1d486ccf00c50bfc894f4f5e2bdbfce558629d2de16f62d"
+    },
+    {
+      "name": "06_明白办_快手发布文案.txt",
+      "path": "upgrades/B/delivery/06_明白办_快手发布文案.txt",
+      "bytes": 3560,
+      "sha256": "dc0fc0a3e2f45359bca24d8b87277f48204035fef0ea24c917da15c5c3c6a4b3"
+    },
+    {
+      "name": "07_明白办_视频封面.png",
+      "path": "upgrades/B/delivery/07_明白办_视频封面.png",
+      "bytes": 1272709,
+      "sha256": "d68f6d408b0427ace13261696dbc65140a3530501838f2657be342a9a3bbb108"
+    },
+    {
+      "name": "08_明白办_在线体验与运行说明.pdf",
+      "path": "upgrades/B/delivery/08_明白办_在线体验与运行说明.pdf",
+      "bytes": 271872,
+      "sha256": "18f0b66ec4dd74396d01a5f18d163497ae41f6a146fbab959e7f50c7d2402db2"
+    },
+    {
+      "name": "09_明白办_测试报告.pdf",
+      "path": "upgrades/B/delivery/09_明白办_测试报告.pdf",
+      "bytes": 298671,
+      "sha256": "81e67af9788e1a0465f7f9f3f04491e150ae1b2ec9c04ee866c554a33534118e"
+    },
+    {
+      "name": "10_明白办_源码.zip",
+      "path": "upgrades/B/delivery/10_明白办_源码.zip",
+      "bytes": 9021941,
+      "sha256": "043caeae457b6eed3838b018ecd0187a46f78ee3132f56a9bd19d0938a7969ff"
+    },
+    {
+      "name": "11_公众版四步图.png",
+      "path": "upgrades/B/delivery/11_公众版四步图.png",
+      "bytes": 606716,
+      "sha256": "060d7c2fb85e5d3b90fd0ed88205d95c462e726af22be5aa23e3270dc0ff72a2"
+    },
+    {
+      "name": "11_技术实现图.png",
+      "path": "upgrades/B/delivery/11_技术实现图.png",
+      "bytes": 372207,
+      "sha256": "a30b79ba0008092ce9a7835c547d1074a918da1260ebfc700d13f35fb774dbff"
+    },
+    {
+      "name": "12_明白办_工具素材来源与原创记录.md",
+      "path": "upgrades/B/delivery/12_明白办_工具素材来源与原创记录.md",
+      "bytes": 6242,
+      "sha256": "49851783653dd7b13b5fbd2dd5175f4805605bac1f2b59381ee84d153195475e"
+    },
+    {
+      "name": "13_明白办_报名字段与提交核对表.md",
+      "path": "upgrades/B/delivery/13_明白办_报名字段与提交核对表.md",
+      "bytes": 4070,
+      "sha256": "91649c7f5265a05c049ef489646cd9b794da3b24496f9d162a360448f2f8c51a"
+    },
+    {
+      "name": "14_明白办_交付清单.json",
+      "path": "upgrades/B/delivery/14_明白办_交付清单.json",
+      "bytes": 21848,
+      "sha256": "e6b98678e3451d8e6efa43b5cfbc803ccd2570fcae5a32b83c7052e50f5ae495"
+    },
+    {
+      "name": "assets/audio/audio-timing.json",
+      "path": "upgrades/B/delivery/assets/audio/audio-timing.json",
+      "bytes": 2567,
+      "sha256": "5d8053e44aaf006d24f6e46046bcea39f67bc133b1e8aa29e72192d16527d8d8"
+    },
+    {
+      "name": "assets/audio/S1.wav",
+      "path": "upgrades/B/delivery/assets/audio/S1.wav",
+      "bytes": 546868,
+      "sha256": "6209486ff4dc0e864569bda9436977557f78feecdba08dc9582fada4ad6bc5b4"
+    },
+    {
+      "name": "assets/audio/S2.wav",
+      "path": "upgrades/B/delivery/assets/audio/S2.wav",
+      "bytes": 526602,
+      "sha256": "b201967c03e448154f14837c48833493298445258d7d9b4f6c2f4e0034326225"
+    },
+    {
+      "name": "assets/audio/S3.wav",
+      "path": "upgrades/B/delivery/assets/audio/S3.wav",
+      "bytes": 580064,
+      "sha256": "86608df0cb3e287ea1fbafe3ad9d4c1f067a668f7d5904b288cfe1443d4c98e4"
+    },
+    {
+      "name": "assets/audio/S4.wav",
+      "path": "upgrades/B/delivery/assets/audio/S4.wav",
+      "bytes": 561672,
+      "sha256": "858fcfed9fcb7c781545707f98bf561e618394d6f04c8df023fd39d46a25d70a"
+    },
+    {
+      "name": "assets/audio/S5.wav",
+      "path": "upgrades/B/delivery/assets/audio/S5.wav",
+      "bytes": 643776,
+      "sha256": "9553ef97015ac1ed27c516c801137f33c81d2944e528c8d6619679950ab9634e"
+    },
+    {
+      "name": "assets/audio/S6a.wav",
+      "path": "upgrades/B/delivery/assets/audio/S6a.wav",
+      "bytes": 339700,
+      "sha256": "217135ae7c4591d497744ef9a6b52a8e97021584205a6e5013620d541a0f2fd9"
+    },
+    {
+      "name": "assets/audio/S6b.wav",
+      "path": "upgrades/B/delivery/assets/audio/S6b.wav",
+      "bytes": 370668,
+      "sha256": "43f38224c29aeec10bd6270bddaf492fee5b48de8c57bafed1ffbfc041f358c8"
+    },
+    {
+      "name": "assets/audio/S7.wav",
+      "path": "upgrades/B/delivery/assets/audio/S7.wav",
+      "bytes": 384808,
+      "sha256": "26bb3281b4dec4e49fb3b461747e8e55af3aed9671f1bce8913912fe292db1a7"
+    },
+    {
+      "name": "assets/audio/S8.wav",
+      "path": "upgrades/B/delivery/assets/audio/S8.wav",
+      "bytes": 434496,
+      "sha256": "f4359e72e6bbd7e7ee416291f170ac9c75abda3cb3886c1a6465d8f70abb8e8f"
+    },
+    {
+      "name": "assets/audio/S9.wav",
+      "path": "upgrades/B/delivery/assets/audio/S9.wav",
+      "bytes": 640922,
+      "sha256": "c4717c1128cce297c299ec2bfb0a254baf67fd2e4effe23004f34da136eac37c"
+    },
+    {
+      "name": "assets/audio/voiceover-full.wav",
+      "path": "upgrades/B/delivery/assets/audio/voiceover-full.wav",
+      "bytes": 5281412,
+      "sha256": "46aa60cec61faaeb79045ad8a174d66e86ade07818201a52cab3d0195b54117c"
+    },
+    {
+      "name": "assets/evidence/a-extra-2026-10-23T13-02-19-913Z.json",
+      "path": "upgrades/B/delivery/assets/evidence/a-extra-2026-10-23T13-02-19-913Z.json",
+      "bytes": 3930,
+      "sha256": "c53a3e9eeaac76110da0d1e4e5143da5a6cb28fe0c90f26701de76ee662fe029"
+    },
+    {
+      "name": "assets/evidence/a-extra-latest.json",
+      "path": "upgrades/B/delivery/assets/evidence/a-extra-latest.json",
+      "bytes": 3930,
+      "sha256": "c53a3e9eeaac76110da0d1e4e5143da5a6cb28fe0c90f26701de76ee662fe029"
+    },
+    {
+      "name": "assets/evidence/edge-run-2026-10-23T13-01-20-715Z.json",
+      "path": "upgrades/B/delivery/assets/evidence/edge-run-2026-10-23T13-01-20-715Z.json",
+      "bytes": 4461,
+      "sha256": "34d699429a6a2e7a83e3038ea29de85c9a761f486ec1e6280ab98423ea07afb8"
+    },
+    {
+      "name": "assets/evidence/edge-run-latest.json",
+      "path": "upgrades/B/delivery/assets/evidence/edge-run-latest.json",
+      "bytes": 4461,
+      "sha256": "34d699429a6a2e7a83e3038ea29de85c9a761f486ec1e6280ab98423ea07afb8"
+    },
+    {
+      "name": "assets/evidence/test-run-2026-10-23T13-00-43-486Z.json",
+      "path": "upgrades/B/delivery/assets/evidence/test-run-2026-10-23T13-00-43-486Z.json",
+      "bytes": 78595,
+      "sha256": "a2e146e8763ef2d757c8893e7001ff17bfc2c0f18ea3c68aee8e847f799a223e"
+    },
+    {
+      "name": "assets/evidence/test-run-latest.json",
+      "path": "upgrades/B/delivery/assets/evidence/test-run-latest.json",
+      "bytes": 78595,
+      "sha256": "a2e146e8763ef2d757c8893e7001ff17bfc2c0f18ea3c68aee8e847f799a223e"
+    },
+    {
+      "name": "assets/evidence/ui-conflict-390.png",
+      "path": "upgrades/B/delivery/assets/evidence/ui-conflict-390.png",
+      "bytes": 194138,
+      "sha256": "8b4486965ced522092c48a6588310c121e1a5fd34c5a12fa59dc267f77554ff1"
+    },
+    {
+      "name": "assets/evidence/ui-result-390-full.png",
+      "path": "upgrades/B/delivery/assets/evidence/ui-result-390-full.png",
+      "bytes": 674820,
+      "sha256": "a7c6ba0a6f9252992e2f60b4611c917431c372c44672d3764d6aff9fcb81cef2"
+    },
+    {
+      "name": "assets/evidence/ui-result-390.png",
+      "path": "upgrades/B/delivery/assets/evidence/ui-result-390.png",
+      "bytes": 277193,
+      "sha256": "079a2da0635e20e98516dddc0908b261bbc5cbbe5be4ae629c66be5fb9f7fbf5"
+    },
+    {
+      "name": "assets/illustrations/checking-together-web.jpg",
+      "path": "upgrades/B/delivery/assets/illustrations/checking-together-web.jpg",
+      "bytes": 133519,
+      "sha256": "10826474a5f67966583f3b96d16cff9cfd9c6ff64da306a086aeff001dafc62a"
+    },
+    {
+      "name": "assets/illustrations/checking-together.png",
+      "path": "upgrades/B/delivery/assets/illustrations/checking-together.png",
+      "bytes": 2228298,
+      "sha256": "fbb684ea5a365584433a26d1e3ae450f8ee5f84b3505003d56d6958dcbedfd5b"
+    },
+    {
+      "name": "assets/illustrations/leaving-ready-web.jpg",
+      "path": "upgrades/B/delivery/assets/illustrations/leaving-ready-web.jpg",
+      "bytes": 120536,
+      "sha256": "1a7910e0e6fd0e98e2f140b995901df5042bdd384acc2f72e02675e811217f11"
+    },
+    {
+      "name": "assets/illustrations/leaving-ready.png",
+      "path": "upgrades/B/delivery/assets/illustrations/leaving-ready.png",
+      "bytes": 2093670,
+      "sha256": "bc07edb60d2f77f22bb3c681c81d45f2a290d5de8882a301ec5a4515701f9538"
+    },
+    {
+      "name": "assets/illustrations/notice-arrived-web.jpg",
+      "path": "upgrades/B/delivery/assets/illustrations/notice-arrived-web.jpg",
+      "bytes": 118335,
+      "sha256": "505792f1ff66f57739490faa9ff53e2fe7453905e050b6088e07c599eaaba5f1"
+    },
+    {
+      "name": "assets/illustrations/notice-arrived.png",
+      "path": "upgrades/B/delivery/assets/illustrations/notice-arrived.png",
+      "bytes": 2094976,
+      "sha256": "2e06f47b1ac5dffe32aa941f3af2a4e062efb5984c3bd5ee96a28b78112b6f2c"
+    },
+    {
+      "name": "assets/illustrations/保持参考图中两位人物的外貌_发型_服装颜色与画风完全一致_约_2026-10-23T12-34-32.png",
+      "path": "upgrades/B/delivery/assets/illustrations/保持参考图中两位人物的外貌_发型_服装颜色与画风完全一致_约_2026-10-23T12-34-32.png",
+      "bytes": 2150309,
+      "sha256": "9b3d79568d4cb38ec7caf7816f35f36c033ecd293f5ae27ed693bdbc62c17685"
+    },
+    {
+      "name": "assets/illustrations/保持参考图中两位人物的外貌_发型_服装颜色与画风完全一致_约_2026-10-23T12-34-59.png",
+      "path": "upgrades/B/delivery/assets/illustrations/保持参考图中两位人物的外貌_发型_服装颜色与画风完全一致_约_2026-10-23T12-34-59.png",
+      "bytes": 2265767,
+      "sha256": "142d0891f5ce95ffc7c06dfcf178c327d8c656586cf96a25bbdd8d07c4d2c3ea"
+    },
+    {
+      "name": "assets/illustrations/保持参考图中两位人物的外貌_发型_服装颜色与画风完全一致_约_2026-10-23T12-35-21.png",
+      "path": "upgrades/B/delivery/assets/illustrations/保持参考图中两位人物的外貌_发型_服装颜色与画风完全一致_约_2026-10-23T12-35-21.png",
+      "bytes": 2151412,
+      "sha256": "30d837bb2c8fdbf08bf38666b40ac95c7213ffc42802f978926eef4780a21d18"
+    },
+    {
+      "name": "assets/recordings/phases.json",
+      "path": "upgrades/B/delivery/assets/recordings/phases.json",
+      "bytes": 693,
+      "sha256": "a704b0781b3b69b6c023c5f7ed15269d2d48b19fd3689a2846c50916f5346561"
+    },
+    {
+      "name": "assets/recordings/recording-raw.mp4",
+      "path": "upgrades/B/delivery/assets/recordings/recording-raw.mp4",
+      "bytes": 2395579,
+      "sha256": "0e08ee627719c49964b464645b01c4c62faeaec12c201d738316c56a29940c1f"
+    },
+    {
+      "name": "assets/screenshots/b-01-home-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-01-home-390.png",
+      "bytes": 416030,
+      "sha256": "4989231bfb7cf4d5618717386ae344358468a08c360295b74411dbe096c39888"
+    },
+    {
+      "name": "assets/screenshots/b-02-loading-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-02-loading-390.png",
+      "bytes": 748759,
+      "sha256": "cf5070e5b8947e397c27c7c6c39c87fa0333302fee0c151e1930a4ca86dd78ca"
+    },
+    {
+      "name": "assets/screenshots/b-03-result-full-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-03-result-full-390.png",
+      "bytes": 584833,
+      "sha256": "11aea8b9f36e762429b36f8a62b26b210e6fc600dc99b21a8f2af5d65f536720"
+    },
+    {
+      "name": "assets/screenshots/b-03-result-top-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-03-result-top-390.png",
+      "bytes": 196289,
+      "sha256": "4737984593beb5034457e0bf5c80fd45a8a1ca178f19e53fa4b89ead160ecd88"
+    },
+    {
+      "name": "assets/screenshots/b-04-evidence-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-04-evidence-390.png",
+      "bytes": 195263,
+      "sha256": "f2e2a6c8a53165773089a07da54a1af7643063a82afe00867ddfbed28613ebba"
+    },
+    {
+      "name": "assets/screenshots/b-05-checked-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-05-checked-390.png",
+      "bytes": 166421,
+      "sha256": "100b5583aa345594d773b1fcedbe343b128e72c12ccbb1eab42e8962d25d3fb0"
+    },
+    {
+      "name": "assets/screenshots/b-06-copy-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-06-copy-390.png",
+      "bytes": 265258,
+      "sha256": "b3eb065990924d4cc20c23801c830a72fbf95d3965a3d31fb0e2f13fa0dd7638"
+    },
+    {
+      "name": "assets/screenshots/b-07-missing-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-07-missing-390.png",
+      "bytes": 208978,
+      "sha256": "ba461111624c3454b13d72fc61983ce77e9166dd8eeca247eb88b58d137d9523"
+    },
+    {
+      "name": "assets/screenshots/b-08-questions-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-08-questions-390.png",
+      "bytes": 198319,
+      "sha256": "674a6e15c09999b948a13d9c855ae5a4510466266b9a7d0c1f2ebcdfa25668c8"
+    },
+    {
+      "name": "assets/screenshots/b-09-conflict-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-09-conflict-390.png",
+      "bytes": 193625,
+      "sha256": "47957ac8b004a2c27f743e7768a09448bf2059cf513185f6b4b06dd630e0fecc"
+    },
+    {
+      "name": "assets/screenshots/b-11-error-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-11-error-390.png",
+      "bytes": 160200,
+      "sha256": "e9fa405fdb24d540e480d81e3400800ccccff4d8d0f794cc4df1402920da36c1"
+    },
+    {
+      "name": "assets/screenshots/b-12-home-1280.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-12-home-1280.png",
+      "bytes": 905674,
+      "sha256": "dce611881dc40b03bbf9ce3dd6b572603f4791e3b85ac91e364bf24423a3207f"
+    },
+    {
+      "name": "assets/screenshots/b-12-home-768.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-12-home-768.png",
+      "bytes": 732770,
+      "sha256": "5f825b183be457084799f82fc0698bfd17bcd3c455520dcc645b69af342e2714"
+    },
+    {
+      "name": "assets/screenshots/b-13-result-1280.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-13-result-1280.png",
+      "bytes": 425067,
+      "sha256": "06b4c2f4fad0782e865019f5978668d5c315b392269a10e40ee4e1146ed196ea"
+    },
+    {
+      "name": "assets/screenshots/b-13-result-768.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-13-result-768.png",
+      "bytes": 314177,
+      "sha256": "f0e790ecbe15fa69d95a27e3e9e32916b8874693d1626a01eb54ba6ef9b54be9"
+    },
+    {
+      "name": "assets/screenshots/b-14-about-390.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-14-about-390.png",
+      "bytes": 617268,
+      "sha256": "7395d1f28144afe1295bd643774d7c111692f1d4958cebaa130230a700bef5de"
+    },
+    {
+      "name": "assets/screenshots/b-cover-ui-crop.png",
+      "path": "upgrades/B/delivery/assets/screenshots/b-cover-ui-crop.png",
+      "bytes": 76749,
+      "sha256": "875a63b298c67d0b112e2af60def00470c1a85d95350be9ae30ec0466f53eb3b"
+    },
+    {
+      "name": "assets/screenshots/qr-preview.png",
+      "path": "upgrades/B/delivery/assets/screenshots/qr-preview.png",
+      "bytes": 2335,
+      "sha256": "2e409f38d04e130b5d006240e3901d4746039606b8f7f86e11290c07402a164d"
+    },
+    {
+      "name": "assets/screenshots/_t10.log",
+      "path": "upgrades/B/delivery/assets/screenshots/_t10.log",
+      "bytes": 701,
+      "sha256": "db3176dea90cb44a3081f47f0d7cbb5e1f2f804a2a3213845b3a431ee704f330"
+    },
+    {
+      "name": "assets/screenshots/_t12.log",
+      "path": "upgrades/B/delivery/assets/screenshots/_t12.log",
+      "bytes": 917,
+      "sha256": "06294a32cd725f8047e14b4970486d150374a0966fc2973dae2fc6434edb34b6"
+    },
+    {
+      "name": "assets/screenshots/_tx.log",
+      "path": "upgrades/B/delivery/assets/screenshots/_tx.log",
+      "bytes": 873,
+      "sha256": "d513f7f699805ca8c6a4f4bf80dd6604d25850adb060c2424c4d8406553696b7"
+    },
+    {
+      "name": "sources/cover.html",
+      "path": "upgrades/B/delivery/sources/cover.html",
+      "bytes": 2919,
+      "sha256": "0a1fb789391655effa94836ab4e041deee8c9d2d3284a3c9ff9aaf4da87ddf86"
+    },
+    {
+      "name": "sources/flow-public.html",
+      "path": "upgrades/B/delivery/sources/flow-public.html",
+      "bytes": 4071,
+      "sha256": "87f67779b181c609c7030de8bb52a0b599216dc023fc27c0cb56b269db59ef83"
+    },
+    {
+      "name": "sources/flow-tech.html",
+      "path": "upgrades/B/delivery/sources/flow-tech.html",
+      "bytes": 4862,
+      "sha256": "f14a3c54ce91adb389d82621a84e6b09b3fbaae0a344497a2ac2a65e99dad7d1"
+    },
+    {
+      "name": "sources/manual-b.html",
+      "path": "upgrades/B/delivery/sources/manual-b.html",
+      "bytes": 25283,
+      "sha256": "9fc55130b86cbbc14633c895a184f955791a374bd78ae75f35529b535e64e315"
+    },
+    {
+      "name": "sources/narration.md",
+      "path": "upgrades/B/delivery/sources/narration.md",
+      "bytes": 2202,
+      "sha256": "b236d6195709014f78ed0b06f5ba728689bea79c05e27a6b71e17c83a0d9a320"
+    },
+    {
+      "name": "sources/run-guide-b.html",
+      "path": "upgrades/B/delivery/sources/run-guide-b.html",
+      "bytes": 7801,
+      "sha256": "9f1ff9947f4e0d89497b53a9da046e80636894751c86c7a0e8d244a6f8fc7317"
+    },
+    {
+      "name": "sources/test-report-b.html",
+      "path": "upgrades/B/delivery/sources/test-report-b.html",
+      "bytes": 10555,
+      "sha256": "3e001e150072d4fbf18eca07b1576b4f0d2e62f2201f5bba2b8b1682829dd1dd"
+    },
+    {
+      "name": "sources/video-timeline.json",
+      "path": "upgrades/B/delivery/sources/video-timeline.json",
+      "bytes": 3440,
+      "sha256": "dce0b3108b0cfc1034867847875a00cb14a9a60be5b76feb2ca174adaa4e750c"
+    },
+    {
+      "name": "15_明白办_用户试用材料/00_说明_这是空白模板.md",
+      "path": "upgrades/B/delivery/15_明白办_用户试用材料/00_说明_这是空白模板.md",
+      "bytes": 2671,
+      "sha256": "478b7c0876260e0d741a4cb1bd7fcde702177244407b34b7fe3ed2a249be8f10"
+    },
+    {
+      "name": "15_明白办_用户试用材料/01_任务卡与访谈提纲.md",
+      "path": "upgrades/B/delivery/15_明白办_用户试用材料/01_任务卡与访谈提纲.md",
+      "bytes": 2748,
+      "sha256": "cccb76186a5384cab7fe18fe9376c30f0097f435d92fa3fa0444bb6e7867a997"
+    },
+    {
+      "name": "15_明白办_用户试用材料/02_试用记录表_空白.csv",
+      "path": "upgrades/B/delivery/15_明白办_用户试用材料/02_试用记录表_空白.csv",
+      "bytes": 441,
+      "sha256": "aab139be577b3381a160961349af1d76f753361955c4f09e98e27737bd6e093d"
+    }
+  ],
+  "zips": {
+    "source": {
+      "name": "10_明白办_源码.zip",
+      "bytes": 9021941,
+      "sha256": "043caeae457b6eed3838b018ecd0187a46f78ee3132f56a9bd19d0938a7969ff"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "url": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
+  "version": "1.2.0-b2",
+  "phases": [
+    {
+      "name": "P1-paste",
+      "frames": 260,
+      "wall": 13.456
+    },
+    {
+      "name": "P2-result",
+      "frames": 96,
+      "wall": 13.09
+    },
+    {
+      "name": "P3-evidence",
+      "frames": 120,
+      "wall": 14.999
+    },
+    {
+      "name": "P4-check",
+      "frames": 110,
+      "wall": 9.094
+    },
+    {
+      "name": "P5-copy",
+      "frames": 166,
+      "wall": 10.207
+    },
+    {
+      "name": "P6-missing",
+      "frames": 106,
+      "wall": 9.694
+    },
+    {
+      "name": "P7-conflict",
+      "frames": 76,
+      "wall": 15.634
+    }
+  ]
+}

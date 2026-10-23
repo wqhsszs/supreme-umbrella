@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>明白办 · 公众版四步图</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1400px; height: 700px; background: #F7F3EB; color: #26312C;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif; overflow: hidden;
+    background-image: radial-gradient(circle at 12% 10%, rgba(185,91,54,.05), transparent 45%),
+                      radial-gradient(circle at 88% 92%, rgba(37,76,64,.05), transparent 45%);
+  }
+  .wrap { padding: 54px 60px 44px; height: 100%; display: flex; flex-direction: column; }
+  .head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 8px; }
+  .head h1 { font-size: 42px; letter-spacing: .5px; }
+  .head span { font-size: 20px; color: #5D6A63; }
+  .sub { font-size: 21px; color: #45514A; margin-bottom: 34px; }
+  .row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; flex: 1; }
+  .card {
+    background: #fff; border: 1px solid #E3DCCD; border-radius: 20px; padding: 26px 24px;
+    display: flex; flex-direction: column; position: relative;
+    box-shadow: 0 8px 24px rgba(38,49,44,.06);
+  }
+  .num {
+    width: 46px; height: 46px; border-radius: 50%; background: #254C40; color: #fff;
+    display: grid; place-items: center; font-size: 22px; font-weight: 700; margin-bottom: 16px;
+  }
+  .card h2 { font-size: 26px; margin-bottom: 10px; }
+  .card p { font-size: 19px; color: #45514A; line-height: 1.65; }
+  .who {
+    margin-top: auto; display: inline-block; font-size: 15px; font-weight: 700;
+    padding: 6px 12px; border-radius: 99px; background: #E7EEE9; color: #254C40; align-self: flex-start;
+  }
+  .who.ai { background: #F7E7DE; color: #8F4322; }
+  .who.human { background: #EAF3ED; color: #2F6B4F; }
+  .arrow { position: absolute; right: -17px; top: 50%; transform: translateY(-50%); font-size: 30px; color: #C9BFA9; }
+  .foot { margin-top: 22px; display: flex; flex-direction: column; gap: 6px; font-size: 17px; color: #5D6A63; }
+  .foot b { color: #26312C; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>明白办 · 一张通知怎么变成一张卡</h1>
+    <span>收到通知之后，下一步更明白</span>
+  </div>
+  <div class="sub">四步里，两步由人做，一步由 AI 做，一步由程序把关——所以卡片既看得懂，也能核对。</div>
+
+  <div class="row">
+    <div class="card">
+      <div class="num">1</div>
+      <h2>收到通知</h2>
+      <p>社区贴在群里、门厅的通知，家人或志愿者先拿到手。原文不动，只做复制。</p>
+      <span class="who">人：家人 / 志愿者</span>
+      <div class="arrow">→</div>
+    </div>
+    <div class="card">
+      <div class="num">2</div>
+      <h2>AI 整理</h2>
+      <p>模型逐句读出时间、地点、对象、材料，按"报名截止 / 活动开始"分开，写成白话。</p>
+      <span class="who ai">AI：大语言模型</span>
+      <div class="arrow">→</div>
+    </div>
+    <div class="card">
+      <div class="num">3</div>
+      <h2>家人核对</h2>
+      <p>点开"对照通知原文"，逐项比对；通知没写的会标"未说明"，冲突的地方单独提醒。</p>
+      <span class="who human">人：核对 + 程序校验引文</span>
+      <div class="arrow">→</div>
+    </div>
+    <div class="card">
+      <div class="num">4</div>
+      <h2>长辈按卡准备</h2>
+      <p>长辈拿到一张能自己读的卡：带什么、几点去、去哪一层；去不去、怎么办自己定。</p>
+      <span class="who">人：长辈本人</span>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>示例：<b>10 月 25 日 17:00 前到一楼服务台报名；10 月 26 日 9:00—11:00 在二楼活动室参加；只带本人手机；仅限已报名居民。</b></span>
+    <span>打勾只表示准备到哪一步，<b>不等于已经报名</b>；卡片内容仅供理解，以通知原文为准。</span>
+  </div>
+</div>
+</body>
+</html>

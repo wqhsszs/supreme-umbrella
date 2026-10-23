@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>明白办 · 技术实现图</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1500px; height: 700px; background: #fff; color: #26312C;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif; overflow: hidden;
+  }
+  .wrap { padding: 40px 48px; height: 100%; display: flex; flex-direction: column; }
+  h1 { font-size: 34px; margin-bottom: 6px; }
+  .sub { font-size: 18px; color: #5D6A63; margin-bottom: 26px; }
+  .lane { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; align-items: stretch; }
+  .box { min-height: 250px;
+    border: 2px solid #254C40; border-radius: 14px; padding: 16px 14px; background: #F7F3EB;
+    display: flex; flex-direction: column; min-height: 210px; position: relative;
+  }
+  .box .k { font-size: 13px; color: #5D6A63; letter-spacing: 1px; margin-bottom: 6px; }
+  .box h3 { font-size: 21px; margin-bottom: 8px; color: #254C40; }
+  .box p { font-size: 15px; color: #45514A; line-height: 1.55; }
+  .box .tag { margin-top: auto; font-size: 13px; font-weight: 700; color: #8F4322; }
+  .arrow { position: absolute; right: -11px; top: 50%; transform: translateY(-50%); color: #C9BFA9; font-size: 22px; z-index: 2; }
+  .branch { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .note { border: 2px dashed #9E2B25; background: #F9EAE8; border-radius: 14px; padding: 14px 16px; }
+  .note.warn { border-color: #8A4B1E; background: #FBF0E2; }
+  .note h4 { font-size: 17px; margin-bottom: 6px; color: #9E2B25; }
+  .note.warn h4 { color: #8A4B1E; }
+  .note p { font-size: 15px; color: #45514A; line-height: 1.55; }
+  .foot { margin-top: auto; font-size: 14px; color: #5D6A63; border-top: 1px solid #E3DCCD; padding-top: 10px; }
+  code { background: #EEF2F7; padding: 0 4px; border-radius: 3px; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>明白办 · 技术实现与数据流</h1>
+  <div class="sub">一条通知走完六步；其中第 3 步由程序做机械校验，第 4 步之后才有页面上的东西。</div>
+
+  <div class="lane">
+    <div class="box">
+      <div class="k">01 INPUT</div>
+      <h3>输入</h3>
+      <p>粘贴通知原文，上限 5000 字。空白/超长即时提示，不静默截断。</p>
+      <div class="tag">浏览器</div>
+      <div class="arrow">→</div>
+    </div>
+    <div class="box">
+      <div class="k">02 MODEL</div>
+      <h3>模型解析</h3>
+      <p>WorkBuddy 云服务免密钥通道，<code>deepseek-v4.1-flash</code> 流式返回固定 JSON。</p>
+      <div class="tag">AI</div>
+      <div class="arrow">→</div>
+    </div>
+    <div class="box">
+      <div class="k">03 VALIDATE</div>
+      <h3>程序校验</h3>
+      <p>字段与类型、status 取值、missing 不得填值、<b>每条引文必须能在原文逐字找到</b>；required 必须有依据。</p>
+      <div class="tag">程序（确定性）</div>
+      <div class="arrow">→</div>
+    </div>
+    <div class="box">
+      <div class="k">04 STATE</div>
+      <h3>状态标注</h3>
+      <p>stated / missing / unclear / conflict 四态，逐项对应原文；冲突并列保留。</p>
+      <div class="tag">程序</div>
+      <div class="arrow">→</div>
+    </div>
+    <div class="box">
+      <div class="k">05 RENDER</div>
+      <h3>展示与复制</h3>
+      <p>行动卡按用途分时间与地点；勾选状态进入复制文本；全部走 textContent。</p>
+      <div class="tag">浏览器</div>
+      <div class="arrow">→</div>
+    </div>
+    <div class="box">
+      <div class="k">06 HUMAN</div>
+      <h3>人核对</h3>
+      <p>展开「对照通知原文」，逐项比对后转发给长辈；不替用户办理任何事。</p>
+      <div class="tag">人</div>
+    </div>
+  </div>
+
+  <div class="branch">
+    <div class="note">
+      <h4>! 校验不通过怎么办</h4>
+      <p>自动重试 1 次；仍不通过 → 显示「这次没有整理成功。原文还在，可以再试一次。」<b>不渲染行动卡</b>。宁可不出，也不出错卡。</p>
+    </div>
+    <div class="note warn">
+      <h4>? 校验通过 ≠ 语义正确</h4>
+      <p>机械校验只能发现"引文对不上原文""结构缺字段""标了要求却没有依据"，<b>不能保证理解一定正确</b>。所以卡片始终提示以原文为准。</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    数据契约：<code>document_status · summary · audience · times[{purpose,value,status,evidence,place}] · location · preparation · actions[{type,value,evidence}] · questions · warnings</code>　｜　
+    版本 v1.2.0-b1　｜　完整字段说明见源码 <code>app/prompts/data-schema.md</code>
+  </div>
+</div>
+</body>
+</html>

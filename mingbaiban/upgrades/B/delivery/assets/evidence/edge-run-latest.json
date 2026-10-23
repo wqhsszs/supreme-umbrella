@@ -1,0 +1,106 @@
+{
+  "runAt": "2026-10-23T13:01:20.715Z",
+  "url": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
+  "browser": "Microsoft Edge (headless) via playwright-core",
+  "results": [
+    {
+      "id": "E1",
+      "name": "空白输入有清楚提示且不发起请求",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"vis\":true,\"txt\":\"还没有贴通知。把社区发来的通知原文贴到上面的框里。\",\"onInputStep\":true}"
+    },
+    {
+      "id": "E2",
+      "name": "超长输入(8003字)提示且不截断",
+      "pass": true,
+      "status": "通过",
+      "detail": "保留长度=8003/8003，提示=通知太长了（8003 字），最多 5000 字。我没有替您删掉一部分，请分两次，或只贴最关键的那一段。",
+      "keptLen": 8003,
+      "len": 8003
+    },
+    {
+      "id": "E3",
+      "name": "注入指令未被执行且未泄露系统提示词",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"onResult\":true,\"leakedPrompt\":false,\"executed\":false}",
+      "onResult": true,
+      "leakedPrompt": false,
+      "executed": false
+    },
+    {
+      "id": "E4",
+      "name": "加载中禁用按钮，连续点击不重复提交",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"seq0\":2,\"seq1\":3,\"delta\":1,\"afterFirst\":{\"disabled\":true,\"busy\":true}}",
+      "seq0": 2,
+      "seq1": 3,
+      "delta": 1,
+      "afterFirst": {
+        "disabled": true,
+        "busy": true
+      }
+    },
+    {
+      "id": "E5",
+      "name": "换通知后不显示上一条通知的旧答案",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"summary\":\"社区食堂下周起为60岁以上居民提供助餐服务，每餐12元，需在10月28日前带证件到居委会登记。\",\"times\":\"报名截止\\n10月28日前\\n✓\\n原文写明\\n地点：社区居委会 \\n✓\\n原文写明\\n对照通知原文\\n活动开始\\n下周起\\n✓\\n原文写明\\n地点：通知未说明 \\n—\\n通知未说明\\n对照通知原文\\n服务时间\\n下周起\\n✓\\n原文写明\\n地点：社区食堂 \\n✓\\n原文写明\\n对照通知原文\"}"
+    },
+    {
+      "id": "E6",
+      "name": "剪贴板不可用时有可手动复制的替代路径（弹出手动复制框）",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"open\":true,\"len\":574,\"head\":\"【明白办】社区通知行动卡\\n\\n这条通知要办什么\\n  社区食堂下周起为60岁以上居民\",\"tail\":\"证，也不代表已经报名或办好。\\n通知没写的内容，卡上标为「通知未说明」，没有替通知补。重要事项请以通知原文和社区说法为准。\"}",
+      "open": true,
+      "len": 574,
+      "head": "【明白办】社区通知行动卡\n\n这条通知要办什么\n  社区食堂下周起为60岁以上居民",
+      "tail": "证，也不代表已经报名或办好。\n通知没写的内容，卡上标为「通知未说明」，没有替通知补。重要事项请以通知原文和社区说法为准。"
+    },
+    {
+      "id": "E7",
+      "name": "通知中的 HTML/脚本不被执行、不被插入 DOM",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"xss\":false,\"xss2\":false,\"imgInjected\":0,\"dialog\":false,\"dialogs\":[]}",
+      "xss": false,
+      "xss2": false,
+      "imgInjected": 0,
+      "dialog": false
+    },
+    {
+      "id": "E8",
+      "name": "360/390px 视口无横向滚动",
+      "pass": true,
+      "status": "通过",
+      "detail": "[{\"width\":360,\"scrollW\":360,\"clientW\":360,\"bodyFont\":\"19px\",\"small\":[]},{\"width\":390,\"scrollW\":390,\"clientW\":390,\"bodyFont\":\"19px\",\"small\":[]}]"
+    },
+    {
+      "id": "E9",
+      "name": "可见按钮/复选框触控高度 ≥44px",
+      "pass": true,
+      "status": "通过",
+      "detail": "[]",
+      "smallHit": []
+    },
+    {
+      "id": "E10",
+      "name": "AI 服务不可用时显示失败说明，不输出固定答案冒充结果",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"shown\":true,\"body\":\"现在没法调用模型，所以没有结果。这不是通知本身的问题。\",\"noCard\":true}",
+      "shown": true,
+      "body": "现在没法调用模型，所以没有结果。这不是通知本身的问题。",
+      "noCard": true
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0
+  }
+}
