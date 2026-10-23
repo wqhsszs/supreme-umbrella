@@ -1,0 +1,109 @@
+LLM status: {"ready":true,"reason":""}
+models FAILED: page.evaluate: CloudOpenAIError: HTTP 525
+    at httpError (https://cdn.jsdelivr.net/npm/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js:4:18837)
+    at async ModelsAPI.list (https://cdn.jsdelivr.net/npm/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js:4:17943)
+    at async eval (eval at evaluate (:370:30), <anonymous>:2:18)
+    at async <anonymous>:396:30
+elapsed ms: 10889
+result: {
+  "ok": true,
+  "phase": "done",
+  "data": {
+    "document_status": "notice",
+    "document_status_reason": "这是一则社区开展手机使用指导活动的通知，写明了时间、地点、报名方式和参加限制。",
+    "summary": "社区服务中心要办手机使用指导活动，需要先报名，名额有限，仅限已报名居民参加。",
+    "audience": {
+      "value": "已报名的居民",
+      "status": "stated",
+      "evidence": [
+        "本次活动仅限已报名居民参加"
+      ]
+    },
+    "times": [
+      {
+        "purpose": "报名截止",
+        "value": "2026年10月25日17:00前",
+        "status": "stated",
+        "evidence": [
+          "请于2026年10月25日17:00前到社区服务中心一楼服务台报名"
+        ],
+        "place": {
+          "value": "社区服务中心一楼服务台",
+          "status": "stated",
+          "evidence": [
+            "请于2026年10月25日17:00前到社区服务中心一楼服务台报名"
+          ]
+        }
+      },
+      {
+        "purpose": "活动开始",
+        "value": "2026年10月26日9:00—11:00",
+        "status": "stated",
+        "evidence": [
+          "时间：2026年10月26日9:00—11:00。"
+        ],
+        "place": {
+          "value": "社区服务中心二楼活动室",
+          "status": "stated",
+          "evidence": [
+            "地点：社区服务中心二楼活动室。"
+          ]
+        }
+      }
+    ],
+    "location": {
+      "value": "社区服务中心二楼活动室（活动地点）；报名在社区服务中心一楼服务台",
+      "status": "stated",
+      "evidence": [
+        "地点：社区服务中心二楼活动室。",
+        "请于2026年10月25日17:00前到社区服务中心一楼服务台报名"
+      ]
+    },
+    "preparation": [
+      {
+        "value": "本人手机",
+        "status": "stated",
+        "evidence": [
+          "请携带本人手机"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "required",
+        "value": "在2026年10月25日17:00前，到社区服务中心一楼服务台报名",
+        "evidence": [
+          "请于2026年10月25日17:00前到社区服务中心一楼服务台报名"
+        ]
+      },
+      {
+        "type": "required",
+        "value": "参加时携带本人手机",
+        "evidence": [
+          "请携带本人手机"
+        ]
+      },
+      {
+        "type": "suggested",
+        "value": "报名前先问清楚名额还有没有",
+        "evidence": [
+          "名额有限"
+        ]
+      }
+    ],
+    "questions": [
+      "名额还有没有，现在报名还来得及吗？",
+      "报名需要带什么材料吗？",
+      "没有提前报名，能不能直接去参加？"
+    ],
+    "warnings": [
+      "报名是在一楼服务台，活动是在二楼活动室，两个地点不一样。",
+      "仅限已报名的居民参加，没报名可能进不了活动。"
+    ]
+  },
+  "errors": [],
+  "warnings": [],
+  "raw": "{\n  \"document_status\": \"notice\",\n  \"document_status_reason\": \"这是一则社区开展手机使用指导活动的通知，写明了时间、地点、报名方式和参加限制。\",\n  \"summary\": \"社区服务中心要办手机使用指导活动，需要先报名，名额有限，仅限已报名居民参加。\",\n  \"audience\": {\n    \"value\": \"已报名的居民\",\n    \"status\": \"stated\",\n    \"evidence\": [\"本次活动仅限已报名居民参加\"]\n  },\n  \"times\": [\n    {\n      \"purpose\": \"报名截止\",\n      \"value\": \"2026年10月25日17:00前\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请于2026年10月25日17:00前到社区服务中心一楼服务台报名\"],\n      \"place\": {\n        \"value\": \"社区服务中心一楼服务台\",\n        \"status\": \"stated\",\n        \"evidence\": [\"请于2026年10月25日17:00前到社区服务中心一楼服务台报名\"]\n      }\n    },\n    {\n      \"purpose\": \"活动开始\",\n      \"value\": \"2026年10月26日9:00—11:00\",\n      \"status\": \"stated\",\n      \"evidence\": [\"时间：2026年10月26日9:00—11:00。\"],\n      \"place\": {\n        \"value\": \"社区服务中心二楼活动室\",\n        \"status\": \"stated\",\n        \"evidence\": [\"地点：社区服务中心二楼活动室。\"]\n      }\n    }\n  ],\n  \"location\": {\n    \"value\": \"社区服务中心二楼活动室（活动地点）；报名在社区服务中心一楼服务台\",\n    \"status\": \"stated\",\n    \"evidence\": [\"地点：社区服务中心二楼活动室。\", \"请于2026年10月25日17:00前到社区服务中心一楼服务台报名\"]\n  },\n  \"preparation\": [\n    {\n      \"value\": \"本人手机\",\n      \"status\": \"stated\",\n      \"evidence\": [\"请携带本人手机\"]\n    }\n  ],\n  \"actions\": [\n    {\n      \"type\": \"required\",\n      \"value\": \"在2026年10月25日17:00前，到社区服务中心一楼服务台报名\",\n      \"evidence\": [\"请于2026年10月25日17:00前到社区服务中心一楼服务台报名\"]\n    },\n    {\n      \"type\": \"required\",\n      \"value\": \"参加时携带本人手机\",\n      \"evidence\": [\"请携带本人手机\"]\n    },\n    {\n      \"type\": \"suggested\",\n      \"value\": \"报名前先问清楚名额还有没有\",\n      \"evidence\": [\"名额有限\"]\n    }\n  ],\n  \"questions\": [\n    \"名额还有没有，现在报名还来得及吗？\",\n    \"报名需要带什么材料吗？\",\n    \"没有提前报名，能不能直接去参加？\"\n  ],\n  \"warnings\": [\n    \"报名是在一楼服务台，活动是在二楼活动室，两个地点不一样。\",\n    \"
+--- console logs ---
+error: Failed to load resource: the server responded with a status of 404 ()
+error: Failed to load resource: the server responded with a status of 525 ()

@@ -1,0 +1,89 @@
+{
+  "runAt": "2026-10-23T12:06:19.139Z",
+  "url": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
+  "browser": "Microsoft Edge (headless) via playwright-core，视口 390×844",
+  "results": [
+    {
+      "id": "A1",
+      "name": "required 但无原文引文 → 校验拒绝",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"ok\":false,\"errors\":[\"actions[0]：标为原文要求但未提供原文引文\"]}"
+    },
+    {
+      "id": "A2",
+      "name": "required 引文对不上原文 → 校验拒绝",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"ok\":false,\"errors\":[\"actions[0]：引文在原文中找不到 →「请携带身份证」\",\"actions[0]：标为原文要求，但没有一条引文能在原文中找到\"]}"
+    },
+    {
+      "id": "A3",
+      "name": "required 且引文真实 → 校验通过（未误伤正常数据）",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"ok\":true,\"errors\":[]}"
+    },
+    {
+      "id": "A0",
+      "name": "示例通知能出结果页（若模型校验失败会自动重试，最多 3 次）",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"result\":true,\"error\":false,\"notNotice\":false,\"detail\":\"\",\"attempt\":1}"
+    },
+    {
+      "id": "A4",
+      "name": "报名地点与活动地点分别显示，未合并成笼统地点",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"text\":\"报名截止\\n2026年10月25日17:00前\\n✓\\n原文写明\\n地点：社区服务中心一楼服务台 \\n✓\\n原文写明\\n对照通知原文对照通知原文\\n活动开始\\n2026年10月26日9:00—11:00\\n✓\\n原文写明\\n地点：社区服务中心二楼活动室 \\n✓\\n原文写明\\n对照通知原文对照通知原文\",\"hasOne\":true,\"hasTwo\":true}"
+    },
+    {
+      "id": "A5",
+      "name": "勾选后复制为 [x]，取消后复制为 [ ]（导出与界面一致）",
+      "pass": true,
+      "status": "通过",
+      "detail": "checked含[x]=true unchecked含[x]=false"
+    },
+    {
+      "id": "A6",
+      "name": "复制文本写明\"不是报名凭证\"，未把整理者状态说成已报名",
+      "pass": true,
+      "status": "通过",
+      "detail": "要收费，也没写其他要带的东西，以发布方说明为准。\n\n—— 说明 ——\n方框打勾记录的是「整理者准备到哪一步」，不是报名凭证，也不代表已经报名或办好。\n通知没写的内容，卡上标为「通知未说明」，没有替通知补。重要事项请以通知原文和社区说法为准。"
+    },
+    {
+      "id": "A7",
+      "name": "复制文本不含模型名与耗时等工程细节",
+      "pass": true,
+      "status": "通过",
+      "detail": "【明白办】社区通知行动卡\n\n这条通知要办什么\n  社区在2026年10月26日上午办手机使用指导活动，需要提前一天到一楼服务台报名，仅限已报名的人参加。\n\n谁适"
+    },
+    {
+      "id": "A8",
+      "name": "正文不含亲属称呼与概括性说法",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"bad\":[],\"len\":750}"
+    },
+    {
+      "id": "A9",
+      "name": "时间冲突时顶部出现提醒，写明前后不一致且不收起",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"visible\":true,\"isDanger\":true,\"text\":\"! 通知里有前后不一致的地方，先问清楚再安排\\n\\n活动开始：通知里出现了互相不一致的写法，需要向发布方确认以哪个为准。\",\"aboveOtherCards\":true}"
+    },
+    {
+      "id": "A10",
+      "name": "非通知文本显示\"不是通知\"提示，而不是失败页",
+      "pass": true,
+      "status": "通过",
+      "detail": "{\"notNotice\":true,\"error\":false,\"title\":\"这段文字看起来不是社区通知\"}"
+    }
+  ],
+  "summary": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0
+  }
+}

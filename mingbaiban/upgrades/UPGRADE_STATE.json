@@ -1,0 +1,46 @@
+{
+  "currentRound": "A",
+  "roundStatus": {
+    "A": "delivered",
+    "B": "not_started",
+    "C": "not_started"
+  },
+  "sourceVersion": "1.0.0",
+  "workingDir": "mingbaiban/upgrades/A/project",
+  "deliveryDir": "mingbaiban/upgrades/A/delivery",
+  "previewUrl": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
+  "previewIsIndependent": false,
+  "previewNote": "平台把同一工作区的发布都指向同一应用（wbapp_iiPVrUTJJSCc0MurWICMde），A 轮覆盖了原 v1.0.0 的线上版本；原版代码在 mingbaiban/app/ 与 git 提交 9ad17e8 中可回滚。",
+  "codeVersion": "1.1.0-a3",
+  "codeHash": null,
+  "assetsManifest": "mingbaiban/upgrades/A/delivery/manifest.json",
+  "zips": {
+    "source": "mingbaiban/upgrades/A/明白办_A轮源码.zip",
+    "package": "mingbaiban/upgrades/A/明白办_A轮交付包.zip"
+  },
+  "models": {
+    "runtime": "deepseek-v4.1-flash（WorkBuddy 云服务免密钥通道，浏览器直连数据面）",
+    "dev": "DeepSeek V4.1 Flash（WorkBuddy 开发执行模型）",
+    "image": "WorkBuddy ImageGen（工具未返回具体模型 ID，故不写型号）"
+  },
+  "completed": [
+    "首页信息结构与文案重写（整理者视角）",
+    "结果页按 要办什么→谁适用→何时何地→准备什么→下一步→还要确认 重排",
+    "新增 times[].place：报名地点与活动地点分开",
+    "顶部确认横幅：冲突置顶、不默认收起",
+    "复制内容与当前勾选状态一致（[x]/[ ]）+ 不是报名凭证的声明",
+    "validate.js：required 无原文依据改判失败；not_notice 不再被误判为失败；网络瞬断重试 1 次",
+    "暖色视觉 + 2 张 AI 插画（主视觉 / 加载静物）实际用于页面",
+    "12 条用例 12/12、页面行为 10/10、A 轮专项 11/11（新版重跑，非复用旧数字）",
+    "四档视口无横向滚动、触控 ≥56px、9 组配色全部 ≥4.5:1",
+    "前后对照 HTML + PNG、验证记录、视觉规范、运行说明、manifest、两个 ZIP"
+  ],
+  "failedOrBlocked": [
+    "独立预览域名：平台不支持（发布均指向同一应用），因此 A 轮覆盖了原地址",
+    "OCR / 语音朗读 / 自动分享 / 持久化分享链接：按任务书属 C 轮，本轮未做",
+    "完整 PDF 与演示视频重制：按任务书属 B 轮，本轮未做",
+    "真机测试与真人试用：不具备条件，未做"
+  ],
+  "nextStep": "把 02_B轮_参赛材料插画与配音升级.txt 交给执行方，并说明「继续执行 B 轮任务书，基于 A 轮成果完成本轮文件交付」；B 轮以 upgrades/A/project 为基线，沿用本轮主视觉与配色。",
+  "updatedAt": "2026-10-23T20:22:41+08:00"
+}

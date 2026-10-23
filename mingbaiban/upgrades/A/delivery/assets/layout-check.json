@@ -1,0 +1,121 @@
+{
+  "base": "http://127.0.0.1:8123/",
+  "viewports": [
+    {
+      "w": 360,
+      "h": 780,
+      "scrollW": 360,
+      "clientW": 360,
+      "bodyFont": "19px",
+      "ctaTop": 694,
+      "ctaHeight": 71,
+      "heroH": 202,
+      "textareaFont": "20px",
+      "smallTargets": [],
+      "focus": {
+        "tag": "A",
+        "outline": "1px auto",
+        "shadow": "none"
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "scrollW": 390,
+      "clientW": 390,
+      "bodyFont": "19px",
+      "ctaTop": 662,
+      "ctaHeight": 71,
+      "heroH": 220,
+      "textareaFont": "20px",
+      "smallTargets": [],
+      "focus": {
+        "tag": "A",
+        "outline": "1px auto",
+        "shadow": "none"
+      }
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "scrollW": 768,
+      "clientW": 768,
+      "bodyFont": "20px",
+      "ctaTop": 687,
+      "ctaHeight": 72,
+      "heroH": 185,
+      "textareaFont": "20px",
+      "smallTargets": [],
+      "focus": {
+        "tag": "A",
+        "outline": "1px auto",
+        "shadow": "none"
+      }
+    },
+    {
+      "w": 1280,
+      "h": 900,
+      "scrollW": 1280,
+      "clientW": 1280,
+      "bodyFont": "20px",
+      "ctaTop": 661,
+      "ctaHeight": 72,
+      "heroH": 203,
+      "textareaFont": "20px",
+      "smallTargets": [],
+      "focus": {
+        "tag": "A",
+        "outline": "1px auto",
+        "shadow": "none"
+      }
+    }
+  ],
+  "contrast": [
+    {
+      "name": "正文 #26312C on #F7F3EB",
+      "ratio": 12.18,
+      "passAA": true
+    },
+    {
+      "name": "次级文字 #45514A on #F7F3EB",
+      "ratio": 7.5,
+      "passAA": true
+    },
+    {
+      "name": "弱化文字 #5D6A63 on #F7F3EB",
+      "ratio": 5.12,
+      "passAA": true
+    },
+    {
+      "name": "主按钮白字 on 深墨绿 #254C40",
+      "ratio": 9.6,
+      "passAA": true
+    },
+    {
+      "name": "正文 #26312C on 卡片 #FFFFFF",
+      "ratio": 13.48,
+      "passAA": true
+    },
+    {
+      "name": "写状态 #2F6B4F on #EAF3ED",
+      "ratio": 5.56,
+      "passAA": true
+    },
+    {
+      "name": "含糊 #8A4B1E on #FBF0E2",
+      "ratio": 6.01,
+      "passAA": true
+    },
+    {
+      "name": "冲突 #9E2B25 on #F9EAE8",
+      "ratio": 6.36,
+      "passAA": true
+    },
+    {
+      "name": "重点色（文字版）#8F4322 on #F7F3EB",
+      "ratio": 6.34,
+      "passAA": true
+    }
+  ],
+  "issues": []
+}

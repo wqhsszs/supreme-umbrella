@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>明白办 A 轮 · 界面前后对照</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  body { margin: 0; font-family: "Microsoft YaHei", sans-serif; color: #26312C; background: #F7F3EB; font-size: 14px; line-height: 1.6; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 24px 40px; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  .sub { color: #5D6A63; font-size: 14px; margin: 0 0 4px; }
+  .meta { color: #5D6A63; font-size: 13px; margin: 0 0 22px; }
+  h2 { font-size: 19px; margin: 30px 0 4px; color: #254C40; }
+  .note { font-size: 13px; color: #5D6A63; margin: 0 0 10px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  .cell { background: #fff; border: 1px solid #E3DCCD; border-radius: 12px; padding: 10px; }
+  .cell h3 { font-size: 14px; margin: 0 0 8px; color: #5D6A63; font-weight: 700; letter-spacing: .5px; }
+  .cell img { display: block; width: 100%; border-radius: 6px; border: 1px solid #EFE9DD; }
+  .cell.wide img { max-height: 420px; object-fit: contain; object-position: top; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 99px; margin-left: 6px; }
+  .tag-old { background: #EFE9DD; color: #6B6355; }
+  .tag-new { background: #E7EEE9; color: #254C40; }
+  ul { margin: 6px 0 0; padding-left: 20px; font-size: 13.5px; }
+  li { margin-bottom: 3px; }
+  .foot { margin-top: 34px; font-size: 12px; color: #6B736C; border-top: 1px solid #E3DCCD; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>明白办 A 轮 · 界面前后对照</h1>
+  <p class="sub">左：A 轮之前的 v1.0.0（长辈独立粘贴视角）　右：A 轮 v1.1.0-a2（家人／志愿者整理视角）</p>
+  <p class="meta">截图均为线上真实界面，2026-10-23 实拍；同一台 Windows 机器、Edge 无头浏览器、2 倍像素密度。左列来自 v1.0.0 运行记录（tests/shots/），右列来自 A 轮部署后实拍。</p>
+
+  <h2>① 首页 · 手机 390px</h2>
+  <p class="note">定位从「收到通知之后」改为「帮家人整理一条社区通知」；主按钮改成「整理成行动卡」；插画放在主按钮之后，避免把操作挤出首屏。</p>
+  <div class="pair">
+    <div class="cell"><h3>改版前 <span class="tag tag-old">v1.0.0</span></h3><img src="assets/before/before-01-home-390.png" alt="改版前首页"></div>
+    <div class="cell"><h3>改版后 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-01-home-390.png" alt="改版后首页"></div>
+  </div>
+
+  <h2>② 首页 · 桌面 1280px</h2>
+  <p class="note">改版前为单列居中，信息密度低；改版后为双栏：左侧输入与主按钮，右侧主插画，顶栏与正文左对齐。</p>
+  <div class="pair">
+    <div class="cell wide"><h3>改版前 <span class="tag tag-old">v1.0.0</span></h3><img src="assets/before/before-02-home-1280.png" alt="改版前桌面首页"></div>
+    <div class="cell wide"><h3>改版后 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-12-home-1280.png" alt="改版后桌面首页"></div>
+  </div>
+
+  <h2>③ 加载态</h2>
+  <p class="note">改版前只有转圈；改版后配小幅静物插画，并明确说明「这一步由 AI 逐句阅读通知原文」，不再给固定秒数。</p>
+  <div class="pair">
+    <div class="cell"><h3>改版前 <span class="tag tag-old">v1.0.0</span></h3><img src="assets/before/before-06-loading-390.png" alt="改版前加载态"></div>
+    <div class="cell"><h3>改版后 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-02-loading-390.png" alt="改版后加载态"></div>
+  </div>
+
+  <h2>④ 结果页顶部</h2>
+  <p class="note">改版前首卡只写「这条通知说的是」；改版后先给「这条通知要办什么」，并在冲突时把「先确认」提醒放在结论之后、其它卡片之前。</p>
+  <div class="pair">
+    <div class="cell"><h3>改版前 <span class="tag tag-old">v1.0.0</span></h3><img src="assets/before/before-03-result-390.png" alt="改版前结果页"></div>
+    <div class="cell"><h3>改版后 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-03-result-top-390.png" alt="改版后结果页"></div>
+  </div>
+
+  <h2>⑤ 原文依据</h2>
+  <p class="note">按钮文案由「看原文依据」改为「对照通知原文」，更接近整理者会说的话。</p>
+  <div class="pair">
+    <div class="cell"><h3>改版前 <span class="tag tag-old">v1.0.0</span></h3><img src="assets/before/before-04-evidence-390.png" alt="改版前原文依据"></div>
+    <div class="cell"><h3>改版后 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-04-evidence-390.png" alt="改版后原文依据"></div>
+  </div>
+
+  <h2>⑥ 缺信息（通知没写地点）</h2>
+  <p class="note">改版前只有徽章「通知未说明」；改版后同一状态会用一句可执行的话说明该怎么办，并把待确认问题单列成卡。</p>
+  <div class="pair">
+    <div class="cell"><h3>改版前 <span class="tag tag-old">v1.0.0</span></h3><img src="assets/before/before-05-missing-390.png" alt="改版前缺失提示"></div>
+    <div class="cell"><h3>改版后 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-07-missing-390.png" alt="改版后缺失提示"></div>
+  </div>
+
+  <h2>⑦ A 轮新增：时间冲突提醒置顶</h2>
+  <p class="note">改版前冲突只体现在某条时间项的徽章上，容易被略过；改版后在最上方单独出横幅，写明「先问清楚再安排」，且不默认收起。</p>
+  <div class="pair">
+    <div class="cell"><h3>改版后新增状态 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-09-conflict-390.png" alt="冲突提醒"></div>
+    <div class="cell"><h3>非通知文本 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-10-not-notice-390.png" alt="非通知提示"></div>
+  </div>
+
+  <h2>⑧ 准备与复制</h2>
+  <p class="note">改版前准备项与行动项混排在「5 您接下来做什么」；改版后拆成「3 家人需要准备什么」与「4 下一步」，并在复制文本中使用 [x]/[ ] 反映当前勾选。</p>
+  <div class="pair">
+    <div class="cell"><h3>勾选状态 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-05-checked-390.png" alt="勾选准备项"></div>
+    <div class="cell"><h3>复制反馈 <span class="tag tag-new">v1.1.0-a2</span></h3><img src="assets/after/after-06-copy-390.png" alt="复制成功提示"></div>
+  </div>
+
+  <div class="foot">
+    说明：截图未做任何内容修改或重新绘制。改版前的截图为 v1.0.0 真实运行画面（对应交付 03 视频素材同一批），改版后的截图为 A 轮版本部署后的实拍。
+    A 轮未重制 PDF 与演示视频，这两项按任务书在 B 轮统一处理。
+  </div>
+</div>
+</body>
+</html>

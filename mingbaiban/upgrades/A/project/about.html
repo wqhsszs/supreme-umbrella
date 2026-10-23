@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于明白办 · 使用说明</title>
+<link rel="stylesheet" href="./css/app.css?v=1.1.0-a3">
+<style>
+  .doc { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+  .doc h1 { font-size: 26px; margin: 0 0 6px; }
+  .doc h2 { font-size: 20px; margin: 26px 0 10px; color: var(--green); }
+  .doc p, .doc li { font-size: 18px; color: var(--ink-2); line-height: 1.8; }
+  .doc ul { padding-left: 22px; }
+  .doc .k { color: var(--green); font-weight: 700; }
+  .note { background: var(--paper); border-left: 4px solid var(--line-strong); padding: 12px 14px; border-radius: 0 8px 8px 0; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">明</span>
+      <span class="brand-text"><strong>明白办</strong><small>把社区通知整理成行动卡</small></span>
+    </div>
+    <a class="btn btn-ghost" href="./index.html">返回</a>
+  </div>
+</header>
+<main>
+  <div class="doc">
+    <h1>关于「明白办」</h1>
+    <p>明白办把社区发来的通知原文，整理成一张能转给家人的行动卡：这件事是什么、谁适用、什么时候、在哪里、要带什么、下一步做什么，以及哪些地方通知其实没说清。</p>
+    <p>常见的用法是：家人或社区志愿者先看一遍通知，整理成卡片，再发给长辈；长辈拿到卡片自己看、自己决定要不要去。</p>
+
+    <h2>怎么用</h2>
+    <ul>
+      <li>把通知文字贴进输入框，点「整理成行动卡」。</li>
+      <li>先看最上面的结论，再看「先确认这几件事」——有冲突或说不清的地方，卡片会放在最前面。</li>
+      <li>每一项后面有「对照通知原文」，可以展开看通知里的原句。</li>
+      <li>要带的东西、要做的事可以打勾。打勾只是记下准备到哪一步，不代表已经报名。</li>
+      <li>点「复制行动卡，发给家人」，粘贴到聊天里就能发。</li>
+    </ul>
+
+    <h2>它会怎么做，不会怎么做</h2>
+    <ul>
+      <li><span class="k">会</span>：逐句读通知，把「报名截止」和「活动开始」分开，把报名地点和活动地点分开。</li>
+      <li><span class="k">会</span>：通知没写的，写「通知未说明」，不替它补。</li>
+      <li><span class="k">不会</span>：不替您报名、预约或办理任何事，也不会说「已经帮您联系社区」。</li>
+      <li><span class="k">不会</span>：不做医疗建议、不做政策资格判断。</li>
+    </ul>
+
+    <h2>关于 AI</h2>
+    <p>行动卡由大语言模型实时生成，不是提前写好的固定答案。生成后会通过一层自动检查：每条「原文依据」必须能在通知里逐字找到；标为「通知明确要求」的事项必须有原文依据，否则整张卡不会显示，而是提示再试一次。</p>
+    <div class="note">
+      <p style="margin:0">这层检查只能发现「引文对不上原文」「结构不完整」这类问题，不能保证语义一定理解正确。重要的事情，请以通知原文和社区工作人员的说法为准。我们没有使用「绝不出错」「保证不编造」这类说法，因为无法证明。</p>
+    </div>
+
+    <h2>你的通知会被怎么处理</h2>
+    <p>你贴进来的通知文字，会发送到模型服务，用于生成这一次的结果。本产品不建账号、不建立通知历史数据库、不主动把原文写入应用日志，刷新页面后输入内容即清空。</p>
+    <p>模型服务由平台托管，其服务端可能按平台自身规则处理请求数据，这部分不在本产品控制范围内，因此我们不会承诺「数据绝不上云」「平台绝不保留」。</p>
+    <p>请不要把身份证号、银行卡号、手机号等个人敏感信息贴进来。</p>
+
+    <h2>这是参赛演示版本</h2>
+    <p>明白办是 2026 年 iCAN 大学生创新创业大赛 · 快手 AI 未来创造者挑战赛的参赛作品，方向为「AI 产品实现」。页面中的示例通知为本项目编写的虚构演示材料，不是任何真实社区的公告；插画中的人物为虚构角色，不对应任何真实个人。</p>
+    <p>目前尚未开展面向目标用户的正式试用，实际使用效果有待验证；也尚未在真实手机上做真机测试。</p>
+
+    <a class="btn btn-primary btn-wide" href="./index.html">回去整理一条通知</a>
+  </div>
+</main>
+</body>
+</html>
