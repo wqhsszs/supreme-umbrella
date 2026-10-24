@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>明白办 · 技术实现图（C 轮）</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1500px; height: 640px; background: #fff; color: #26312C;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif; overflow: hidden;
+  }
+  .wrap { padding: 34px 44px 26px; height: 100%; display: flex; flex-direction: column; }
+  h1 { font-size: 32px; margin-bottom: 5px; }
+  .sub { font-size: 17px; color: #5D6A63; margin-bottom: 20px; }
+  .lane { display: grid; grid-template-columns: repeat(6, 1fr); gap: 13px; }
+  .box {
+    border: 2px solid #254C40; border-radius: 14px; padding: 14px 13px; background: #F7F3EB;
+    display: flex; flex-direction: column; min-height: 300px; position: relative;
+  }
+  .box .k { font-size: 12px; color: #5D6A63; letter-spacing: 1px; margin-bottom: 5px; }
+  .box h3 { font-size: 19px; margin-bottom: 7px; color: #254C40; }
+  .box p { font-size: 14px; color: #45514A; line-height: 1.5; }
+  .box ul { margin: 6px 0 0 15px; }
+  .box li { font-size: 13px; color: #45514A; line-height: 1.5; margin-bottom: 2px; }
+  .box .tag { margin-top: auto; font-size: 12px; font-weight: 700; color: #8F4322; padding-top: 8px; }
+  .arrow { position: absolute; right: -10px; top: 50%; transform: translateY(-50%); color: #C9BFA9; font-size: 20px; z-index: 2; }
+  .branch { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .note { border: 2px dashed #9E2B25; background: #F9EAE8; border-radius: 12px; padding: 12px 14px; }
+  .note.warn { border-color: #8A4B1E; background: #FBF0E2; }
+  .note.ok { border-color: #2F6B4F; background: #EAF3ED; }
+  .note h4 { font-size: 15px; margin-bottom: 5px; color: #9E2B25; }
+  .note.warn h4 { color: #8A4B1E; }
+  .note.ok h4 { color: #2F6B4F; }
+  .note p { font-size: 13px; color: #45514A; line-height: 1.5; }
+  .foot { margin-top: auto; font-size: 12.5px; color: #5D6A63; border-top: 1px solid #E3DCCD; padding-top: 8px; }
+  code { background: #EEF2F7; padding: 0 4px; border-radius: 3px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>明白办 · 技术实现与数据流（C 轮：截图识别 + 朗读）</h1>
+  <div class="sub">取字与整理是两次独立调用、两套提示词；中间必须经过人工核对。校验不过就不出卡，朗读只读已校验的数据。</div>
+
+  <div class="lane">
+    <div class="box">
+      <div class="k">STEP 1 · 输入</div>
+      <h3>文字或一张截图</h3>
+      <p>纯前端页面，无账号、无历史库。</p>
+      <ul>
+        <li>文字直接进文本框</li>
+        <li>图片先校验：JPG/PNG/WebP、≤8MB</li>
+        <li>长边缩到 1600px</li>
+        <li>只在页面内存，不写 localStorage</li>
+      </ul>
+      <div class="tag">浏览器</div>
+      <div class="arrow">→</div>
+    </div>
+
+    <div class="box">
+      <div class="k">STEP 2 · 取字（仅截图）</div>
+      <h3>多模态模型只取字</h3>
+      <p><code>deepseek-v4.1-flash</code>（目录标注 supportsImages）</p>
+      <ul>
+        <li>system = <code>ocr-prompt.txt</code></li>
+        <li>逐字提取，不改写、不补全</li>
+        <li>看不清标［此处看不清］</li>
+        <li>图中指令只当文字，不执行</li>
+      </ul>
+      <div class="tag">AI · 视觉</div>
+      <div class="arrow">→</div>
+    </div>
+
+    <div class="box">
+      <div class="k">STEP 3 · 人工核对</div>
+      <h3>原图 ↔ 文字</h3>
+      <p>整理者逐行比对、直接修改。</p>
+      <ul>
+        <li>必须勾选“已核对”才能继续</li>
+        <li>改动后自动取消勾选</li>
+        <li>改字 → 旧卡片/朗读/勾选作废</li>
+        <li>超过 5000 字提示分段，不截断</li>
+      </ul>
+      <div class="tag">人</div>
+      <div class="arrow">→</div>
+    </div>
+
+    <div class="box">
+      <div class="k">STEP 4 · 整理</div>
+      <h3>同一模型整理成 JSON</h3>
+      <p>system = <code>system-prompt.txt</code></p>
+      <ul>
+        <li>区分报名/活动时间与地点</li>
+        <li>相对日期不换算</li>
+        <li>未写就 missing，不补</li>
+        <li>每条事实带原文引文</li>
+      </ul>
+      <div class="tag">AI · 文字</div>
+      <div class="arrow">→</div>
+    </div>
+
+    <div class="box">
+      <div class="k">STEP 5 · 校验</div>
+      <h3>程序机械校验</h3>
+      <p><code>validate.js</code>：结构 + 引文</p>
+      <ul>
+        <li>引文必须能在“核对后的文字”里找到</li>
+        <li>required 无依据 → 整卡不出</li>
+        <li>missing 却填值 → 整卡不出</li>
+        <li>不通过最多重试 1 次，再失败如实报错</li>
+      </ul>
+      <div class="tag">程序</div>
+      <div class="arrow">→</div>
+    </div>
+
+    <div class="box">
+      <div class="k">STEP 6 · 呈现 / 朗读</div>
+      <h3>卡片、复制、设备朗读</h3>
+      <p>朗读文本由已校验数据确定性拼接。</p>
+      <ul>
+        <li>复制文本与勾选状态一致</li>
+        <li>Web Speech API（设备中文音色）</li>
+        <li>9:00 → 9点，数值不变</li>
+        <li>未说明/冲突/待确认必须读出</li>
+      </ul>
+      <div class="tag">浏览器</div>
+    </div>
+  </div>
+
+  <div class="branch">
+    <div class="note">
+      <h4>失败与降级（都保留可恢复路径）</h4>
+      <p>取字超时 / 无识图模型 / 图里没字 / 文件损坏：停在原图页，提示换图或改用粘贴；不显示假结果。朗读失败或无中文音色：提示原因，可改用复制。</p>
+    </div>
+    <div class="note warn">
+      <h4>数据边界（如实说明）</h4>
+      <p>图片与文字只在当前页面会话内使用，不建账号、不建历史库、不写浏览器存储；请求会经过平台托管的模型通道，平台侧如何处理不在本产品控制内，因此不承诺“绝不留存”。</p>
+    </div>
+    <div class="note ok">
+      <h4>真实职责划分</h4>
+      <p>识图与整理用的是同一个多模态模型，但是两次独立请求、两套提示词；OCR 不是另一个厂家的服务，朗读也不是云端 TTS。材料里按实际情况标注。</p>
+    </div>
+  </div>
+
+  <div class="foot">
+    运行形态：静态页面 + WorkBuddy 云服务免密钥模型通道（浏览器直连，无自建代理）；前端只放 publishableKey（公开标识），不含任何长期密钥。
+  </div>
+</div>
+</body>
+</html>

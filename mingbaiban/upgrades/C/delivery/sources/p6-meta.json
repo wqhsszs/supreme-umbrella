@@ -1,0 +1,29 @@
+{
+  "wall": 34.358,
+  "frames": 37,
+  "speakStart": 1792826032191,
+  "speakEnd": 1792826050224,
+  "pre": {
+    "supported": true,
+    "disabled": false,
+    "zh": 3
+  },
+  "after": {
+    "status": {
+      "supported": true,
+      "speaking": true,
+      "paused": false,
+      "voiceName": "Microsoft Huihui - Chinese (Simplified, PRC)",
+      "voiceLang": "zh-CN",
+      "zhVoiceCount": 3,
+      "error": "",
+      "textLength": 347
+    },
+    "controls": true,
+    "btnHidden": true,
+    "err": ""
+  },
+  "recStart": 1792825999753,
+  "rate": 48000,
+  "ch": 2
+}

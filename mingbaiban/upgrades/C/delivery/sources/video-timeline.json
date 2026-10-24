@@ -1,0 +1,106 @@
+{
+  "timeline": [
+    {
+      "name": "P1-home",
+      "sids": [
+        "S1"
+      ],
+      "duration": 11.168,
+      "audio": 10.82,
+      "wall": 10.93,
+      "start": 0.0
+    },
+    {
+      "name": "P2-upload",
+      "sids": [
+        "S2"
+      ],
+      "duration": 12.689,
+      "audio": 12.34,
+      "wall": 12.45,
+      "start": 11.168
+    },
+    {
+      "name": "P3-ocr",
+      "sids": [
+        "S3"
+      ],
+      "duration": 18.0,
+      "audio": 14.5,
+      "wall": 18.57,
+      "start": 23.857
+    },
+    {
+      "name": "P4-review",
+      "sids": [
+        "S4"
+      ],
+      "duration": 10.451,
+      "audio": 10.1,
+      "wall": 10.12,
+      "start": 41.857
+    },
+    {
+      "name": "P5-result",
+      "sids": [
+        "S5",
+        "S6"
+      ],
+      "duration": 18.806,
+      "audio": 18.46,
+      "wall": 18.55,
+      "start": 52.308
+    },
+    {
+      "name": "P6-speech",
+      "sids": [
+        "S7"
+      ],
+      "duration": 34.667,
+      "audio": 34.32,
+      "wall": 34.36,
+      "start": 71.114
+    },
+    {
+      "name": "P7-copy",
+      "sids": [
+        "S8"
+      ],
+      "duration": 9.633,
+      "audio": 9.28,
+      "wall": 9.38,
+      "start": 105.781
+    },
+    {
+      "name": "P8-missing",
+      "sids": [
+        "S9a"
+      ],
+      "duration": 10.426,
+      "audio": 6.93,
+      "wall": 30.65,
+      "start": 115.415
+    },
+    {
+      "name": "P9-conflict",
+      "sids": [
+        "S9b"
+      ],
+      "duration": 10.799,
+      "audio": 7.3,
+      "wall": 24.86,
+      "start": 125.841
+    },
+    {
+      "name": "P10-end",
+      "sids": [
+        "S10"
+      ],
+      "duration": 16.572,
+      "audio": 16.22,
+      "wall": 16.33,
+      "start": 136.64
+    }
+  ],
+  "totalSeconds": 153.21
+}

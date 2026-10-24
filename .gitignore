@@ -11,6 +11,15 @@ mingbaiban/tests/videocheck/
 mingbaiban/tests/_pkg_check/
 mingbaiban/tests/_unzip_check/
 
+# ---- C 轮：录屏原始帧与制作期临时文件（可由 tools 重新生成）----
+# 约 6000 张 JPEG；分镜时间轴见 upgrades/C/delivery/sources/video-phases.json
+mingbaiban/upgrades/*/delivery/assets/recordings/
+mingbaiban/upgrades/*/_tmp/
+mingbaiban/upgrades/*/delivery/assets/screenshots/_pdf-p*.png
+mingbaiban/upgrades/*/delivery/assets/screenshots/_e2e-*.png
+mingbaiban/upgrades/*/delivery/assets/screenshots/_smoke-*.png
+mingbaiban/upgrades/*/delivery/assets/screenshots/c7-smoke.png
+
 # ---- 依赖与缓存 ----
 node_modules/
 __pycache__/

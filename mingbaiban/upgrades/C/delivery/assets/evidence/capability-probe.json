@@ -1,0 +1,36 @@
+{
+  "what": "C 轮接入前的能力核实记录（先验证、后接入；全部为 2026-10-23 实测）",
+  "vision": {
+    "modelDirectory": {
+      "method": "mcp__genie-baas__workbuddy_cloudservice_llm_list_models（applicationId wbapp_iiPVrUTJJSCc0MurWICMde）",
+      "result": "deepseek-v4.1-flash 标注 supportsImages: true、disabledMultimodal: false；另有 glm-5v-turbo / glm-4.6v / glm-5.3-flash / hy3 / kimi 系列等多模态模型",
+      "usageInProduct": "js/llm.js pickImageModel()：只在 supportsImages === true 且未停用的模型里按提示词顺序挑选，目录未标注一律视为不支持"
+    },
+    "messageFormat": {
+      "method": "在浏览器内抓取并检查 @tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js 源码",
+      "finding": "chat.completions.create() 将 messages 原样 JSON 透传到 POST /chat/completions，图像格式由后端决定；SDK 源码中不存在 audio/speech 接口",
+      "verification": "用 OpenAI 兼容格式 {type:'image_url', image_url:{url:'data:image/jpeg;base64,...'}} 实测成功"
+    },
+    "firstRealVisionCall": {
+      "time": "2026-10-23 13:37 附近（北京时间）",
+      "input": "自编排版通知图 ocr-01-clear.jpg（900×1046）",
+      "outputExcerpt": "关于开展“手机使用指导”活动的通知 / 各位居民：/ …时间：2026年10月26日9:00—11:00 / 地点：社区服务中心二楼活动室 / …【虚构演示样例·非真实社区公告】",
+      "verdict": "可用，逐字准确，据此接入"
+    }
+  },
+  "tts": {
+    "cloud": "模型目录无 TTS 类模型；SDK 源码无 audio/speech 接口 → 云端 TTS 不可用",
+    "browser": "Web Speech API 在本机 Edge 可用，getVoices() 返回 3 个中文音色（含 Microsoft Huihui - Chinese (Simplified, PRC)）",
+    "exportCapability": "Web Speech API 不能导出音频文件 → 产品不提供下载语音按钮"
+  },
+  "audioRecording": {
+    "dshow": "ffmpeg -list_devices：只有麦克风阵列，无立体声混音 → dshow 不可用",
+    "wasapiLoopback": "pyaudiowpatch get_default_wasapi_loopback() → 扬声器 (Realtek(R) Audio) [Loopback]，48kHz/2ch，可用",
+    "probe": "录到 Web Speech 播放的真实声音：mean −27.1 dB / max −0.7 dB / 18.1 s"
+  },
+  "deployment": {
+    "originCheck": "模型通道按 Origin 校验；本地 http://127.0.0.1 只能看界面，真实调用必须走线上域名",
+    "shareCookie": "分享链接首次访问需落地 __wb_rsc Cookie 后子资源才可取（否则子资源 403）；自动化脚本已按此重试",
+    "rateLimit": "当天调用量大后通道返回 quota_rate_limited（'请求被限流，请稍后重试。'），产品如错误实显示"
+  }
+}

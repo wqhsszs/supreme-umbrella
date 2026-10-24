@@ -1,0 +1,216 @@
+{
+  "base": "http://127.0.0.1:8124/",
+  "viewports": [
+    {
+      "w": 360,
+      "h": 780,
+      "upload": {
+        "scrollW": 360,
+        "clientW": 360,
+        "bodyFont": "19px",
+        "textareaFont": "20px",
+        "previewH": 260,
+        "ocrBtn": 65
+      },
+      "review": {
+        "scrollW": 360,
+        "clientW": 360,
+        "sideBySide": false,
+        "figW": 328,
+        "edW": 328,
+        "confirmTop": 1426,
+        "confirmH": 71,
+        "confirmDisabled": true
+      },
+      "result": {
+        "scrollW": 360,
+        "clientW": 360,
+        "speakTop": 2329,
+        "speakH": 65,
+        "copyH": 65,
+        "speechText": "声音来自这台设备，不是云端配音；不同设备听起来会不一样。",
+        "sourceLine": "来源：上传的通知截图 · 文字由 Deepseek-V4.1-Flash 取出后经整理者核对 · 卡片只依据核对后的文字"
+      },
+      "smallTargets": {
+        "upload": [],
+        "review": [],
+        "result": []
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "upload": {
+        "scrollW": 390,
+        "clientW": 390,
+        "bodyFont": "19px",
+        "textareaFont": "20px",
+        "previewH": 260,
+        "ocrBtn": 65
+      },
+      "review": {
+        "scrollW": 390,
+        "clientW": 390,
+        "sideBySide": false,
+        "figW": 358,
+        "edW": 358,
+        "confirmTop": 1426,
+        "confirmH": 71,
+        "confirmDisabled": true
+      },
+      "result": {
+        "scrollW": 390,
+        "clientW": 390,
+        "speakTop": 2329,
+        "speakH": 65,
+        "copyH": 65,
+        "speechText": "声音来自这台设备，不是云端配音；不同设备听起来会不一样。",
+        "sourceLine": "来源：上传的通知截图 · 文字由 Deepseek-V4.1-Flash 取出后经整理者核对 · 卡片只依据核对后的文字"
+      },
+      "smallTargets": {
+        "upload": [],
+        "review": [],
+        "result": []
+      }
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "upload": {
+        "scrollW": 768,
+        "clientW": 768,
+        "bodyFont": "20px",
+        "textareaFont": "20px",
+        "previewH": 340,
+        "ocrBtn": 67
+      },
+      "review": {
+        "scrollW": 768,
+        "clientW": 768,
+        "sideBySide": true,
+        "figW": 176,
+        "edW": 207,
+        "confirmTop": 1169,
+        "confirmH": 113,
+        "confirmDisabled": true
+      },
+      "result": {
+        "scrollW": 768,
+        "clientW": 768,
+        "speakTop": 2034,
+        "speakH": 67,
+        "copyH": 67,
+        "speechText": "声音来自这台设备，不是云端配音；不同设备听起来会不一样。",
+        "sourceLine": "来源：上传的通知截图 · 文字由 Deepseek-V4.1-Flash 取出后经整理者核对 · 卡片只依据核对后的文字"
+      },
+      "smallTargets": {
+        "upload": [],
+        "review": [],
+        "result": []
+      }
+    },
+    {
+      "w": 1280,
+      "h": 900,
+      "upload": {
+        "scrollW": 1280,
+        "clientW": 1280,
+        "bodyFont": "20px",
+        "textareaFont": "20px",
+        "previewH": 340,
+        "ocrBtn": 67
+      },
+      "review": {
+        "scrollW": 1280,
+        "clientW": 1280,
+        "sideBySide": true,
+        "figW": 212,
+        "edW": 250,
+        "confirmTop": 1116,
+        "confirmH": 113,
+        "confirmDisabled": true
+      },
+      "result": {
+        "scrollW": 1280,
+        "clientW": 1280,
+        "speakTop": 1987,
+        "speakH": 67,
+        "copyH": 67,
+        "speechText": "声音来自这台设备，不是云端配音；不同设备听起来会不一样。",
+        "sourceLine": "来源：上传的通知截图 · 文字由 Deepseek-V4.1-Flash 取出后经整理者核对 · 卡片只依据核对后的文字"
+      },
+      "smallTargets": {
+        "upload": [],
+        "review": [],
+        "result": []
+      }
+    }
+  ],
+  "contrast": [
+    {
+      "name": "正文 #26312C on #F7F3EB",
+      "fg": "#26312C",
+      "bg": "#F7F3EB",
+      "ratio": 12.18,
+      "passAA": true
+    },
+    {
+      "name": "次级文字 #45514A on #FFFFFF",
+      "fg": "#45514A",
+      "bg": "#FFFFFF",
+      "ratio": 8.3,
+      "passAA": true
+    },
+    {
+      "name": "弱化文字 #5D6A63 on #F7F3EB",
+      "fg": "#5D6A63",
+      "bg": "#F7F3EB",
+      "ratio": 5.12,
+      "passAA": true
+    },
+    {
+      "name": "主色按钮 #FFFFFF on #254C40",
+      "fg": "#FFFFFF",
+      "bg": "#254C40",
+      "ratio": 9.6,
+      "passAA": true
+    },
+    {
+      "name": "重点色文字 #8F4322 on #F7F3EB",
+      "fg": "#8F4322",
+      "bg": "#F7F3EB",
+      "ratio": 6.34,
+      "passAA": true
+    },
+    {
+      "name": "核对提示 #8A4B1E on #FBF0E2",
+      "fg": "#8A4B1E",
+      "bg": "#FBF0E2",
+      "ratio": 6.01,
+      "passAA": true
+    },
+    {
+      "name": "冲突标题 #9E2B25 on #F9EAE8",
+      "fg": "#9E2B25",
+      "bg": "#F9EAE8",
+      "ratio": 6.36,
+      "passAA": true
+    },
+    {
+      "name": "原文写明 #2F6B4F on #EAF3ED",
+      "fg": "#2F6B4F",
+      "bg": "#EAF3ED",
+      "ratio": 5.56,
+      "passAA": true
+    },
+    {
+      "name": "选中标签 #254C40 on #FFFFFF",
+      "fg": "#254C40",
+      "bg": "#FFFFFF",
+      "ratio": 9.6,
+      "passAA": true
+    }
+  ],
+  "issues": [],
+  "at": "2026-10-23T14:18:21.309Z"
+}

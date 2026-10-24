@@ -1,0 +1,858 @@
+{
+  "round": "C（最终）",
+  "product": "明白办 — 面向长辈的 AI 社区通知行动助手",
+  "version": "1.3.0-c7",
+  "baseline": "A v1.1.0-a3 / B v1.2.0-b2",
+  "generatedAt": "2026-10-24T15:28:06+08:00",
+  "previewUrl": "https://mingbaiban-42482.app.workbuddy.host/?sharecode=QCZF2UKNAG",
+  "applicationId": "wbapp_iiPVrUTJJSCc0MurWICMde",
+  "runtimeModel": "deepseek-v4.1-flash（取字与整理两次独立调用，WorkBuddy 云服务通道）",
+  "speech": "Web Speech API（设备音色，非云端 TTS，不能导出音频）",
+  "ttsNarration": "Windows SAPI5 / Microsoft Huihui（材料制作用）",
+  "imageTool": "沿用 B 轮 ImageGen 插画 5 张（C 轮未新增）",
+  "video": {
+    "duration": "00:02:33.20",
+    "audio": "yes",
+    "seconds": null
+  },
+  "note": "平台把同工作区发布指向同一应用：C 覆盖了 B 的线上版本；A/B 代码可回滚。",
+  "fileCount": 137,
+  "files": [
+    {
+      "name": "00_开始使用与交付状态.md",
+      "path": "upgrades/C/delivery/00_开始使用与交付状态.md",
+      "bytes": 2693,
+      "sha256": "ed9ddce525d40ce681af819d872bc0e206a5226a0fb3d135c4db68afb05fd3e5"
+    },
+    {
+      "name": "01_明白办_产品说明书.pdf",
+      "path": "upgrades/C/delivery/01_明白办_产品说明书.pdf",
+      "bytes": 4774292,
+      "sha256": "32ca4d468b7bb68a972198627d0c81553b41fc3ff4e3ad18c90af9f943050409"
+    },
+    {
+      "name": "02_明白办_产品说明书_可编辑源文件.docx",
+      "path": "upgrades/C/delivery/02_明白办_产品说明书_可编辑源文件.docx",
+      "bytes": 4390185,
+      "sha256": "85ba70562a32370a88ab195bdf9968b98009eedc5ba06c38dc641c35e4d681b6"
+    },
+    {
+      "name": "03_明白办_产品演示.mp4",
+      "path": "upgrades/C/delivery/03_明白办_产品演示.mp4",
+      "bytes": 14020649,
+      "sha256": "9cafb55ac818ff1a0aeee2a7ed1777ac8cc5b6c43c82a2e8dfb0cfae469c8bb7"
+    },
+    {
+      "name": "04_明白办_视频字幕.srt",
+      "path": "upgrades/C/delivery/04_明白办_视频字幕.srt",
+      "bytes": 1645,
+      "sha256": "e04f9a100eae0d6c57a1bd0dc9f78cb098c1a5736ad3710abd0e39e2ccca8d35"
+    },
+    {
+      "name": "05_明白办_视频脚本与分镜.md",
+      "path": "upgrades/C/delivery/05_明白办_视频脚本与分镜.md",
+      "bytes": 3435,
+      "sha256": "18720e892310c90083e3a2ff8efbde6daff6adc6457b2617e7bacdd902fca650"
+    },
+    {
+      "name": "06_明白办_快手发布文案.txt",
+      "path": "upgrades/C/delivery/06_明白办_快手发布文案.txt",
+      "bytes": 4115,
+      "sha256": "9494fefcc4f2deed5494e5c5981961c9c6e30c69b5361f18f8e5a33b6b43c9fa"
+    },
+    {
+      "name": "07_明白办_视频封面.png",
+      "path": "upgrades/C/delivery/07_明白办_视频封面.png",
+      "bytes": 1262770,
+      "sha256": "310b86ffbed36758569c31b9e6d944e16cd8be24c5f0aa8257298c6449199b99"
+    },
+    {
+      "name": "08_明白办_在线体验与运行说明.pdf",
+      "path": "upgrades/C/delivery/08_明白办_在线体验与运行说明.pdf",
+      "bytes": 243253,
+      "sha256": "d771cec3bbf011e4d645652be9c244d00c86fd4ff0b55b08cc1c771f657ff7b1"
+    },
+    {
+      "name": "09_明白办_测试报告.pdf",
+      "path": "upgrades/C/delivery/09_明白办_测试报告.pdf",
+      "bytes": 379502,
+      "sha256": "5cd352bc0efaf797d4be6d8ef857eb10ebf47909f3e3190813cf5c393a368916"
+    },
+    {
+      "name": "10_明白办_源码.zip",
+      "path": "upgrades/C/delivery/10_明白办_源码.zip",
+      "bytes": 9013396,
+      "sha256": "20490e865c2b8baa0d602e49f6a21a4a6ff017fbbd04a8b98d22ea2246223c60"
+    },
+    {
+      "name": "11_公众版五步图.png",
+      "path": "upgrades/C/delivery/11_公众版五步图.png",
+      "bytes": 660795,
+      "sha256": "10c15f5345bd09ebee0bea87ee2701ee103f05e1fdecc47ae0441ed369dc28f3"
+    },
+    {
+      "name": "11_技术实现图.png",
+      "path": "upgrades/C/delivery/11_技术实现图.png",
+      "bytes": 515540,
+      "sha256": "dde1d095a06b536106571047e301f4ffd587730570013316b1d1772678dcc297"
+    },
+    {
+      "name": "12_明白办_工具素材来源与原创记录.md",
+      "path": "upgrades/C/delivery/12_明白办_工具素材来源与原创记录.md",
+      "bytes": 5684,
+      "sha256": "f0b7fe2e2f3e3aac6fbece7c8fb43f614023f4083f9c9d159f703cc86aa02b41"
+    },
+    {
+      "name": "13_明白办_报名字段与提交核对表.md",
+      "path": "upgrades/C/delivery/13_明白办_报名字段与提交核对表.md",
+      "bytes": 4359,
+      "sha256": "22c8c3d621c680d70cf518006d9512aacb9cfed1006af3083552f650b5a772a9"
+    },
+    {
+      "name": "14_明白办_交付清单.json",
+      "path": "upgrades/C/delivery/14_明白办_交付清单.json",
+      "bytes": 35900,
+      "sha256": "3397461e150e1ae1f2fff45ba8478012a2bcc23b4c0972563acd43ad1e223043"
+    },
+    {
+      "name": "16_C轮新增功能与限制.md",
+      "path": "upgrades/C/delivery/16_C轮新增功能与限制.md",
+      "bytes": 10140,
+      "sha256": "b51dc1e019688b4052f8229ba4934ede8c3e977ef819a5f804bd55bb83c1628a"
+    },
+    {
+      "name": "17_三轮升级总结.md",
+      "path": "upgrades/C/delivery/17_三轮升级总结.md",
+      "bytes": 6371,
+      "sha256": "f2a884680ffa2f7e2638dc56ef76ff16ec4f789af1b202b7a7521a8152a7b25a"
+    },
+    {
+      "name": "assets/audio/narration-timing.json",
+      "path": "upgrades/C/delivery/assets/audio/narration-timing.json",
+      "bytes": 2541,
+      "sha256": "7f55583cd440f2b2b968d92c17c78904c4e12ab99edb50a8e4578188e6c6f92a"
+    },
+    {
+      "name": "assets/audio/S1.wav",
+      "path": "upgrades/C/delivery/assets/audio/S1.wav",
+      "bytes": 477106,
+      "sha256": "52af4ea5dc9edde137d746776973caa6d3b4e4cd7b6ac7daf650ec307032618b"
+    },
+    {
+      "name": "assets/audio/S10.wav",
+      "path": "upgrades/C/delivery/assets/audio/S10.wav",
+      "bytes": 715436,
+      "sha256": "c7cb2ff0103030b7dd29768e480087cfe5cb88a4c758cfe002c2ab9ac30c4b96"
+    },
+    {
+      "name": "assets/audio/S2.wav",
+      "path": "upgrades/C/delivery/assets/audio/S2.wav",
+      "bytes": 544208,
+      "sha256": "1e167b6ac5a38c8f83eee7cb433b976b7fa225dd580db11f2d9c33e3d2c67b93"
+    },
+    {
+      "name": "assets/audio/S3.wav",
+      "path": "upgrades/C/delivery/assets/audio/S3.wav",
+      "bytes": 639500,
+      "sha256": "3af8c44e8e5252408821cb1c4f7b3fe7772dd5afe5dbc4faddf4e51139b616ea"
+    },
+    {
+      "name": "assets/audio/S4.wav",
+      "path": "upgrades/C/delivery/assets/audio/S4.wav",
+      "bytes": 445488,
+      "sha256": "42cb8f8035b3a0e3828670f5e24b1471be9df0605d68aa9d739c4ad8d18cdb5f"
+    },
+    {
+      "name": "assets/audio/S5.wav",
+      "path": "upgrades/C/delivery/assets/audio/S5.wav",
+      "bytes": 500312,
+      "sha256": "585596de6e056aad4966d73aceb44980af7cde57c71867bb834400189feddc8b"
+    },
+    {
+      "name": "assets/audio/S6.wav",
+      "path": "upgrades/C/delivery/assets/audio/S6.wav",
+      "bytes": 313698,
+      "sha256": "08c752cb14209825b316c18a7c58b15522c32d3ab1ae4c9e780a21cda02c5e43"
+    },
+    {
+      "name": "assets/audio/S7.wav",
+      "path": "upgrades/C/delivery/assets/audio/S7.wav",
+      "bytes": 696266,
+      "sha256": "48bb8ec9b6bcc557e80cbe90d523a0454c3a47b69e1a83826e375eec989f661f"
+    },
+    {
+      "name": "assets/audio/S7s.wav",
+      "path": "upgrades/C/delivery/assets/audio/S7s.wav",
+      "bytes": 729558,
+      "sha256": "9e2a4d256495d2e04b365560d37466f8cba07e49ffdbf05c7f895312ff2ec3d7"
+    },
+    {
+      "name": "assets/audio/S8.wav",
+      "path": "upgrades/C/delivery/assets/audio/S8.wav",
+      "bytes": 409444,
+      "sha256": "fea38c60e04f30654245c361b43fbe4fa5bbbf3d2d9af195f811aa358b9bcad6"
+    },
+    {
+      "name": "assets/audio/S9.wav",
+      "path": "upgrades/C/delivery/assets/audio/S9.wav",
+      "bytes": 479544,
+      "sha256": "ac35b36d875f862492b9bc620dfba3be2c9aeb62cd5ed870f68b70392bee0384"
+    },
+    {
+      "name": "assets/audio/S9a.wav",
+      "path": "upgrades/C/delivery/assets/audio/S9a.wav",
+      "bytes": 305494,
+      "sha256": "27bc66aa9a163b255dba29581355700ebe1d8c6e6c768e785ee714d9ca5a7b5a"
+    },
+    {
+      "name": "assets/audio/S9b.wav",
+      "path": "upgrades/C/delivery/assets/audio/S9b.wav",
+      "bytes": 321918,
+      "sha256": "fe863c5dcd20196d293028da0eb192c340770bcbcb31addce03d73c4a3f1a999"
+    },
+    {
+      "name": "assets/audio/speech-live.wav",
+      "path": "upgrades/C/delivery/assets/audio/speech-live.wav",
+      "bytes": 1634424,
+      "sha256": "34f9617b00800e379be7e6b0925979fd0bed674340baf087f53a5d9be6e002ff"
+    },
+    {
+      "name": "assets/evidence/a-extra-2026-10-23T14-22-19-314Z.json",
+      "path": "upgrades/C/delivery/assets/evidence/a-extra-2026-10-23T14-22-19-314Z.json",
+      "bytes": 3931,
+      "sha256": "2944427772bb357eac0e078d4759d2f5f36369dc4f5ddae3ff575abc9f673ea8"
+    },
+    {
+      "name": "assets/evidence/a-extra-2026-10-24T04-04-55-753Z.json",
+      "path": "upgrades/C/delivery/assets/evidence/a-extra-2026-10-24T04-04-55-753Z.json",
+      "bytes": 3944,
+      "sha256": "cdb76bc6b6f32df9cd720256fce0a7123cc08cd3815348934a4032d22c9fb111"
+    },
+    {
+      "name": "assets/evidence/a-extra-latest.json",
+      "path": "upgrades/C/delivery/assets/evidence/a-extra-latest.json",
+      "bytes": 3944,
+      "sha256": "cdb76bc6b6f32df9cd720256fce0a7123cc08cd3815348934a4032d22c9fb111"
+    },
+    {
+      "name": "assets/evidence/acceptance-c.json",
+      "path": "upgrades/C/delivery/assets/evidence/acceptance-c.json",
+      "bytes": 2839,
+      "sha256": "1f692f238584e2c9811d923f04c3d7fec9c918b54f6f6161ca1b1358d538ea39"
+    },
+    {
+      "name": "assets/evidence/c-layout.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-layout.json",
+      "bytes": 5320,
+      "sha256": "daf69e983c49eeb4aa167f6f87b334f73bcd814cb34a332d3aa49ebf08d87cec"
+    },
+    {
+      "name": "assets/evidence/c-ocr-20261023-140211.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-ocr-20261023-140211.json",
+      "bytes": 6698,
+      "sha256": "e1b55e20255f4a5cecaf768da1fd25ebe3abfaab10773a3c44b12c007ae1c374"
+    },
+    {
+      "name": "assets/evidence/c-ocr-20261023-141233.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-ocr-20261023-141233.json",
+      "bytes": 7598,
+      "sha256": "8f995a662e175293ed46db338c56d5da6987831c02fb296f9df1a39f4e4017be"
+    },
+    {
+      "name": "assets/evidence/c-ocr-20261024-035549.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-ocr-20261024-035549.json",
+      "bytes": 7530,
+      "sha256": "837c73ae4122875c05f43223d92518bffa5805b6f13fa39144cfab21996ea3d6"
+    },
+    {
+      "name": "assets/evidence/c-ocr-20261024-035920.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-ocr-20261024-035920.json",
+      "bytes": 7412,
+      "sha256": "069916275b4e66bd68a4d5f0509754996134d4cbc19311f266b585bb34b3b7e4"
+    },
+    {
+      "name": "assets/evidence/c-ocr-20261024-065131.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-ocr-20261024-065131.json",
+      "bytes": 7436,
+      "sha256": "f9f47091cd6268919331b21b71bff5b2c7a1cec589253697c82586991aa0a91d"
+    },
+    {
+      "name": "assets/evidence/c-ocr-latest.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-ocr-latest.json",
+      "bytes": 7436,
+      "sha256": "f9f47091cd6268919331b21b71bff5b2c7a1cec589253697c82586991aa0a91d"
+    },
+    {
+      "name": "assets/evidence/c-speech-20261023-141719.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-speech-20261023-141719.json",
+      "bytes": 10964,
+      "sha256": "4c00843d69469d65208d75e479582e2ebf6b7b0be3a9b523a45649a273c4d23c"
+    },
+    {
+      "name": "assets/evidence/c-speech-20261023-141754.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-speech-20261023-141754.json",
+      "bytes": 10965,
+      "sha256": "0be51dd4ed666225f249a11ba28fb9813e860b25934475bfee2845980da68ff3"
+    },
+    {
+      "name": "assets/evidence/c-speech-20261024-035814.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-speech-20261024-035814.json",
+      "bytes": 10837,
+      "sha256": "fce3ddd0a3f9cb211588c2a200938427e29e66f8f718e7e7e769412364e0a020"
+    },
+    {
+      "name": "assets/evidence/c-speech-latest.json",
+      "path": "upgrades/C/delivery/assets/evidence/c-speech-latest.json",
+      "bytes": 10837,
+      "sha256": "fce3ddd0a3f9cb211588c2a200938427e29e66f8f718e7e7e769412364e0a020"
+    },
+    {
+      "name": "assets/evidence/capability-probe.json",
+      "path": "upgrades/C/delivery/assets/evidence/capability-probe.json",
+      "bytes": 2729,
+      "sha256": "a106645b5dbb5d1fe624e89cf4890ea67b3c6a6373299fe12e138e7280448db0"
+    },
+    {
+      "name": "assets/evidence/edge-run-2026-10-23T14-21-23-551Z.json",
+      "path": "upgrades/C/delivery/assets/evidence/edge-run-2026-10-23T14-21-23-551Z.json",
+      "bytes": 4349,
+      "sha256": "fabfcc58b03b09093895ba428fcfa0fbcef4ec4183d14e1091d19e923e4e486d"
+    },
+    {
+      "name": "assets/evidence/edge-run-2026-10-24T04-03-56-903Z.json",
+      "path": "upgrades/C/delivery/assets/evidence/edge-run-2026-10-24T04-03-56-903Z.json",
+      "bytes": 4286,
+      "sha256": "853a43427c2041d93878da83eb39f7e62036c7c771959d08453aa0e860f10f06"
+    },
+    {
+      "name": "assets/evidence/edge-run-latest.json",
+      "path": "upgrades/C/delivery/assets/evidence/edge-run-latest.json",
+      "bytes": 4286,
+      "sha256": "853a43427c2041d93878da83eb39f7e62036c7c771959d08453aa0e860f10f06"
+    },
+    {
+      "name": "assets/evidence/final-numbers.json",
+      "path": "upgrades/C/delivery/assets/evidence/final-numbers.json",
+      "bytes": 107,
+      "sha256": "072540e112f020393777613cb542a674d136c5bac4f2dec717e6b582cddae5d5"
+    },
+    {
+      "name": "assets/evidence/rerun-note.json",
+      "path": "upgrades/C/delivery/assets/evidence/rerun-note.json",
+      "bytes": 934,
+      "sha256": "0a758570286cf3c26da3815e0e2149963d5acbb7118d4ab73187273b15b00cbb"
+    },
+    {
+      "name": "assets/evidence/test-run-2026-10-23T14-20-42-855Z.json",
+      "path": "upgrades/C/delivery/assets/evidence/test-run-2026-10-23T14-20-42-855Z.json",
+      "bytes": 73932,
+      "sha256": "0cda8b36ed66495465c97d7a5248d923f68525e6a8e2a29083d08b26c8ba4d9f"
+    },
+    {
+      "name": "assets/evidence/test-run-2026-10-23T14-57-25-913Z.json",
+      "path": "upgrades/C/delivery/assets/evidence/test-run-2026-10-23T14-57-25-913Z.json",
+      "bytes": 13283,
+      "sha256": "4940bcac8f8741e8907eec11bffe7693f4b81c19c53c6affd41fa53fca8aa641"
+    },
+    {
+      "name": "assets/evidence/test-run-2026-10-24T04-03-17-412Z.json",
+      "path": "upgrades/C/delivery/assets/evidence/test-run-2026-10-24T04-03-17-412Z.json",
+      "bytes": 76934,
+      "sha256": "50eab001e7b933a1f8a4dc9fb772c6a6518e7bdebc08ef2df7c49330185ce576"
+    },
+    {
+      "name": "assets/evidence/test-run-latest.json",
+      "path": "upgrades/C/delivery/assets/evidence/test-run-latest.json",
+      "bytes": 76934,
+      "sha256": "50eab001e7b933a1f8a4dc9fb772c6a6518e7bdebc08ef2df7c49330185ce576"
+    },
+    {
+      "name": "assets/evidence/ui-conflict-390.png",
+      "path": "upgrades/C/delivery/assets/evidence/ui-conflict-390.png",
+      "bytes": 197652,
+      "sha256": "5e04e05a1c5258325e3eda7d20ae7ca69271b30eaf6172eec59bd0b1f04062f8"
+    },
+    {
+      "name": "assets/evidence/ui-result-390-full.png",
+      "path": "upgrades/C/delivery/assets/evidence/ui-result-390-full.png",
+      "bytes": 605481,
+      "sha256": "7b3b19b3e0c68d280b3981ae13f763a8e09b010b0f3d54e3e3dd238c1e867ae8"
+    },
+    {
+      "name": "assets/evidence/ui-result-390.png",
+      "path": "upgrades/C/delivery/assets/evidence/ui-result-390.png",
+      "bytes": 262351,
+      "sha256": "4a26cd002ec4e610464742761e465a699546750136da2fa781be435742c6b4d6"
+    },
+    {
+      "name": "assets/evidence/_c_ocr_console.log",
+      "path": "upgrades/C/delivery/assets/evidence/_c_ocr_console.log",
+      "bytes": 1693,
+      "sha256": "ab5cfd3ab685005c234d131d7ebc736aea7297cf37a6ce6757a5836f1a55f6e2"
+    },
+    {
+      "name": "assets/evidence/_c_speech_console.log",
+      "path": "upgrades/C/delivery/assets/evidence/_c_speech_console.log",
+      "bytes": 1439,
+      "sha256": "210d9237611d35f5cbe7d6e8c572dc33a088622610b4b7bb425b6cb651d6f0c6"
+    },
+    {
+      "name": "assets/evidence/_pipeline.log",
+      "path": "upgrades/C/delivery/assets/evidence/_pipeline.log",
+      "bytes": 824,
+      "sha256": "88c9f47ec9b37b162586e0bde62a0e91c0117d6a09e73aa103fa7e0baa8e110b"
+    },
+    {
+      "name": "assets/evidence/_t10.log",
+      "path": "upgrades/C/delivery/assets/evidence/_t10.log",
+      "bytes": 707,
+      "sha256": "6bd1addd74b91384d46322795b4eda8340692dbdf647064e226ab2251fa4e6d9"
+    },
+    {
+      "name": "assets/evidence/_t12.log",
+      "path": "upgrades/C/delivery/assets/evidence/_t12.log",
+      "bytes": 923,
+      "sha256": "c6353d7f7319796dba2de059ede2cb039aa511bb2809fd57132dfc76cd68ae3d"
+    },
+    {
+      "name": "assets/evidence/_tx.log",
+      "path": "upgrades/C/delivery/assets/evidence/_tx.log",
+      "bytes": 878,
+      "sha256": "0db370019cb69e7063b2ed56e1767a2316cc82300745122b3b500086f7c75cbe"
+    },
+    {
+      "name": "assets/illustrations/checking-together.png",
+      "path": "upgrades/C/delivery/assets/illustrations/checking-together.png",
+      "bytes": 2228298,
+      "sha256": "fbb684ea5a365584433a26d1e3ae450f8ee5f84b3505003d56d6958dcbedfd5b"
+    },
+    {
+      "name": "assets/illustrations/desk-still-life-web.jpg",
+      "path": "upgrades/C/delivery/assets/illustrations/desk-still-life-web.jpg",
+      "bytes": 74324,
+      "sha256": "faa6fa72e297796d4cf94314d259d2ae294c342b8e0eb5d3928c69af8c569ab4"
+    },
+    {
+      "name": "assets/illustrations/desk-still-life.png",
+      "path": "upgrades/C/delivery/assets/illustrations/desk-still-life.png",
+      "bytes": 2105608,
+      "sha256": "9ee0b1e4cd6c7b82605f88a6e5aff237bbea2572490059faddbf057616e23501"
+    },
+    {
+      "name": "assets/illustrations/hero-family-web.jpg",
+      "path": "upgrades/C/delivery/assets/illustrations/hero-family-web.jpg",
+      "bytes": 136767,
+      "sha256": "70b1d6028a440f6aeed7db495daef8dba72090522b19d0eccc0f1a56f0b499e9"
+    },
+    {
+      "name": "assets/illustrations/hero-family.png",
+      "path": "upgrades/C/delivery/assets/illustrations/hero-family.png",
+      "bytes": 2227192,
+      "sha256": "3bdab6b2fbbc87a530edbc7b6b6425b30cc55bf59b8c8d5a663e20f512a4df23"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-01-clear.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-01-clear.jpg",
+      "bytes": 99803,
+      "sha256": "f348b93c65e149f499e8fb965c8b7b79790e941bc2bae6611c236461018da6a0"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-02-no-year-no-place.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-02-no-year-no-place.jpg",
+      "bytes": 45031,
+      "sha256": "a291d3396206d8367ffb3dc644b97606d1e95ab817537051c06f07c9944adf72"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-03-date-conflict.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-03-date-conflict.jpg",
+      "bytes": 83964,
+      "sha256": "e7afd4b867287fd956d478fcb5e1282db68b32dc6b631cc14e1d73b85a8a3114"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-04-blurry.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-04-blurry.jpg",
+      "bytes": 34776,
+      "sha256": "fc9dc45c5651dd05468b4159ecc16ef51151a4d13604c8951c7b90094776653c"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-05-blank.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-05-blank.jpg",
+      "bytes": 17823,
+      "sha256": "95b8c3ae04056e126e46358869a17c7cd0dc51f1954d1e783f54dabdababdf97"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-06-not-notice.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-06-not-notice.jpg",
+      "bytes": 22653,
+      "sha256": "23d541084f0559dc37b83fb2d99a2422b495e817fc68540b7796a8cc20c52456"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-07-ambiguous-char.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-07-ambiguous-char.jpg",
+      "bytes": 52156,
+      "sha256": "fe2403470afc2315b7b7e56861412ea0d0ef80be9d9fe4dccc0281945c7d90dc"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-08-injected-instruction.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-08-injected-instruction.jpg",
+      "bytes": 60132,
+      "sha256": "dbcf58b920c77e8bb22ebc3cab98f37538e0d182fd9527824676e9186d674f59"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-09-too-long.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-09-too-long.jpg",
+      "bytes": 436480,
+      "sha256": "3c4090a58625be0a8a0ddf66782a3db9db9bdda713b00ecfaa624c4889fc6242"
+    },
+    {
+      "name": "assets/ocr-samples/ocr-10-personal-info.jpg",
+      "path": "upgrades/C/delivery/assets/ocr-samples/ocr-10-personal-info.jpg",
+      "bytes": 56713,
+      "sha256": "6335f065f13412792863f0e877f71feeea3419af5f1bbef7a3283ed1f96a4169"
+    },
+    {
+      "name": "assets/screenshots/c-01-home-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-01-home-390.png",
+      "bytes": 267158,
+      "sha256": "3d7a4987803aa4b575c16396153868c824a73d3151f1315faef3124e926ef52c"
+    },
+    {
+      "name": "assets/screenshots/c-02-upload-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-02-upload-390.png",
+      "bytes": 289080,
+      "sha256": "0b74ba10f1e925d67826c02c09a4b34ea705b38dd4212ba5e03e1e626985edd4"
+    },
+    {
+      "name": "assets/screenshots/c-02-upload-fig.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-02-upload-fig.png",
+      "bytes": 196357,
+      "sha256": "5277078ff26f6ff8ace6c5be3f09ed198a82b1ef3ca61a5b11a0546a381975d5"
+    },
+    {
+      "name": "assets/screenshots/c-03-review-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-03-review-390.png",
+      "bytes": 276330,
+      "sha256": "3e7562aa58360f6e2f9192fd8b174404e77c396ac6fb199a7c5c13db2bba8daf"
+    },
+    {
+      "name": "assets/screenshots/c-03-review-fig.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-03-review-fig.png",
+      "bytes": 190913,
+      "sha256": "e856eafdda169378fbd210a659b5df6bf7d36743a29c21b4067a0865c0bd35ab"
+    },
+    {
+      "name": "assets/screenshots/c-04-reviewed-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-04-reviewed-390.png",
+      "bytes": 555765,
+      "sha256": "422309c4b05492556f62a328bf82e238c7f2ea9e9bfe6358e2e5237367eb6bc8"
+    },
+    {
+      "name": "assets/screenshots/c-04-reviewed-fig.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-04-reviewed-fig.png",
+      "bytes": 419141,
+      "sha256": "e9046283d5dd7bcc6fed07733d9e5fe51885bcb12eeffbe8bcacc309d54f59de"
+    },
+    {
+      "name": "assets/screenshots/c-05-result-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-05-result-390.png",
+      "bytes": 205463,
+      "sha256": "3165226336839af811122fc4e251289d7b67584db7cf4b39cec5639907752822"
+    },
+    {
+      "name": "assets/screenshots/c-06-evidence-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-06-evidence-390.png",
+      "bytes": 182339,
+      "sha256": "f8b893c502c68fdf63db2115394e07edafc9ca0196b6edc149bb475f911b4be4"
+    },
+    {
+      "name": "assets/screenshots/c-06-evidence-fig.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-06-evidence-fig.png",
+      "bytes": 144748,
+      "sha256": "667915fcee4ad77309d86ec4cc7659e1d70d829b1d400bd581c674e0094ba15f"
+    },
+    {
+      "name": "assets/screenshots/c-07-speech-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-07-speech-390.png",
+      "bytes": 213232,
+      "sha256": "15b8870e13819e1af3ce9270f7e812a2fae34a22f30b244325f6b7a6719c3580"
+    },
+    {
+      "name": "assets/screenshots/c-07-speech-fig.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-07-speech-fig.png",
+      "bytes": 152860,
+      "sha256": "618d817abebf1fe5e43a20597224b8cb759c3bedec7dbca9938aefdbfbe938ba"
+    },
+    {
+      "name": "assets/screenshots/c-08-missing-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-08-missing-390.png",
+      "bytes": 187591,
+      "sha256": "9aeebfcfca0314eae10bd11f67bf4bb572ade6f241df29338ffb0f904df6d0b5"
+    },
+    {
+      "name": "assets/screenshots/c-08-missing-fig.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-08-missing-fig.png",
+      "bytes": 147563,
+      "sha256": "b4213365e9a959d11a8a740820a08d4688d98722abe971ec1dfe6e09f14773ff"
+    },
+    {
+      "name": "assets/screenshots/c-09-conflict-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-09-conflict-390.png",
+      "bytes": 198518,
+      "sha256": "ebc7a9ddf22b6a479f4705d73239553df839c82014c92d4440f8a32c84e28c6b"
+    },
+    {
+      "name": "assets/screenshots/c-09-conflict-fig.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-09-conflict-fig.png",
+      "bytes": 148407,
+      "sha256": "cc92f2ffca0acf5e97830228f70a0241860ee9f9277f08a98b058837158b8c95"
+    },
+    {
+      "name": "assets/screenshots/c-10-about-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-10-about-390.png",
+      "bytes": 236925,
+      "sha256": "68e9a2a4360355e3a2cfa0b720357a68eba21575e2f53d4495b81f3bb5522507"
+    },
+    {
+      "name": "assets/screenshots/c-cover-ui-crop.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-cover-ui-crop.png",
+      "bytes": 301380,
+      "sha256": "db8b8c720e2cdef82e6673f7a8335c01b0396025a485872048351b5967326e13"
+    },
+    {
+      "name": "assets/screenshots/c-fallback-result-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-fallback-result-390.png",
+      "bytes": 122607,
+      "sha256": "9291dbc8638960debb24bd7c4f5a0a5b69232add3c60655f6d0cd411580ce772"
+    },
+    {
+      "name": "assets/screenshots/c-fallback-upload-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-fallback-upload-390.png",
+      "bytes": 99558,
+      "sha256": "1fad4cd386e706c1dc1595c8fc3ce29c6ece14dd09ef8dbc4672a6b3ef2d68b1"
+    },
+    {
+      "name": "assets/screenshots/c-result-1280-full.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-result-1280-full.png",
+      "bytes": 846394,
+      "sha256": "b5dbb1bd708d982c9acac7e8327e1e101894c392f46028038357cf00e8adbe28"
+    },
+    {
+      "name": "assets/screenshots/c-result-1280.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-result-1280.png",
+      "bytes": 423518,
+      "sha256": "25cbabd8a8746c10e01b56247fa7b7a542286c1a99b2a0ca1fc14ae04596b633"
+    },
+    {
+      "name": "assets/screenshots/c-result-360-full.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-result-360-full.png",
+      "bytes": 612929,
+      "sha256": "a3f5a12ecda8e99592bfbf53b49697c492a6ec5f734209909fbbabca3c7ff0f3"
+    },
+    {
+      "name": "assets/screenshots/c-result-360.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-result-360.png",
+      "bytes": 190420,
+      "sha256": "e44e314a64afabee5bb9b56df6d21ce87b7bb12840038fb0ed88a3e4e02f03ed"
+    },
+    {
+      "name": "assets/screenshots/c-result-390-full.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-result-390-full.png",
+      "bytes": 615035,
+      "sha256": "b0af4eaf7b2b65cb3d383def14f843c02bec4c17f432cd502ed070605e197f0e"
+    },
+    {
+      "name": "assets/screenshots/c-result-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-result-390.png",
+      "bytes": 205463,
+      "sha256": "3165226336839af811122fc4e251289d7b67584db7cf4b39cec5639907752822"
+    },
+    {
+      "name": "assets/screenshots/c-result-768-full.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-result-768-full.png",
+      "bytes": 673589,
+      "sha256": "33a1ebd3dda0b6c3a99b7f802ebb6e632c10ffbae90ce3718034625f18182f00"
+    },
+    {
+      "name": "assets/screenshots/c-result-768.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-result-768.png",
+      "bytes": 320762,
+      "sha256": "225c30a5ec8f17d11f7eb28ca258ae95d4fea35587de4688c21cafdcedc4573d"
+    },
+    {
+      "name": "assets/screenshots/c-review-1280.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-review-1280.png",
+      "bytes": 1244126,
+      "sha256": "670c03f9580c707c98381907ecd2cc083ab80e3997d94c7f0c9cf37f22809d8b"
+    },
+    {
+      "name": "assets/screenshots/c-review-360.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-review-360.png",
+      "bytes": 306615,
+      "sha256": "00c5592c025e5df1b44e8a189e9b2552f2154ce111e8a5285def0455c02b4e1b"
+    },
+    {
+      "name": "assets/screenshots/c-review-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-review-390.png",
+      "bytes": 338719,
+      "sha256": "d2709f83e0a0a8aa7a4255eb1cd915ec8430560de2bd11f84f46b1ca878cff4d"
+    },
+    {
+      "name": "assets/screenshots/c-review-768.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-review-768.png",
+      "bytes": 982058,
+      "sha256": "c4d0e8c326168bae3892108edef84af492bf83077ca000ac322a85ad560d6adb"
+    },
+    {
+      "name": "assets/screenshots/c-upload-1280.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-upload-1280.png",
+      "bytes": 1073820,
+      "sha256": "9d4b8e630073227851631875ea6030669e21031811a060175b317fca9e864a3f"
+    },
+    {
+      "name": "assets/screenshots/c-upload-360.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-upload-360.png",
+      "bytes": 273924,
+      "sha256": "8c736424253a68d3c4a58ec1804727cb9f6024616b01fe26347df6ad7043ae1a"
+    },
+    {
+      "name": "assets/screenshots/c-upload-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-upload-390.png",
+      "bytes": 289080,
+      "sha256": "0b74ba10f1e925d67826c02c09a4b34ea705b38dd4212ba5e03e1e626985edd4"
+    },
+    {
+      "name": "assets/screenshots/c-upload-768.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c-upload-768.png",
+      "bytes": 850869,
+      "sha256": "c2fccabf452d94b2749968611c7b22d8a7ad892c15c4ae2af00829b680a0280d"
+    },
+    {
+      "name": "assets/screenshots/c7-smoke.png",
+      "path": "upgrades/C/delivery/assets/screenshots/c7-smoke.png",
+      "bytes": 141420,
+      "sha256": "0e6d244d5a2a2e8f6c200c9e67b201a5fc1ec666623b4850f39338c9db0ffd00"
+    },
+    {
+      "name": "assets/screenshots/qr-preview.png",
+      "path": "upgrades/C/delivery/assets/screenshots/qr-preview.png",
+      "bytes": 2335,
+      "sha256": "2e409f38d04e130b5d006240e3901d4746039606b8f7f86e11290c07402a164d"
+    },
+    {
+      "name": "assets/screenshots/_e2e-result-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/_e2e-result-390.png",
+      "bytes": 122607,
+      "sha256": "9291dbc8638960debb24bd7c4f5a0a5b69232add3c60655f6d0cd411580ce772"
+    },
+    {
+      "name": "assets/screenshots/_pdf-p1.png",
+      "path": "upgrades/C/delivery/assets/screenshots/_pdf-p1.png",
+      "bytes": 484515,
+      "sha256": "f69f434a6cdf69750cbd37a813f6de622f6f4d4740db026894b3f5a2ec294738"
+    },
+    {
+      "name": "assets/screenshots/_pdf-p4.png",
+      "path": "upgrades/C/delivery/assets/screenshots/_pdf-p4.png",
+      "bytes": 172085,
+      "sha256": "230c0be4904cd8076fc3664a66b2349372a73f339c9f5e662945c595d4bf4f90"
+    },
+    {
+      "name": "assets/screenshots/_pdf-p8.png",
+      "path": "upgrades/C/delivery/assets/screenshots/_pdf-p8.png",
+      "bytes": 137622,
+      "sha256": "1c62dfd89c50b9505bdb4fa2d631dd5806d4fc9f2344e17eff8d0fd75ce34c5a"
+    },
+    {
+      "name": "assets/screenshots/_smoke-upload-390.png",
+      "path": "upgrades/C/delivery/assets/screenshots/_smoke-upload-390.png",
+      "bytes": 99558,
+      "sha256": "1fad4cd386e706c1dc1595c8fc3ce29c6ece14dd09ef8dbc4672a6b3ef2d68b1"
+    },
+    {
+      "name": "assets/tts-samples/_probe.wav",
+      "path": "upgrades/C/delivery/assets/tts-samples/_probe.wav",
+      "bytes": 44,
+      "sha256": "4872b61c768dff943f9e021453d816f06e35adc8edd88ef183301f03e31b94a5"
+    },
+    {
+      "name": "sources/cover.html",
+      "path": "upgrades/C/delivery/sources/cover.html",
+      "bytes": 2941,
+      "sha256": "3d30eeb15106c5dbc0cffa025369133e82a3ad2e33e63dc91b9b46b75735a803"
+    },
+    {
+      "name": "sources/flow-public.html",
+      "path": "upgrades/C/delivery/sources/flow-public.html",
+      "bytes": 4561,
+      "sha256": "05e01525bf24662942db79245c7492442f8d64aabb3a9185c053148d3570d253"
+    },
+    {
+      "name": "sources/flow-tech.html",
+      "path": "upgrades/C/delivery/sources/flow-tech.html",
+      "bytes": 6679,
+      "sha256": "7b88ed743c395b1a1777594908675764c021a99a7c1b9118d8e23d4c7da831b1"
+    },
+    {
+      "name": "sources/manual-c.html",
+      "path": "upgrades/C/delivery/sources/manual-c.html",
+      "bytes": 28663,
+      "sha256": "301dac6692c1515ebf0251351420c72043c0d805300d251cca8371c111ba97e9"
+    },
+    {
+      "name": "sources/narration.json",
+      "path": "upgrades/C/delivery/sources/narration.json",
+      "bytes": 1968,
+      "sha256": "a9824fc66726b6347b8bcb617b464e2ddcf72b242306c60e1a3b473a2aa7ec45"
+    },
+    {
+      "name": "sources/run-guide-c.html",
+      "path": "upgrades/C/delivery/sources/run-guide-c.html",
+      "bytes": 6329,
+      "sha256": "67537cf03d2ca32677e72af22ba5f480a8d958511cb534fa84b2507a4f7aebf5"
+    },
+    {
+      "name": "sources/test-report-c.html",
+      "path": "upgrades/C/delivery/sources/test-report-c.html",
+      "bytes": 26016,
+      "sha256": "7a76de26c5079c47833f9825beb6899df929ff37a43b10fd788336b4e3211cfa"
+    },
+    {
+      "name": "sources/video-timeline.json",
+      "path": "upgrades/C/delivery/sources/video-timeline.json",
+      "bytes": 1844,
+      "sha256": "d8d4fb7a6223fb583215ae46f69f1c6ec3a6ecdb66d6a549422ca3079d31933e"
+    },
+    {
+      "name": "15_明白办_用户试用材料/00_说明_这是空白模板.md",
+      "path": "upgrades/C/delivery/15_明白办_用户试用材料/00_说明_这是空白模板.md",
+      "bytes": 2671,
+      "sha256": "478b7c0876260e0d741a4cb1bd7fcde702177244407b34b7fe3ed2a249be8f10"
+    },
+    {
+      "name": "15_明白办_用户试用材料/01_任务卡与访谈提纲.md",
+      "path": "upgrades/C/delivery/15_明白办_用户试用材料/01_任务卡与访谈提纲.md",
+      "bytes": 4129,
+      "sha256": "f758fffbaed7d36240489de1957910caf042626021a16f4be8f4aa1fb511e972"
+    },
+    {
+      "name": "15_明白办_用户试用材料/02_试用记录表_空白.csv",
+      "path": "upgrades/C/delivery/15_明白办_用户试用材料/02_试用记录表_空白.csv",
+      "bytes": 552,
+      "sha256": "094ebee9f26cf0d155d1affcba2e65a41c36249bbb766734ebb20af85e93dc04"
+    },
+    {
+      "name": "assets/recordings/phases.json",
+      "path": "upgrades/C/delivery/assets/recordings/phases.json",
+      "bytes": 1073,
+      "sha256": "529fcecb65bb57c963bea63e6ffd5bc629be741bb22902499f17c8c736763306",
+      "note": "录屏分镜与时间轴（约 6000 张原始帧未入包，避免体积膨胀）"
+    }
+  ],
+  "zips": {
+    "source": {
+      "name": "10_明白办_源码.zip",
+      "bytes": 9013396,
+      "sha256": "20490e865c2b8baa0d602e49f6a21a4a6ff017fbbd04a8b98d22ea2246223c60"
+    }
+  }
+}

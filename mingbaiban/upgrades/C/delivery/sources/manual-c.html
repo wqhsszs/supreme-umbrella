@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>明白办 · 产品说明书（C 轮）</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #26312C; font-size: 9.9pt; line-height: 1.68;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page { width: 210mm; height: 297mm; padding: 15mm 16mm 14mm; position: relative;
+          page-break-after: always; overflow: hidden; background: #fff; }
+  .page:last-child { page-break-after: auto; }
+  h1 { font-size: 19pt; margin: 0 0 3mm; }
+  h3 { font-size: 10.8pt; margin: 3.4mm 0 1.6mm; }
+  p { margin: 0 0 2.2mm; }
+  ul { margin: 0 0 2.2mm; padding-left: 5mm; }
+  li { margin-bottom: 1mm; }
+  .lead { font-size: 10.6pt; color: #333b45; }
+  .muted { color: #5D6A63; }
+  .small { font-size: 8.5pt; line-height: 1.58; }
+  .kicker { font-size: 8.6pt; color: #254C40; font-weight: 700; }
+  .rule { height: 3px; background: #254C40; width: 24mm; margin: 2.4mm 0 4mm; }
+  table { width: 100%; border-collapse: collapse; margin: 1mm 0 3mm; font-size: 8.8pt; line-height: 1.5; }
+  th, td { border: 1px solid #E3DCCD; padding: 1.6mm 2mm; text-align: left; vertical-align: top; }
+  th { background: #F2EFE7; font-weight: 700; }
+  .box { border: 1px solid #E3DCCD; border-left: 4px solid #254C40; background: #FAF8F3;
+         padding: 2.4mm 3.4mm; margin: 0 0 3mm; font-size: 9.2pt; line-height: 1.62; }
+  .box.warn { border-left-color: #8A4B1E; background: #FDF6EC; }
+  .box.ok { border-left-color: #2F6B4F; background: #F2F8F4; }
+  figure { margin: 0 0 2mm; }
+  figure img { display: block; border: 1px solid #E3DCCD; border-radius: 3px; }
+  figcaption { font-size: 8.2pt; color: #5D6A63; margin-top: 1mm; }
+  .shots { display: flex; gap: 4mm; justify-content: center; }
+  .shots figure { flex: 0 0 50mm; min-width: 0; margin: 0; }
+  .shots figure[style] img { width: 56mm; }
+  .shots img { width: 50mm; height: auto; display: block; }
+  .footer { position: absolute; bottom: 7mm; left: 16mm; right: 16mm; display: flex;
+            justify-content: space-between; font-size: 7.8pt; color: #8b95a1;
+            border-top: 1px solid #E9E3D6; padding-top: 1.6mm; }
+  .cover-art { width: 100%; border-radius: 4px; }
+  .qr { width: 30mm; }
+  .two { display: flex; gap: 5mm; }
+  .two > div { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- ============ P1 封面 ============ -->
+<section class="page">
+  <p class="kicker">2026 iCAN 大学生创新创业大赛 · 快手 AI 未来创造者挑战赛　|　AI 产品实现</p>
+  <div class="rule"></div>
+  <h1 style="font-size:30pt; line-height:1.25;">明白办</h1>
+  <p class="lead" style="font-size:13pt; margin-bottom:2mm;">给家人一张明白卡，也能读给他听</p>
+  <p class="lead">把社区通知——文字或截图——整理成家人看得懂、能听清的行动卡：时间分用途、地点不混淆、每一项都能对照原文；卡片还能用设备语音读给长辈听。</p>
+
+  <figure style="margin-top:5mm;">
+    <img class="cover-art" src="../assets/illustrations/checking-together.png" alt="家人与长辈在餐桌旁一起核对通知">
+    <figcaption>情境插画为 AI 生成，人物为虚构角色，不代表真实个人。</figcaption>
+  </figure>
+
+  <div style="margin-top:4mm; display:flex; gap:5mm; align-items:flex-start;">
+    <div style="flex:1">
+      <table style="margin:0; font-size:9pt;">
+        <tr><td style="width:26mm; color:#5D6A63;">产品名称</td><td>明白办（Mingbai Ban）</td></tr>
+        <tr><td style="color:#5D6A63;">版本</td><td>v1.3.0-c7（三轮升级最终候选）</td></tr>
+        <tr><td style="color:#5D6A63;">在线体验</td><td>mingbaiban-42482.app.workbuddy.host</td></tr>
+        <tr><td style="color:#5D6A63;">运行时模型</td><td>minimax-m3.1-flash（平台托管通道，取字与整理两次调用）</td></tr>
+        <tr><td style="color:#5D6A63;">本版新增</td><td>截图取字与人工核对、行动卡朗读</td></tr>
+      </table>
+    </div>
+    <div style="flex:0 0 32mm; text-align:center;">
+      <img class="qr" src="../assets/screenshots/qr-preview.png" alt="体验入口二维码">
+      <div class="small muted" style="margin-top:1mm;">扫码打开</div>
+    </div>
+  </div>
+  <p class="small muted" style="margin-top:3mm;">本说明书所述功能均为该版本已实现并可复现的功能；用户的真实使用效果尚未验证，第 8 节如实说明。</p>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 1 页</span></div>
+</section>
+
+<!-- ============ P2 一件具体的小事（产品概述） ============ -->
+<section class="page">
+  <p class="kicker">01　产品概述</p>
+  <h1>一件具体的小事，为什么需要整理</h1>
+  <div class="rule"></div>
+
+  <p class="lead">下面这条通知，是很多社区最常见的写法（本项目编写的演示样例，不是真实社区公告）：</p>
+  <div class="box small" style="font-size:9pt;">
+    各位居民：为帮助老年居民掌握智能手机常用功能，社区服务中心将开展“手机使用指导”活动。<br>
+    时间：2026年10月26日9:00—11:00　　地点：社区服务中心二楼活动室<br>
+    报名方式：请于2026年10月25日17:00前到社区服务中心一楼服务台报名，名额有限。<br>
+    说明：本次活动仅限已报名居民参加，请携带本人手机。
+  </div>
+
+  <p>八十几个字里有四组关键信息，而且互相“长得像”：</p>
+  <table>
+    <tr><th style="width:30%">容易读错的地方</th><th>为什么</th></tr>
+    <tr><td>两个时间</td><td>25 日 17:00 是<b>报名截止</b>，26 日 9:00 是<b>活动开始</b>。错当成“25 日去参加”，就白跑一趟。</td></tr>
+    <tr><td>两处地点</td><td>报名在<b>一楼服务台</b>，活动在<b>二楼活动室</b>。合并成一个“社区服务中心”，到了还得再问。</td></tr>
+    <tr><td>一个限制</td><td>“仅限已报名居民参加”决定了要不要提前跑一趟；漏掉这句，当天可能进不去。</td></tr>
+    <tr><td>一份材料</td><td>只写了“本人手机”。实际准备时，人容易顺手再带身份证、医保卡——通知并没有要求。</td></tr>
+  </table>
+
+  <p><b>明白办做的事</b>：把这条通知整理成一张卡——先说这条通知要办什么，再把两个时间、两处地点、限制条件、要带的东西分条列出，<b>每一条都能点开看到通知里的原句</b>；通知没写的，就写“通知未说明”，不替它补。</p>
+
+  <div class="box ok small">
+    <b>目标用户</b>：主要操作人是<b>家人或社区志愿者</b>，受益者是<b>长辈</b>。长辈不必自己复制粘贴长段文字；但卡片写得中性、可独立阅读，长辈拿到就能自己看明白，去不去、怎么办仍由本人决定。
+  </div>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 2 页</span></div>
+</section>
+
+<!-- ============ P3 用户与流程 ============ -->
+<section class="page">
+  <p class="kicker">02　目标用户与协作流程</p>
+  <h1>三步由人做，两步由 AI，中间隔着一次人工核对</h1>
+  <div class="rule"></div>
+
+  <figure>
+    <img src="../11_公众版五步图.png" alt="五步流程：收到通知、从图里取字、对照原图核对、AI 整理成卡、读给家人听" style="width:100%;">
+    <figcaption>图 1　一条通知到一张能听的卡（可编辑源：sources/flow-public.html）</figcaption>
+  </figure>
+
+  <h3>谁在做什么</h3>
+  <table>
+    <tr><th style="width:22%">角色</th><th style="width:40%">具体动作</th><th>为什么必须这样分</th></tr>
+    <tr><td>家人 / 志愿者</td><td>贴文字或传截图、对照原图核对取出的文字、勾选"我已核对"、把卡读给长辈或转发给长辈</td><td>只有人知道这条通知和自家情况的关系；核对这一步是人的操作，不是社区认证</td></tr>
+    <tr><td>AI · 取字</td><td>只把截图里的文字逐字取出来，不改写、不补年份、不补楼层、不补电话；看不清的地方明确标注</td><td>整理者不用照着图打一遍字</td></tr>
+    <tr><td>AI · 整理</td><td>读懂任意写法、拆出事实、判断缺失与冲突、改写成白话，输出固定 JSON</td><td>通知措辞千变万化，规则与模板覆盖不了</td></tr>
+    <tr><td>程序</td><td>结构、字段、状态、每条引文是否真的出现在"核对后的文字"里；机械校验，每次都一样</td><td>提示词无法证明模型没编，检查可以</td></tr>
+    <tr><td>长辈</td><td>听卡或看卡、决定去不去、按卡准备</td><td>——</td></tr>
+  </table>
+
+  <h3>适老化不是"把字放大"</h3>
+  <ul class="small">
+    <li>正文 20px、行高 1.75；关键事实 22px；按钮最小 56px；复选框 32px、整行可点。</li>
+    <li>状态不只靠颜色：原文写明 ✓ 实线、通知未说明 — 虚线、说得含糊 ? 点线、前后不一致 ! 双线。</li>
+    <li>360 / 390 / 768 / 1280 四档视口实测无横向滚动；核对页在手机上下排、桌面上原图与文字并排。</li>
+    <li>朗读由点击触发，不自动播放；可暂停、继续、停止；同一时刻只有一个朗读任务。</li>
+  </ul>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 3 页</span></div>
+</section>
+
+<!-- ============ P4 核心功能 ============ -->
+<section class="page">
+  <p class="kicker">03　核心功能</p>
+  <h1>六项功能，都在真实界面里</h1>
+  <div class="rule"></div>
+
+  <table class="small">
+    <tr><th style="width:8%">编号</th><th style="width:20%">功能</th><th>实现要点</th></tr>
+    <tr><td>F1</td><td><b>通知输入</b></td><td>粘贴文字（上限 5000 字）或上传一张截图（JPG/PNG/WebP，≤8MB，长边自动缩到 1600px）；空白、超长、坏文件都明确提示且不静默截断</td></tr>
+    <tr><td>F2</td><td><b>截图取字</b></td><td>多模态模型独立调用，只取字不改写；看不清标注"［此处看不清，请对照图片］"；没字、太模糊如实提示，不猜</td></tr>
+    <tr><td>F3</td><td><b>人工核对</b></td><td>左边原图、右边文字逐行对照，可自由修改；必须勾选"我已核对"才能整理，改过字自动取消勾选；改字后旧卡、复制文本与朗读全部作废</td></tr>
+    <tr><td>F4</td><td><b>事实整理</b></td><td>一句话说清"要办什么"，再按 谁适用 / 何时何地 / 准备什么 / 下一步 / 还要确认 分条；冲突置顶提醒</td></tr>
+    <tr><td>F5</td><td><b>原文核对</b></td><td>每个事实项标注四态之一；文字来源标"对照通知原文"，截图来源标"对照核对后文字"并可查看原图</td></tr>
+    <tr><td>F6</td><td><b>朗读与复制</b></td><td>设备中文语音读整张卡（暂停/继续/停止），未说明、冲突、待确认都会被读出；复制文本与勾选一致并声明"不是报名凭证"</td></tr>
+  </table>
+
+  <div class="shots" style="margin-top:2mm;">
+    <figure><img src="../assets/screenshots/c-02-upload-fig.png" alt="上传截图"><figcaption>① 传截图</figcaption></figure>
+    <figure><img src="../assets/screenshots/c-03-review-fig.png" alt="原图与文字对照"><figcaption>② 对照原图核对</figcaption></figure>
+    <figure><img src="../assets/screenshots/c-07-speech-fig.png" alt="读给家人听"><figcaption>③ 读给家人听</figcaption></figure>
+  </div>
+
+  <div class="box small" style="margin-top:2.5mm;">
+    <b>三处关键设计：</b>①核对是闸门——不勾选"已核对"就不能整理，图片来源的证据入口写"核对后的文字"而不是"通知原文"；②冲突或含糊置顶提醒，不折到底部；③朗读内容由已校验数据确定性拼出，不再让模型自由改写，也不会把勾选读成"已报名"。
+  </div>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 4 页</span></div>
+</section>
+
+<!-- ============ P5 连续场景示例 ============ -->
+<section class="page">
+  <p class="kicker">04　应用场景示例</p>
+  <h1>同一条通知，原文与行动卡逐项对照</h1>
+  <div class="rule"></div>
+
+  <table class="small">
+    <tr><th style="width:26%">通知原文</th><th style="width:37%">行动卡怎么显示</th><th>关键点</th></tr>
+    <tr><td>请于 2026 年 10 月 25 日 17:00 前到社区服务中心一楼服务台报名</td><td><b>报名截止</b>：2026 年 10 月 25 日 17:00 前（原文写明）<br><b>地点</b>：社区服务中心一楼服务台（原文写明）</td><td>时间与它自己的地点绑在一起</td></tr>
+    <tr><td>时间：2026 年 10 月 26 日 9:00—11:00　　地点：社区服务中心二楼活动室</td><td><b>活动开始</b>：2026 年 10 月 26 日 9:00—11:00（原文写明）<br><b>地点</b>：社区服务中心二楼活动室（原文写明）</td><td>不与报名地点混成一个</td></tr>
+    <tr><td>本次活动仅限已报名居民参加</td><td><b>谁适用</b>：已报名的居民（原文写明）</td><td>限制条件不被删掉</td></tr>
+    <tr><td>请携带本人手机</td><td><b>准备什么</b>：本人手机（原文写明）</td><td>不加身份证、不加医保卡</td></tr>
+    <tr><td>（原文没有写集合点/联系方式等）</td><td>显示“通知未说明”，并在“还要确认什么”列出可问的问题</td><td>缺就是缺，不补齐</td></tr>
+  </table>
+
+  <div class="shots" style="margin-top:1mm;">
+    <figure style="flex:0 0 58mm;"><img src="../assets/screenshots/c-08-missing-fig.png" alt="缺信息"><figcaption>缺信息：通知未说明</figcaption></figure>
+    <figure style="flex:0 0 58mm;"><img src="../assets/screenshots/c-09-conflict-fig.png" alt="冲突提醒"><figcaption>冲突：先提醒，不收起</figcaption></figure>
+  </div>
+
+  <p class="small muted" style="margin-top:1mm;">以上均为线上版本真实返回与真实界面截图，未做内容修改。本节的行动卡由"上传截图 → 人工核对 → 整理"生成：取字、核对、整理各有一次真实记录，见 16_C轮新增功能与限制。示例通知为本项目编写的虚构演示材料。</p>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 5 页</span></div>
+</section>
+
+<!-- ============ P6 AI 角色与价值 ============ -->
+<section class="page">
+  <p class="kicker">05　AI 的角色与价值</p>
+  <h1>模型取字，模型整理，程序核对，人决定，设备发声</h1>
+  <div class="rule"></div>
+
+  <table class="small">
+    <tr><th style="width:16%">环节</th><th style="width:46%">谁做</th><th>边界</th></tr>
+    <tr><td>截图取字</td><td><b>多模态模型</b>（minimax-m3.1-flash，独立一次调用、专用取字提示词）：逐字提取、保留段落顺序</td><td>不改写、不补全、不给置信度；看不清就标出来；图里的指令只当文字</td></tr>
+    <tr><td>人工核对</td><td><b>整理者</b>：对照原图改字、勾选"我已核对"</td><td>是整理者的操作，不等于社区认证，也不保证取字全对</td></tr>
+    <tr><td>事实整理</td><td><b>模型</b>（同通道第二次调用）：固定 JSON 输出对象、时间、准备、下一步、待确认</td><td>必须给逐字原文摘录；不判断资格、不做医疗法律建议</td></tr>
+    <tr><td>机械校验</td><td><b>程序</b>：字段类型、status 取值、missing 不得填值、每条引文必须能在"核对后的文字"里找到、required 必须有依据</td><td>校验不过 → 重试 1 次 → 仍不过则不出卡</td></tr>
+    <tr><td>朗读</td><td><b>程序</b>：由已校验数据确定性拼出朗读文本；<b>设备语音</b>（浏览器 Web Speech API）发声</td><td>不是云端 TTS，不再调用模型改写；音色取决于设备</td></tr>
+    <tr><td>判断去不去</td><td><b>人</b>：长辈听完/看完自己决定</td><td>产品不代办、不报名、不代发</td></tr>
+  </table>
+
+  <h3>为什么朗读不让模型再写一遍</h3>
+  <p>朗读文本是<b>从已通过校验的同一份卡片数据拼出来的</b>：数字、时点、地点与页面完全一致，"通知未说明""前后不一致""还要确认"都照读，不为了顺口删掉。时间只做等价改写（9:00 读作"9点"），数值、年份、用途都不变；没有年份就不读出年份。这样朗读内容可以像页面一样被核对，而不是又一次"模型发挥"。</p>
+
+  <div class="box warn small">
+    <b>必须说清的限制：</b>引文能在核对后的文字里找到，不等于理解一定正确；取字也不可能百分之百准确——所以核对必须由人做完。程序拦得住"引文对不上""结构不完整""标了要求却没有依据"，拦不住"引文真实但意思读反了"。结果页始终提示以通知原文和社区说法为准。
+  </div>
+
+  <h3>运行时模型服务与语音（如实记录）</h3>
+  <table class="small">
+    <tr><th style="width:22%">项目</th><th>实际情况</th></tr>
+    <tr><td>接入方式</td><td>WorkBuddy 云服务托管免密钥通道，浏览器直连，服务端按 Origin 校验，前端不保存长期密钥</td></tr>
+    <tr><td>实际模型</td><td><code>minimax-m3.1-flash</code>（取字与整理同模型、两次调用）；结果页脚注标明实际型号</td></tr>
+    <tr><td>朗读</td><td>浏览器 Web Speech API + 设备/系统中文音色（本机为 Microsoft Huihui）；<b>非云端 TTS</b></td></tr>
+    <tr><td>无法确认</td><td>上游机房形态与平台侧数据处理由平台托管，本项目无法核实，故不作声明</td></tr>
+  </table>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 6 页</span></div>
+</section>
+
+<!-- ============ P7 技术实现 ============ -->
+<section class="page">
+  <p class="kicker">06　技术实现思路</p>
+  <h1>六步链路：取字、核对、整理、校验、呈现、发声</h1>
+  <div class="rule"></div>
+
+  <figure>
+    <img src="../11_技术实现图.png" alt="C 轮技术实现与数据流" style="width:100%;">
+    <figcaption>图 2　技术实现与数据流（可编辑源：sources/flow-tech.html）</figcaption>
+  </figure>
+
+  <div class="two">
+    <div>
+      <h3>技术选型</h3>
+      <ul class="small">
+        <li>前端：原生 HTML/CSS/JS，无框架、无构建</li>
+        <li>模型接入：WorkBuddy 云服务 SDK（CDN 版）</li>
+        <li>取字：canvas 缩放 + base64 → 多模态消息</li>
+        <li>校验：自研 validate.js（结构与引文回溯）</li>
+        <li>朗读：Web Speech API（设备音色）</li>
+      </ul>
+    </div>
+    <div>
+      <h3>关键实现</h3>
+      <ul class="small">
+        <li>两套提示词各存一份：prompts/ocr-prompt.txt、prompts/system-prompt.txt</li>
+        <li>请求序号丢弃过期响应；取字中可取消，换图不串台</li>
+        <li>改字自动取消"已核对"，旧卡/复制/朗读一并作废</li>
+        <li>全部文本走 textContent，不拼 innerHTML</li>
+        <li>图片只存于页面内存（ObjectURL），不写 localStorage/IndexedDB</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>输出契约（节选）</h3>
+  <div class="box small">
+    <code>document_status · summary · audience · times[{purpose,value,status,evidence,place}] · location · preparation · actions[{type,value,evidence}] · questions · warnings</code><br>
+    <span class="muted">status 仅取 stated / missing / unclear / conflict；missing 时 value 必须为 null、evidence 必须为空。图片来源的卡片只依据"核对后的文字"校验，页面明确区分"待核对"与"已由整理者核对"。</span>
+  </div>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 7 页</span></div>
+</section>
+
+<!-- ============ P8 验证与限制 ============ -->
+<section class="page">
+  <p class="kicker">07　验证情况与限制</p>
+  <h1>做过的测试，和还没做到的事</h1>
+  <div class="rule"></div>
+
+  <h3>本版本（v1.3.0-c7）实测</h3>
+  <table class="small">
+    <tr><th style="width:36%">项目</th><th style="width:18%">结果</th><th>说明</th></tr>
+    <tr><td>截图识别专项 20 项（C1）</td><td><b>20 / 20 通过</b></td><td>清晰/无年份无地点/日期冲突/模糊/无字/非通知/人工改字/图内指令/超长/个人信息不落库/坏文件/取消换图/核对闸门/超限不截断</td></tr>
+    <tr><td>朗读专项 19 项（C2）</td><td><b>19 / 19 通过</b></td><td>发音等价改写、缺失/冲突照读、勾选不读成已报名、暂停继续停止、单实例、换卡终止、无中文音色与不支持时的如实提示</td></tr>
+    <tr><td>A 轮回归 12 条通知用例</td><td><b>12 / 12 通过</b></td><td>8 条正常 + 4 条边界，在本版上重跑</td></tr>
+    <tr><td>页面行为与异常路径 10 项</td><td><b>10 / 10 通过</b></td><td>空白、超长、注入、重复提交、过期响应、复制降级等</td></tr>
+    <tr><td>A 轮专项 11 项</td><td><b>11 / 11 通过</b></td><td>required 无依据拒绝、复制与勾选一致、地点分离、冲突置顶、非通知提示</td></tr>
+    <tr><td>布局与可访问性</td><td>通过</td><td>360/390/768/1280 上传页、核对页、结果页均无横向滚动；触控区 ≥44px；9 组配色最低 5.12:1</td></tr>
+    <tr><td>演示视频</td><td>153 秒</td><td>1080×1920、H.264(yuv420p)+AAC；<b>真实操作录屏</b>＋产品朗读原声（截取约 18 秒）</td></tr>
+  </table>
+  <p class="small muted">测试环境：Windows 11 + Edge（视口 390×844，部分用例 360/768/1280），对象为线上版本，走真实模型调用；原始记录见交付包 assets/evidence/。全部通过只说明在当前测试集上符合预期，不代表任何输入都不会出错。</p>
+
+  <h3>还没做到的</h3>
+  <ul class="small">
+    <li><b>未开展目标用户试用。</b>没有长辈或志愿者使用本版本的记录，因此不提供任何效果、满意度、节省时间的数据。</li>
+    <li><b>未做真机测试。</b>四档视口都是桌面浏览器模拟；微信内置浏览器、安卓低端机的朗读表现未验证。</li>
+    <li><b>朗读依赖设备。</b>用的是浏览器/系统语音：音色随设备变化，有的设备没有中文音色就读不了；<b>不能导出音频文件</b>，所以产品里没有"下载语音"按钮。</li>
+    
+    <li><b>取字不是认证。</b>多模态模型取字会有错漏，核对这一步必须由人完成；本产品不把识别结果当作已核实的事实。</li>
+    <li><b>校验有盲区。</b>引文真实但理解错误的，机械检查发现不了。</li>
+    <li><b>相对时间仍不换算。</b>"明天""周五"原样保留并提示确认。</li>
+    <li><b>依赖网络与服务配额。</b>不可用或被限流时页面明确报错，不给假答案。</li>
+  </ul>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 8 页</span></div>
+</section>
+
+<!-- ============ P9 价值与下一步 ============ -->
+<section class="page">
+  <p class="kicker">08　应用价值与下一步</p>
+  <h1>从一张卡到能听的卡，先做小范围验证</h1>
+  <div class="rule"></div>
+
+  <h3>它现在能解决什么</h3>
+  <table class="small">
+    <tr><th style="width:30%">场景</th><th>产品做的事</th></tr>
+    <tr><td>家人替长辈读通知</td><td>截图直接传，不用照着打字；核对后转发，或当场读给长辈听</td></tr>
+    <tr><td>长辈看字吃力</td><td>整卡朗读，数字放慢读清；"未说明""冲突""还要确认"也照读，不哄着听</td></tr>
+    <tr><td>社区志愿者协助登记</td><td>写法各异的通知快速得到统一格式的事实清单，缺口与冲突一眼看出</td></tr>
+    <tr><td>长辈自己复查</td><td>卡片可独立阅读、可反复听；去不去仍由本人决定</td></tr>
+  </table>
+
+  <h3>下一步怎么验证（不承诺结果）</h3>
+  <ul class="small">
+    <li><b>配对试用：</b>3—5 组"家人 + 长辈"，两条难度相近的通知，一条直接看截图、一条用产品（传图→核对→听卡），交叉顺序；记录答对的时间地点、是否听清"未说明/待确认"、卡住的位置。模板见 15_用户试用材料。</li>
+    <li><b>真机测试：</b>在长辈实际使用的手机上验证传图、朗读与微信内置浏览器。</li>
+    <li><b>若换更好的语音：</b>产品内朗读通道是独立模块（speech.js），替换音色不影响事实链路；若有云端 TTS 通道再评估"保存这张卡的语音"，现在<b>不预设已具备</b>。</li>
+  </ul>
+
+  <div class="box small">
+    <b>商业化与合作：</b>目前没有任何商业合作、政府采购或社区落地。可能的路径（社区养老服务、社会组织工具）都只是<b>待验证设想</b>，不作为既成事实。
+  </div>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 9 页</span></div>
+</section>
+
+<!-- ============ P10 来源与入口 ============ -->
+<section class="page">
+  <p class="kicker">09　来源与体验入口</p>
+  <h1>用了什么工具，怎么自己试</h1>
+  <div class="rule"></div>
+
+  <div class="two">
+    <div>
+      <h3>AI 与工具来源</h3>
+      <table class="small">
+        <tr><th style="width:30%">用途</th><th>工具</th></tr>
+        <tr><td>产品运行时</td><td>大语言模型 minimax-m3.1-flash（WorkBuddy 云服务通道）</td></tr>
+        <tr><td>开发执行</td><td>WorkBuddy（开发执行模型 MiniMax-M3.1-Flash）</td></tr>
+        <tr><td>截图取字</td><td>minimax-m3.1-flash 原生多模态（平台通道，OpenAI 兼容 image_url 消息，实测后接入）</td></tr>
+        <tr><td>产品内朗读</td><td>浏览器 Web Speech API + 设备中文音色（本机 Microsoft Huihui）；<b>非云端 TTS，未克隆真人声音</b></td></tr>
+        <tr><td>视频旁白</td><td>Windows 系统语音合成（SAPI5，Microsoft Huihui）；与产品内朗读是两个通道，材料里分开标注</td></tr>
+        <tr><td>朗读原声录制</td><td>WASAPI 环回录音（pyaudiowpatch）+ 有界面 Edge，录的是系统真实播放声</td></tr>
+        <tr><td>插画</td><td>WorkBuddy 图像生成工具（沿用 B 轮 3 张叙事插画与主视觉，C 轮未新画）</td></tr>
+        <tr><td>界面截图/录屏</td><td>Microsoft Edge + playwright-core（CDP 屏幕捕获）</td></tr>
+      </table>
+      <p class="small muted">详情见交付包 12_工具素材来源与原创记录.md 与 sources/。</p>
+    </div>
+    <div style="flex:0 0 62mm; text-align:center;">
+      <h3>在线体验</h3>
+      <img src="../assets/screenshots/qr-preview.png" alt="体验入口二维码" style="width:42mm;">
+      <p class="small" style="margin-top:1.5mm; word-break:break-all;">mingbaiban-42482.app.workbuddy.host</p>
+      <p class="small muted">扫码或输入地址；无需注册登录。<br>控制台执行 <code>window.MBB_CONFIG.appVersion</code> 应返回 1.3.0-c7。</p>
+    </div>
+  </div>
+
+  <h3>声明</h3>
+  <ul class="small">
+    <li>文中三条示例通知均为本项目编写的<b>虚构演示材料</b>，不是任何真实社区的公告。</li>
+    <li>插画人物为<b>虚构角色</b>，不对应任何真实个人，也不是试用现场照片。</li>
+    <li>视频与说明书中出现的人物形象、场景均为 AI 生成或真实界面截图，没有使用真人证言。</li>
+    <li>本作品未使用第三方图库、音乐素材或他人成品；未声称技术首创，也未承诺比赛晋级。</li>
+    <li>在线地址由平台托管，长期可用性不由本项目控制；提交前请再点开确认一次。</li>
+  </ul>
+
+  <div class="footer"><span>明白办 · 产品说明书　v1.3.0-c7</span><span>2026-10-23　第 10 页</span></div>
+</section>
+
+</body>
+</html>
